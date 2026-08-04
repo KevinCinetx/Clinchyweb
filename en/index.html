@@ -1,0 +1,776 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>(function(){try{var t=localStorage.getItem('clinchy-theme');if(t&&t!=='clay'){document.documentElement.dataset.theme=t;}}catch(e){}})();</script>
+<title>Clinchy — Manage your chores. Earn rewards.</title>
+<meta name="description" content="Clinchy turns shared chores into a mission marketplace. Value decays until someone takes it. First come, first served.">
+<link rel="canonical" href="https://{{DOMAIN}}/en/">
+<link rel="alternate" hreflang="fr" href="https://{{DOMAIN}}/">
+<link rel="alternate" hreflang="en" href="https://{{DOMAIN}}/en/">
+<link rel="alternate" hreflang="x-default" href="https://{{DOMAIN}}/">
+
+<link rel="icon" href="../assets/img/favicon.ico" sizes="32x32">
+<link rel="icon" href="../assets/img/favicon-192x192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<meta name="theme-color" content="#13111E">
+
+<link rel="preload" href="../assets/fonts/nunito-900.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/dmsans-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Clinchy">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Clinchy — Manage your chores. Earn rewards.">
+<meta property="og:description" content="Chores, marketplace style. Post a mission, its value drops until someone takes it.">
+<meta property="og:url" content="https://{{DOMAIN}}/en/">
+<meta property="og:image" content="https://{{DOMAIN}}/assets/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Clinchy — Manage your chores. Earn rewards.">
+<meta name="twitter:description" content="Chores, marketplace style. First come, first served.">
+<meta name="twitter:image" content="https://{{DOMAIN}}/assets/img/og-image.png">
+<meta name="apple-itunes-app" content="app-id={{APPLE_APP_ID}}">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Clinchy",
+  "applicationCategory": "ProductivityApplication",
+  "operatingSystem": "iOS, Android",
+  "url": "https://{{DOMAIN}}/en/",
+  "description": "Clinchy turns shared chores into a mission marketplace whose value decays over time.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{PUBLISHER_NAME}}"
+  },
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "Clinchy Pro",
+      "price": "{{PRICE_PRO}}",
+      "priceCurrency": "EUR",
+      "url": "{{APPSTORE_URL}}"
+    },
+    {
+      "@type": "Offer",
+      "name": "Clinchy Family",
+      "price": "{{PRICE_FAMILY}}",
+      "priceCurrency": "EUR",
+      "url": "{{APPSTORE_URL}}"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Clinchy",
+  "url": "https://{{DOMAIN}}/en/",
+  "logo": "https://{{DOMAIN}}/assets/img/icon.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Is Clinchy free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The free plan supports up to 2 spaces, 6 members per space and 10 active missions. Premium unlocks the limits, statistics and themes."}},
+    {"@type": "Question", "name": "Does everyone need to pay for the subscription?", "acceptedAnswer": {"@type": "Answer", "text": "No. Just one subscriber is enough: if the space admin is Premium, the whole space benefits from the expanded limits. Free members keep their ads and hidden statistics."}},
+    {"@type": "Question", "name": "How are points calculated?", "acceptedAnswer": {"@type": "Answer", "text": "Each mission has a starting price that drops in steps as long as nobody takes it. The first member who takes it earns the price shown at that exact moment."}},
+    {"@type": "Question", "name": "What happens if nobody takes a mission?", "acceptedAnswer": {"@type": "Answer", "text": "Its value keeps dropping step by step until it turns negative: it then becomes a penalty to nudge someone into handling it."}},
+    {"@type": "Question", "name": "Why are my points reset every Monday?", "acceptedAnswer": {"@type": "Answer", "text": "Every Monday at 00:00, the spendable balance resets to zero and unspent points convert to XP. Nothing is lost, but you have to spend to benefit."}},
+    {"@type": "Question", "name": "Does it work for an 8-person shared house?", "acceptedAnswer": {"@type": "Answer", "text": "On the free plan, a space supports up to 6 members. With a Premium admin, the space scales up to 50 members."}},
+    {"@type": "Question", "name": "Can my kids use Clinchy?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, through Kid Mode: a simplified, colorful interface with stars instead of points, inside a parent's account who administers the space."}},
+    {"@type": "Question", "name": "Does it work across multiple households at once?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, a single account can belong to several spaces (household, shared house, team) and switch between them freely."}},
+    {"@type": "Question", "name": "How do I invite someone to my space?", "acceptedAnswer": {"@type": "Answer", "text": "With an invite code or a shareable link. The join request then needs to be approved by an existing member."}},
+    {"@type": "Question", "name": "How do I delete my account?", "acceptedAnswer": {"@type": "Answer", "text": "From the app (Profile > Settings > Delete my account) or through the public form on the account deletion page if you no longer have the app."}}
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="ambient" aria-hidden="true">
+  <div class="ambient__blob ambient__blob--1"></div>
+  <div class="ambient__blob ambient__blob--2"></div>
+  <div class="ambient__blob ambient__blob--3"></div>
+</div>
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <symbol id="icon-burger" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></symbol>
+  <symbol id="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></symbol>
+  <symbol id="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="4,13 9,18 20,6"/></symbol>
+  <symbol id="icon-chevron-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15,5 8,12 15,19"/></symbol>
+  <symbol id="icon-chevron-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9,5 16,12 9,19"/></symbol>
+  <symbol id="icon-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="4" x2="12" y2="20"/><line x1="4" y1="12" x2="20" y2="12"/></symbol>
+</svg>
+
+<header class="nav" id="nav">
+  <div class="container nav__inner">
+    <a class="nav__logo" href="./index.html" aria-label="Clinchy — home">
+      <img src="../assets/img/clinchy-wordmark.png" alt="Clinchy" width="150" height="39">
+    </a>
+    <nav class="nav__links" aria-label="Main navigation">
+      <a class="nav__link" href="./fonctionnalites.html">Features</a>
+      <a class="nav__link" href="./index.html#comment-ca-marche">How it works</a>
+      <a class="nav__link" href="./tarifs.html">Pricing</a>
+      <a class="nav__link" href="./index.html#faq">FAQ</a>
+    </nav>
+    <div class="nav__actions">
+      <a class="btn btn--accent nav__cta" href="./index.html#hero-download">Download</a>
+      <button class="nav__burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" id="burger-btn">
+        <svg class="icon-burger" width="22" height="22"><use href="#icon-burger"/></svg>
+        <svg class="icon-close" width="22" height="22"><use href="#icon-close"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="nav__mobile" id="mobile-menu">
+  <div class="nav__mobile-top">
+    <img src="../assets/img/clinchy-wordmark.png" alt="Clinchy" width="140" height="36">
+    <button class="nav__burger" type="button" aria-label="Close menu" id="mobile-close-btn">
+      <svg width="22" height="22"><use href="#icon-close"/></svg>
+    </button>
+  </div>
+  <nav class="nav__mobile-links" aria-label="Mobile navigation">
+    <a href="./fonctionnalites.html">Features</a>
+    <a href="./index.html#comment-ca-marche">How it works</a>
+    <a href="./tarifs.html">Pricing</a>
+    <a href="./index.html#faq">FAQ</a>
+    <a href="./support.html">Support</a>
+  </nav>
+  <div class="nav__mobile-foot">
+    <a class="btn btn--accent btn--block" href="./index.html#hero-download">Download Clinchy</a>
+  </div>
+</div>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero__grid">
+      <div>
+        <span class="eyebrow">🏠 Home · 💼 Work — you choose</span>
+        <h1 data-reveal>Chores, <span class="grad-text">marketplace</span> style.</h1>
+        <p class="lede" data-reveal>Post a mission, its value drops as long as nobody takes it. Whoever grabs it first pockets the points — and spends them in the reward shop you built together.</p>
+        <div class="hero__badges" id="hero-download" data-reveal>
+          <span class="store-badge-wrap">
+            <span class="store-badge store-badge--disabled" aria-disabled="true" title="Link to activate: fill in {{APPSTORE_URL}}">
+              <img src="../assets/img/badge-appstore-en.svg" alt="Download on the App Store" width="180" height="54" loading="eager" decoding="async">
+            </span>
+            <span class="store-badge__soon">Soon</span>
+          </span>
+          <span class="store-badge-wrap">
+            <span class="store-badge store-badge--disabled" aria-disabled="true" title="Link to activate: fill in {{PLAYSTORE_URL}}">
+              <img src="../assets/img/badge-googleplay-en.png" alt="Get it on Google Play" width="182" height="54" loading="eager" decoding="async">
+            </span>
+            <span class="store-badge__soon">Soon</span>
+          </span>
+        </div>
+        <p class="hero__fineprint" data-reveal>Free · no card required · 4 languages</p>
+      </div>
+      <div class="hero__visual" data-reveal>
+        <div class="phone phone--secondary" aria-hidden="true">
+          <div class="phone__notch"></div>
+          <div class="phone__screen">
+            <img src="../assets/screens/store.webp" alt="" width="300" height="610" loading="lazy" decoding="async">
+            <div class="phone__sheen"></div>
+          </div>
+        </div>
+        <div class="phone phone--primary">
+          <div class="phone__notch"></div>
+          <div class="phone__screen">
+            <img src="../assets/screens/market.webp" alt="Preview of the Marketplace in the Clinchy app: missions with decaying price and urgency badges" width="300" height="610" loading="eager" decoding="async" fetchpriority="high">
+            <div class="phone__sheen"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-cue" aria-hidden="true"><div class="scroll-cue__mouse"></div></div>
+  </section>
+
+  <!-- PROBLEM -->
+  <section class="section" aria-labelledby="problem-title">
+    <div class="container">
+      <h2 class="visually-hidden" id="problem-title">The problem with shared chores</h2>
+      <div class="problem-grid">
+        <div class="card problem-card" data-reveal>"Who took the trash out last time?"</div>
+        <div class="card problem-card" data-reveal>"The chore chart lasts three weeks, tops."</div>
+        <div class="card problem-card" data-reveal>"Reminders? Everyone ignores them."</div>
+      </div>
+      <p class="problem-conclusion" data-reveal>The problem isn't organization. It's motivation.</p>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section section--alt" id="comment-ca-marche" aria-labelledby="how-title">
+    <div class="container">
+      <div class="section-head section-head--center">
+        <span class="eyebrow">⚙️ The mechanic</span>
+        <h2 id="how-title">How it works</h2>
+        <p class="lede" style="margin-inline:auto">Four steps, and your missions organize themselves.</p>
+      </div>
+      <ol class="steps">
+        <li class="step" data-reveal>
+          <span class="step__num">1</span>
+          <h3>Post a mission</h3>
+          <p>Title, category, starting price, decay per step, decay interval, and a criticality level — you decide.</p>
+        </li>
+        <li class="step" data-reveal>
+          <span class="step__num">2</span>
+          <h3>The price drops on its own</h3>
+          <p>Step by step, as long as nobody takes it, it loses value. The urgency badge climbs.</p>
+        </li>
+        <li class="step" data-reveal>
+          <span class="step__num">3</span>
+          <h3>Whoever takes it first wins</h3>
+          <p>At the price shown at that exact moment. A swipe confirms it once it's done.</p>
+        </li>
+        <li class="step" data-reveal>
+          <span class="step__num">4</span>
+          <h3>Spend your points</h3>
+          <p>In the reward shop you built together: movie night, sleep-in, pick-the-restaurant…</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE DEMO -->
+  <section class="section" id="demo" aria-labelledby="demo-title">
+    <div class="container">
+      <div class="section-head section-head--center">
+        <span class="eyebrow">✨ Try it</span>
+        <h2 id="demo-title">Watch the price drop</h2>
+        <p class="lede" style="margin-inline:auto">This is exactly what your household sees, in real time.</p>
+      </div>
+      <div class="demo">
+        <div>
+          <div class="card mission-card" id="demo-card" data-reduced-motion="false">
+            <div class="mission-card__top">
+              <div>
+                <div class="mission-card__title">🧺 Hang the laundry</div>
+                <div class="mission-card__meta">
+                  <span>Laundry</span>
+                  <span aria-hidden="true">·</span>
+                  <span>The Smith household</span>
+                </div>
+              </div>
+              <span class="mission-card__badge" id="demo-badge">Chill</span>
+            </div>
+            <div class="mission-card__price-wrap">
+              <div class="mission-card__price" id="demo-price" aria-live="polite">30 pts</div>
+              <div class="mission-card__price-label">Current value</div>
+            </div>
+            <div class="mission-card__progress" aria-hidden="true">
+              <div class="mission-card__progress-bar" id="demo-progress-bar"></div>
+            </div>
+            <p class="mission-card__next" id="demo-next">Next −2 pts in 1.2s</p>
+            <button class="btn btn--accent mission-card__cta" id="demo-cta" type="button">Take it — 30 pts</button>
+            <div class="mission-card__status" id="demo-status" role="status">✅ Taken! +<span id="demo-earned">30</span> points</div>
+            <button class="btn btn--ghost mission-card__replay" id="demo-replay" type="button" hidden>🔁 Replay</button>
+          </div>
+          <div class="demo__reduced-controls" id="demo-reduced-controls">
+            <button class="btn btn--outline btn--sm" id="demo-step-btn" type="button">Simulate decay</button>
+          </div>
+        </div>
+        <div class="demo__side">
+          <div class="card demo__balance" data-reveal>
+            <div>
+              <div class="demo__balance-label">This week's balance</div>
+              <div class="demo__balance-value"><span id="demo-balance">128</span> pts</div>
+            </div>
+            <span style="font-size:2rem" aria-hidden="true">🪙</span>
+          </div>
+          <p class="demo__caption" data-reveal>Every step drops the value. The color follows urgency — green, amber, orange 🔥, then red 🚨 if nobody handles it. Whoever taps "Take it" first pockets the price shown at that instant.</p>
+          <p class="demo__caption" data-reveal>Your tap triggers confetti — a small, satisfying confirmation, just like in the app.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <canvas class="confetti-canvas" id="confetti-canvas" aria-hidden="true"></canvas>
+
+  <!-- MODES -->
+  <section class="section section--deep" id="modes" aria-labelledby="modes-title">
+    <div class="container">
+      <div class="section-head section-head--center">
+        <span class="eyebrow">🔀 One system, two vocabularies</span>
+        <h2 id="modes-title">Home or Work: you choose</h2>
+        <p class="lede" style="margin-inline:auto">When you create a space, you choose the vocabulary. Everything else in the product stays the same.</p>
+      </div>
+      <div class="mode-switch-wrap">
+        <div class="mode-switch" role="group" aria-label="Choose display mode">
+          <button class="mode-switch__btn" id="mode-home-btn" type="button" aria-pressed="true">🏠 Home</button>
+          <button class="mode-switch__btn" id="mode-work-btn" type="button" aria-pressed="false">💼 Work</button>
+        </div>
+      </div>
+      <p class="text-center" style="max-width:60ch;margin-inline:auto 40px">
+        In a <span data-mode-text data-mode-home="household" data-mode-work="team">household</span>, we talk about <span data-mode-text data-mode-home="Missions & Points" data-mode-work="Missions & Credits">Missions &amp; Points</span>. Same mechanic, different vocabulary.
+      </p>
+      <div class="mode-demo-grid">
+        <div class="card mode-demo-card" data-reveal>
+          <div class="mode-demo-card__label">Sample mission</div>
+          <div class="mode-demo-card__value" data-mode-text data-mode-home="🧺 Hang the laundry — 24 pts" data-mode-work="📊 Prepare the report — 40 credits">🧺 Hang the laundry — 24 pts</div>
+        </div>
+        <div class="card mode-demo-card" data-reveal>
+          <div class="mode-demo-card__label">Sample reward</div>
+          <div class="mode-demo-card__value" data-mode-text data-mode-home="🎬 Pick tonight's movie — 60 pts" data-mode-work="☕ Afternoon off — 90 credits">🎬 Pick tonight's movie — 60 pts</div>
+        </div>
+        <div class="card mode-demo-card" data-reveal>
+          <div class="mode-demo-card__label">Typical space</div>
+          <div class="mode-demo-card__value" data-mode-text data-mode-home="Couple, shared house, family" data-mode-work="Startup, project team">Couple, shared house, family</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES BENTO -->
+  <section class="section" id="fonctionnalites" aria-labelledby="bento-title">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">🧩 All of Clinchy</span>
+        <h2 id="bento-title">One app, one complete system</h2>
+        <p class="lede">The full detail of every feature is on the <a href="./fonctionnalites.html" style="color:var(--accent-bright);text-decoration:underline">dedicated page</a>.</p>
+      </div>
+      <div class="bento">
+        <article class="bento-item bento-item--lg card" data-reveal>
+          <div class="bento-item__icon" aria-hidden="true">🛒</div>
+          <h3>The Marketplace</h3>
+          <p>Filter by To take, In progress, Done. Decaying value, color-coded urgency, one-tap claiming.</p>
+          <div class="bento-viz" aria-hidden="true">
+            <div class="bento-viz__bar"><span style="width:78%;background:var(--up)"></span></div>
+            <div class="bento-viz__bar"><span style="width:46%;background:var(--warm)"></span></div>
+            <div class="bento-viz__bar"><span style="width:20%;background:var(--hot)"></span></div>
+          </div>
+        </article>
+        <article class="bento-item bento-item--lg card" data-reveal>
+          <div class="bento-item__icon" aria-hidden="true">🎁</div>
+          <h3>The Shop</h3>
+          <p>Rewards created by the group: limited or unlimited stock, some time-limited, guardrails at creation.</p>
+          <div class="bento-viz bento-viz--chips" aria-hidden="true">
+            <span class="bento-viz__chip">🎬 60 pts</span>
+            <span class="bento-viz__chip">🛌 45 pts</span>
+            <span class="bento-viz__chip">🍕 80 pts</span>
+          </div>
+        </article>
+        <article class="bento-item bento-item--md card" data-reveal>
+          <span class="bento-item__pro">PRO</span>
+          <div class="bento-item__icon" aria-hidden="true">🧭</div>
+          <h3>Smart Planner</h3>
+          <p>Analyzes 4 weeks of history and suggests a balanced split of missions between members.</p>
+        </article>
+        <article class="bento-item bento-item--md card" data-reveal>
+          <div class="bento-item__icon" aria-hidden="true">🔁</div>
+          <h3>Detected routines</h3>
+          <p>"Every Tuesday", "every other Saturday": Clinchy spots your habits and schedules them for you.</p>
+        </article>
+        <article class="bento-item card" data-reveal>
+          <span class="bento-item__pro">PRO</span>
+          <div class="bento-item__icon" aria-hidden="true">📊</div>
+          <h3>Statistics</h3>
+          <p>Productivity score, most active day, CSV export.</p>
+        </article>
+        <article class="bento-item card" data-reveal>
+          <span class="bento-item__pro">PRO</span>
+          <div class="bento-item__icon" aria-hidden="true">🍅</div>
+          <h3>Pomodoro + Live Activity</h3>
+          <p>Timer on the lock screen and the Dynamic Island.</p>
+        </article>
+        <article class="bento-item card" data-reveal>
+          <span class="bento-item__pro">PRO</span>
+          <div class="bento-item__icon" aria-hidden="true">🧸</div>
+          <h3>Kid Mode</h3>
+          <p>Giant interface, stars, exit approved by a parent.</p>
+        </article>
+        <article class="bento-item card" data-reveal>
+          <span class="bento-item__pro">PRO</span>
+          <div class="bento-item__icon" aria-hidden="true">🧩</div>
+          <h3>Android widget</h3>
+          <p>The state of the marketplace right on your home screen.</p>
+        </article>
+        <article class="bento-item card" data-reveal>
+          <div class="bento-item__icon" aria-hidden="true">🔔</div>
+          <h3>Smart notifications</h3>
+          <p>Value drops, upcoming deadlines, streak reminders.</p>
+        </article>
+        <article class="bento-item card" data-reveal>
+          <div class="bento-item__icon" aria-hidden="true">📅</div>
+          <h3>iOS Calendar &amp; Reminders</h3>
+          <p>Add a mission to your calendar in one tap.</p>
+        </article>
+        <article class="bento-item card" data-reveal>
+          <div class="bento-item__icon" aria-hidden="true">🏆</div>
+          <h3>Global leaderboard</h3>
+          <p>"Around me" and "Top worldwide", on top of your space's leaderboard.</p>
+        </article>
+        <article class="bento-item card" data-reveal>
+          <span class="bento-item__pro">PRO</span>
+          <div class="bento-item__icon" aria-hidden="true">🎨</div>
+          <h3>Themes &amp; sounds</h3>
+          <p>Clay, Gold, Neon, 8-bit — try them at the bottom of this page.</p>
+        </article>
+        <article class="bento-item card" data-reveal>
+          <div class="bento-item__icon" aria-hidden="true">📚</div>
+          <h3>Libraries</h3>
+          <p>Dozens of ready-made missions and rewards, sorted by category.</p>
+        </article>
+        <article class="bento-item card" data-reveal>
+          <div class="bento-item__icon" aria-hidden="true">🌍</div>
+          <h3>4 languages</h3>
+          <p>French, English, Spanish, German — detected automatically.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- GAMIFICATION -->
+  <section class="section section--deep" id="gamification" aria-labelledby="gamify-title">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">🔥 The rhythm</span>
+        <h2 id="gamify-title">Spend it, or bank it — never both</h2>
+      </div>
+      <div class="gamify">
+        <div class="stack">
+          <p class="lede">Your <strong>XP</strong> never drops: every completed mission earns you some, whether it's worth 3 or 30 points. Your <strong>levels</strong> climb through increasingly steep tiers. Your <strong>streak 🔥</strong> holds as long as you complete at least one mission a day — a reminder pings you in the evening if it's at risk.</p>
+          <div class="gamify__points">
+            <span class="pill">🪙 Unspent points</span>
+            <span class="gamify__arrow" aria-hidden="true">→</span>
+            <span class="pill">⭐ Converted to XP (1:1)</span>
+          </div>
+          <p class="lede">Every <strong>Monday at 00:00</strong> (local time), the spendable balance resets to zero. Nothing is lost: unspent points become XP. But they lose all purchasing power — hoarding never paid anyone's bills. A countdown warns you starting Sunday at 8pm.</p>
+        </div>
+        <div class="card" data-reveal>
+          <h3 style="margin-bottom:18px">⏳ Resets in</h3>
+          <div class="countdown" id="reset-countdown" aria-live="off">
+            <div class="clay--sunken countdown__unit"><div class="countdown__num" id="cd-days">–</div><div class="countdown__label">days</div></div>
+            <div class="clay--sunken countdown__unit"><div class="countdown__num" id="cd-hours">–</div><div class="countdown__label">hours</div></div>
+            <div class="clay--sunken countdown__unit"><div class="countdown__num" id="cd-mins">–</div><div class="countdown__label">min</div></div>
+            <div class="clay--sunken countdown__unit"><div class="countdown__num" id="cd-secs">–</div><div class="countdown__label">sec</div></div>
+          </div>
+          <p style="margin-top:18px;color:var(--text-muted);font-size:0.88rem">Calculated from your device's clock, up to Monday 00:00.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- USE CASES -->
+  <section class="section" id="cas-usage" aria-labelledby="usecases-title">
+    <div class="container">
+      <div class="section-head section-head--center">
+        <span class="eyebrow">👥 Who it's for</span>
+        <h2 id="usecases-title">One system, four settings</h2>
+      </div>
+      <div class="usecases">
+        <article class="card usecase-card" data-reveal>
+          <span class="usecase-card__emoji" aria-hidden="true">💑</span>
+          <h3>As a couple</h3>
+          <p>No more silent "it's always me". Missions speak for you, and split themselves fairly.</p>
+          <div class="usecase-card__example"><b>Mission:</b> Weekly grocery run — 22 pts<br><b>Reward:</b> You pick tonight's movie — 15 pts</div>
+        </article>
+        <article class="card usecase-card" data-reveal>
+          <span class="usecase-card__emoji" aria-hidden="true">🏠</span>
+          <h3>In a shared house</h3>
+          <p>One shared space, one invite code, and no more nagging people on the group chat.</p>
+          <div class="usecase-card__example"><b>Mission:</b> Take out the trash — 9 pts<br><b>Reward:</b> Bathroom all to yourself this morning — 20 pts</div>
+        </article>
+        <article class="card usecase-card" data-reveal>
+          <span class="usecase-card__emoji" aria-hidden="true">👨‍👩‍👧</span>
+          <h3>As a family</h3>
+          <p>Kid Mode 🧸 turns chores into a game for the little ones, with a parent-approved exit.</p>
+          <div class="usecase-card__example"><b>Mission:</b> Put away the toys — 5 ⭐<br><b>Reward:</b> 1h of console time — 25 ⭐</div>
+        </article>
+        <article class="card usecase-card" data-reveal>
+          <span class="usecase-card__emoji" aria-hidden="true">🚀</span>
+          <h3>As a team / startup</h3>
+          <p>Work mode: missions and credits. The team's least loved tasks finally find takers, no dedicated meeting required.</p>
+          <div class="usecase-card__example"><b>Mission:</b> Prepare the report — 40 credits<br><b>Reward:</b> Afternoon off — 90 credits</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCREENSHOTS -->
+  <section class="section section--alt" id="captures" aria-labelledby="screens-title">
+    <div class="container">
+      <div class="section-head section-head--center">
+        <span class="eyebrow">📱 In pictures</span>
+        <h2 id="screens-title">A look inside the app</h2>
+      </div>
+      <div class="carousel">
+        <ul class="carousel__track" id="carousel-track" tabindex="0" aria-label="Clinchy app screenshots">
+          <li class="carousel__item">
+            <div class="phone carousel__phone"><div class="phone__notch"></div><div class="phone__screen"><img src="../assets/screens/market.webp" alt="The Marketplace: list of missions with decaying prices" width="300" height="610" loading="lazy" decoding="async"></div></div>
+            <p class="carousel__caption">The Marketplace</p>
+          </li>
+          <li class="carousel__item">
+            <div class="phone carousel__phone"><div class="phone__notch"></div><div class="phone__screen"><img src="../assets/screens/store.webp" alt="The Shop: rewards to redeem with points" width="300" height="610" loading="lazy" decoding="async"></div></div>
+            <p class="carousel__caption">The Shop</p>
+          </li>
+          <li class="carousel__item">
+            <div class="phone carousel__phone"><div class="phone__notch"></div><div class="phone__screen"><img src="../assets/screens/activity.webp" alt="Real-time activity feed for the space" width="300" height="610" loading="lazy" decoding="async"></div></div>
+            <p class="carousel__caption">Live activity</p>
+          </li>
+          <li class="carousel__item">
+            <div class="phone carousel__phone"><div class="phone__notch"></div><div class="phone__screen"><img src="../assets/screens/stats.webp" alt="Statistics and productivity score" width="300" height="610" loading="lazy" decoding="async"></div></div>
+            <p class="carousel__caption">Statistics</p>
+          </li>
+          <li class="carousel__item">
+            <div class="phone carousel__phone"><div class="phone__notch"></div><div class="phone__screen"><img src="../assets/screens/pomodoro.webp" alt="Built-in Pomodoro timer above in-progress missions" width="300" height="610" loading="lazy" decoding="async"></div></div>
+            <p class="carousel__caption">Built-in Pomodoro</p>
+          </li>
+          <li class="carousel__item">
+            <div class="phone carousel__phone"><div class="phone__notch"></div><div class="phone__screen"><img src="../assets/screens/kid-mode.webp" alt="Kid Mode with a giant interface and stars" width="300" height="610" loading="lazy" decoding="async"></div></div>
+            <p class="carousel__caption">Kid Mode 🧸</p>
+          </li>
+          <li class="carousel__item">
+            <div class="phone carousel__phone"><div class="phone__notch"></div><div class="phone__screen"><img src="../assets/screens/profile.webp" alt="Profile with level, XP and current streak" width="300" height="610" loading="lazy" decoding="async"></div></div>
+            <p class="carousel__caption">Profile &amp; progress</p>
+          </li>
+          <li class="carousel__item">
+            <div class="phone carousel__phone"><div class="phone__notch"></div><div class="phone__screen"><img src="../assets/screens/paywall.webp" alt="Premium subscription screen" width="300" height="610" loading="lazy" decoding="async"></div></div>
+            <p class="carousel__caption">Going Premium</p>
+          </li>
+        </ul>
+        <div class="carousel__nav">
+          <button class="carousel__btn" id="carousel-prev" type="button" aria-label="Previous screenshot"><svg width="18" height="18"><use href="#icon-chevron-left"/></svg></button>
+          <button class="carousel__btn" id="carousel-next" type="button" aria-label="Next screenshot"><svg width="18" height="18"><use href="#icon-chevron-right"/></svg></button>
+        </div>
+        <div class="carousel__dots" id="carousel-dots" aria-hidden="true"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="section" id="tarifs" aria-labelledby="pricing-title">
+    <div class="container">
+      <div class="section-head section-head--center">
+        <span class="eyebrow">👑 Pricing</span>
+        <h2 id="pricing-title">Free to start, Premium to go further</h2>
+      </div>
+      <div class="pricing-grid">
+        <div class="card price-card" data-reveal>
+          <div class="price-card__name">Free</div>
+          <div class="price-card__price">$0</div>
+          <ul class="price-card__list">
+            <li><svg width="18" height="18"><use href="#icon-check"/></svg> 2 spaces max</li>
+            <li><svg width="18" height="18"><use href="#icon-check"/></svg> 6 members per space</li>
+            <li><svg width="18" height="18"><use href="#icon-check"/></svg> 10 active missions</li>
+            <li><svg width="18" height="18"><use href="#icon-check"/></svg> Libraries &amp; shop</li>
+            <li><svg width="18" height="18"><use href="#icon-check"/></svg> Ads included</li>
+          </ul>
+          <a class="btn btn--outline btn--block" href="./tarifs.html">See the details</a>
+        </div>
+        <div class="card price-card price-card--featured" data-reveal>
+          <span class="price-card__badge">Popular</span>
+          <div class="price-card__name">Pro</div>
+          <div class="price-card__price">{{PRICE_PRO}} <span>/ month</span></div>
+          <ul class="price-card__list">
+            <li><svg width="18" height="18"><use href="#icon-check"/></svg> Unlimited spaces &amp; missions</li>
+            <li><svg width="18" height="18"><use href="#icon-check"/></svg> Up to 50 members</li>
+            <li><svg width="18" height="18"><use href="#icon-check"/></svg> Zero ads</li>
+            <li><svg width="18" height="18"><use href="#icon-check"/></svg> Statistics + CSV export</li>
+            <li><svg width="18" height="18"><use href="#icon-check"/></svg> Gold, Neon, 8-bit themes</li>
+          </ul>
+          <a class="btn btn--accent btn--block" href="./tarifs.html">See the details</a>
+        </div>
+        <div class="card price-card" data-reveal>
+          <div class="price-card__name">Family</div>
+          <div class="price-card__price">{{PRICE_FAMILY}} <span>/ month</span></div>
+          <ul class="price-card__list">
+            <li><svg width="18" height="18"><use href="#icon-check"/></svg> Everything in Pro, shared</li>
+            <li><svg width="18" height="18"><use href="#icon-check"/></svg> Parent / Kid mode 🧸</li>
+            <li><svg width="18" height="18"><use href="#icon-check"/></svg> Live Activities &amp; widget</li>
+            <li><svg width="18" height="18"><use href="#icon-check"/></svg> Ideal for the whole family</li>
+          </ul>
+          <a class="btn btn--outline btn--block" href="./tarifs.html">See the details</a>
+        </div>
+      </div>
+      <div class="price-callout" data-reveal>
+        <span class="price-callout__emoji" aria-hidden="true">💡</span>
+        <div>
+          <strong style="font-family:var(--font-display)">One subscriber is enough.</strong>
+          <p style="margin-top:6px">If a space's admin is Premium, the whole space gets 50 members and unlimited missions. Free members keep their ads and hidden statistics.</p>
+        </div>
+      </div>
+      <p class="legal-note">Subscription automatically renews, cancel anytime from your App Store / Google Play account settings. Full details on the <a href="./tarifs.html" style="color:var(--accent-bright)">pricing page</a>.</p>
+    </div>
+  </section>
+
+  <!-- PERSONALIZATION / THEMES -->
+  <section class="section section--deep" id="personnalisation" aria-labelledby="theme-title">
+    <div class="container">
+      <div class="section-head section-head--center">
+        <span class="eyebrow">🎨 Personalization</span>
+        <h2 id="theme-title">Try the app's themes</h2>
+        <p class="lede" style="margin-inline:auto">Themes are subscriber-only in the app — try them right here on the site.</p>
+      </div>
+      <div class="theme-picker" role="group" aria-label="Choose a theme">
+        <button class="theme-swatch" data-theme-btn="clay" type="button" aria-pressed="true">
+          <span class="theme-swatch__dot" style="background:linear-gradient(135deg,#A78BFF,#6D4DEB)"></span>
+          <span class="theme-swatch__label">Clay 🫧</span>
+        </button>
+        <button class="theme-swatch" data-theme-btn="gold" type="button" aria-pressed="false">
+          <span class="theme-swatch__dot" style="background:linear-gradient(135deg,#F5D77A,#B8901A)"></span>
+          <span class="theme-swatch__label">Gold 👑</span>
+        </button>
+        <button class="theme-swatch" data-theme-btn="neon" type="button" aria-pressed="false">
+          <span class="theme-swatch__dot" style="background:linear-gradient(135deg,#7DF3FF,#00A8BD)"></span>
+          <span class="theme-swatch__label">Neon ⚡</span>
+        </button>
+        <button class="theme-swatch" data-theme-btn="8bit" type="button" aria-pressed="false">
+          <span class="theme-swatch__dot" style="background:linear-gradient(135deg,#D08CFF,#8A2FD1)"></span>
+          <span class="theme-swatch__label">8-bit 🕹️</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq" aria-labelledby="faq-title">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">❓ FAQ</span>
+        <h2 id="faq-title">What people ask us the most</h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Is it free? <span class="faq-item__icon" aria-hidden="true"><svg width="14" height="14"><use href="#icon-plus"/></svg></span></summary>
+          <div class="faq-item__body"><p>Yes. The free plan supports up to 2 spaces, 6 members per space and 10 active missions (+1 per ad watched). Premium unlocks the rest.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Does everyone need to pay? <span class="faq-item__icon" aria-hidden="true"><svg width="14" height="14"><use href="#icon-plus"/></svg></span></summary>
+          <div class="faq-item__body"><p>No. Just one subscriber is enough: if the space's admin is Premium, the whole space benefits (up to 50 members, unlimited missions). Free members keep their ads and hidden statistics.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>How are points calculated? <span class="faq-item__icon" aria-hidden="true"><svg width="14" height="14"><use href="#icon-plus"/></svg></span></summary>
+          <div class="faq-item__body"><p>Each mission has a starting price that loses value in steps as long as nobody takes it, based on an interval and a decay amount the creator chooses. Whoever takes it first earns the price shown at that moment.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>What happens if nobody takes a mission? <span class="faq-item__icon" aria-hidden="true"><svg width="14" height="14"><use href="#icon-plus"/></svg></span></summary>
+          <div class="faq-item__body"><p>Its value keeps dropping until it turns negative: it then becomes a penalty, a strong signal for someone to handle it quickly.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Why are my points reset every Monday? <span class="faq-item__icon" aria-hidden="true"><svg width="14" height="14"><use href="#icon-plus"/></svg></span></summary>
+          <div class="faq-item__body"><p>Every Monday at 00:00 (local time), the spendable balance resets to zero and unspent points convert to XP at a 1:1 rate. Nothing is lost, but you have to spend to benefit: hoarding gives you no purchasing power.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Does it work for an 8-person shared house? <span class="faq-item__icon" aria-hidden="true"><svg width="14" height="14"><use href="#icon-plus"/></svg></span></summary>
+          <div class="faq-item__body"><p>On the free plan, a space supports up to 6 members. With a Premium admin, the space scales to 50 members — plenty for a large shared house.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Can my kids use it? <span class="faq-item__icon" aria-hidden="true"><svg width="14" height="14"><use href="#icon-plus"/></svg></span></summary>
+          <div class="faq-item__body"><p>Yes, through Kid Mode 🧸: a simplified interface with stars, inside a parent's account who stays in control. Exiting Kid Mode requires a long-press and a parent's approval.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Does it work offline / across multiple households? <span class="faq-item__icon" aria-hidden="true"><svg width="14" height="14"><use href="#icon-plus"/></svg></span></summary>
+          <div class="faq-item__body"><p>A single account can belong to several spaces (household, shared house, team) and switch between them. The app needs a connection to sync activity between members in real time.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>How do I invite someone? <span class="faq-item__icon" aria-hidden="true"><svg width="14" height="14"><use href="#icon-plus"/></svg></span></summary>
+          <div class="faq-item__body"><p>With an invite code (e.g. HOME42) or a shareable link. The join request then needs to be approved by an existing member of the space, in real time.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>How do I delete my account? <span class="faq-item__icon" aria-hidden="true"><svg width="14" height="14"><use href="#icon-plus"/></svg></span></summary>
+          <div class="faq-item__body"><p>From the app (Profile → Settings → Delete my account) or, if you no longer have the app, through the public form on the <a href="./suppression-compte.html">account deletion page</a>.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-band" data-reveal>
+        <img class="cta-band__logo" src="../assets/img/clinchy-wordmark.png" alt="Clinchy" width="170" height="44">
+        <h2>Tonight, someone's finally emptying the dishwasher.</h2>
+        <p>Free, no commitment.</p>
+        <div class="cta-band__badges">
+          <span class="store-badge-wrap">
+            <span class="store-badge store-badge--disabled" aria-disabled="true" title="Link to activate: fill in {{APPSTORE_URL}}">
+              <img src="../assets/img/badge-appstore-en.svg" alt="Download on the App Store" width="180" height="54" loading="lazy" decoding="async">
+            </span>
+            <span class="store-badge__soon">Soon</span>
+          </span>
+          <span class="store-badge-wrap">
+            <span class="store-badge store-badge--disabled" aria-disabled="true" title="Link to activate: fill in {{PLAYSTORE_URL}}">
+              <img src="../assets/img/badge-googleplay-en.png" alt="Get it on Google Play" width="182" height="54" loading="lazy" decoding="async">
+            </span>
+            <span class="store-badge__soon">Soon</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <img src="../assets/img/clinchy-wordmark.png" alt="Clinchy" width="130" height="34">
+        <p>Manage your chores. Earn rewards. The app that turns shared chores into a mission marketplace.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="./fonctionnalites.html">Features</a></li>
+          <li><a href="./tarifs.html">Pricing</a></li>
+          <li><a href="./index.html#captures">Screenshots</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Help</h4>
+        <ul>
+          <li><a href="./support.html">Support</a></li>
+          <li><a href="./index.html#faq">FAQ</a></li>
+          <li><a href="./support.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="./confidentialite.html">Privacy</a></li>
+          <li><a href="./conditions.html">Terms of use</a></li>
+          <li><a href="./suppression-compte.html">Delete account</a></li>
+          <li><a href="./mentions-legales.html">Legal notice</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__col" style="margin-bottom:32px">
+      <div class="switcher-group">
+        <span class="switcher-label">Language</span>
+        <div class="switcher-row">
+          <a class="switcher-btn" href="../index.html">FR</a>
+          <a class="switcher-btn" href="./index.html" aria-current="true">EN</a>
+        </div>
+      </div>
+      <div class="switcher-group">
+        <span class="switcher-label">Theme</span>
+        <div class="switcher-row" role="group" aria-label="Choose a theme">
+          <button class="switcher-btn" data-theme-btn="clay" type="button" aria-pressed="true">Clay 🫧</button>
+          <button class="switcher-btn" data-theme-btn="gold" type="button" aria-pressed="false">Gold 👑</button>
+          <button class="switcher-btn" data-theme-btn="neon" type="button" aria-pressed="false">Neon ⚡</button>
+          <button class="switcher-btn" data-theme-btn="8bit" type="button" aria-pressed="false">8-bit 🕹️</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2026 Clinchy — All rights reserved.</p>
+      <p>Clinchy is not affiliated with Apple or Google.</p>
+      <p>App Store is a trademark of Apple Inc. Google Play and the Google Play logo are trademarks of Google LLC.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

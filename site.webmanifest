@@ -1,0 +1,25 @@
+{
+  "name": "Clinchy — Gère tes missions. Gagne des récompenses.",
+  "short_name": "Clinchy",
+  "description": "Clinchy transforme les tâches partagées en marché de missions dont la valeur décote avec le temps.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "lang": "fr",
+  "theme_color": "#13111E",
+  "background_color": "#13111E",
+  "icons": [
+    {
+      "src": "./assets/img/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./assets/img/favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

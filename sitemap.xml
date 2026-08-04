@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+    <loc>https://{{DOMAIN}}/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://{{DOMAIN}}/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://{{DOMAIN}}/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://{{DOMAIN}}/"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://{{DOMAIN}}/fonctionnalites.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://{{DOMAIN}}/fonctionnalites.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://{{DOMAIN}}/en/fonctionnalites.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://{{DOMAIN}}/fonctionnalites.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://{{DOMAIN}}/tarifs.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://{{DOMAIN}}/tarifs.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://{{DOMAIN}}/en/tarifs.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://{{DOMAIN}}/tarifs.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://{{DOMAIN}}/support.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://{{DOMAIN}}/support.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://{{DOMAIN}}/en/support.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://{{DOMAIN}}/support.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://{{DOMAIN}}/suppression-compte.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://{{DOMAIN}}/suppression-compte.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://{{DOMAIN}}/en/suppression-compte.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://{{DOMAIN}}/suppression-compte.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://{{DOMAIN}}/confidentialite.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://{{DOMAIN}}/confidentialite.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://{{DOMAIN}}/en/confidentialite.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://{{DOMAIN}}/confidentialite.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://{{DOMAIN}}/conditions.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://{{DOMAIN}}/conditions.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://{{DOMAIN}}/en/conditions.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://{{DOMAIN}}/conditions.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://{{DOMAIN}}/mentions-legales.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://{{DOMAIN}}/mentions-legales.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://{{DOMAIN}}/en/mentions-legales.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://{{DOMAIN}}/mentions-legales.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://{{DOMAIN}}/en/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://{{DOMAIN}}/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://{{DOMAIN}}/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://{{DOMAIN}}/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://{{DOMAIN}}/en/fonctionnalites.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://{{DOMAIN}}/fonctionnalites.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://{{DOMAIN}}/en/fonctionnalites.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://{{DOMAIN}}/fonctionnalites.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://{{DOMAIN}}/en/tarifs.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://{{DOMAIN}}/tarifs.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://{{DOMAIN}}/en/tarifs.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://{{DOMAIN}}/tarifs.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://{{DOMAIN}}/en/support.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://{{DOMAIN}}/support.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://{{DOMAIN}}/en/support.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://{{DOMAIN}}/support.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://{{DOMAIN}}/en/suppression-compte.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://{{DOMAIN}}/suppression-compte.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://{{DOMAIN}}/en/suppression-compte.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://{{DOMAIN}}/suppression-compte.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://{{DOMAIN}}/en/confidentialite.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://{{DOMAIN}}/confidentialite.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://{{DOMAIN}}/en/confidentialite.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://{{DOMAIN}}/confidentialite.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://{{DOMAIN}}/en/conditions.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://{{DOMAIN}}/conditions.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://{{DOMAIN}}/en/conditions.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://{{DOMAIN}}/conditions.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://{{DOMAIN}}/en/mentions-legales.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://{{DOMAIN}}/mentions-legales.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://{{DOMAIN}}/en/mentions-legales.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://{{DOMAIN}}/mentions-legales.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>

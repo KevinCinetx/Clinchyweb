@@ -1,0 +1,14 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "{{APPLE_TEAM_ID}}.com.kevinihoua.clinchy",
+        "paths": ["/join", "/join.html", "/join.html?*", "/join?*"]
+      }
+    ]
+  },
+  "webcredentials": {
+    "apps": ["{{APPLE_TEAM_ID}}.com.kevinihoua.clinchy"]
+  }
+}
