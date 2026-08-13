@@ -120,22 +120,6 @@
     });
   }
 
-  /* ---------- Mode switch (Maison / Travail) ---------- */
-  var modeHomeBtn = document.getElementById("mode-home-btn");
-  var modeWorkBtn = document.getElementById("mode-work-btn");
-  var modeTexts = document.querySelectorAll("[data-mode-text]");
-  function setMode(mode) {
-    modeTexts.forEach(function (el) {
-      el.textContent = mode === "home" ? el.getAttribute("data-mode-home") : el.getAttribute("data-mode-work");
-    });
-    if (modeHomeBtn) modeHomeBtn.setAttribute("aria-pressed", String(mode === "home"));
-    if (modeWorkBtn) modeWorkBtn.setAttribute("aria-pressed", String(mode === "work"));
-  }
-  if (modeHomeBtn && modeWorkBtn) {
-    modeHomeBtn.addEventListener("click", function () { setMode("home"); });
-    modeWorkBtn.addEventListener("click", function () { setMode("work"); });
-  }
-
   /* ---------- Weekly reset countdown (Monday 00:00 local) ---------- */
   var cdDays = document.getElementById("cd-days");
   if (cdDays) {
@@ -298,7 +282,7 @@
       priceEl.style.color = "var(" + st.varName + ")";
       badgeEl.textContent = st.badge;
       badgeEl.style.color = "var(" + st.varName + ")";
-      ctaBtn.textContent = price >= 0 ? "Prendre — " + price + " pts" : "Prendre quand même — " + price + " pts";
+      ctaBtn.textContent = price >= 0 ? "Prendre · " + price + " pts" : "Prendre quand même · " + price + " pts";
     }
 
     function updateProgress() {
@@ -534,7 +518,7 @@
         if (fallback) fallback.hidden = false;
       }, 1500);
     } else {
-      joinCodeEl.textContent = "—";
+      joinCodeEl.textContent = "–";
       if (fallback) fallback.hidden = false;
     }
   }

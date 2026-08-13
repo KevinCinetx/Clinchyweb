@@ -9,8 +9,8 @@ Toutes les variables `{{…}}` du dépôt doivent être remplacées avant mise e
 définitive. Fais une recherche globale (`grep -rn "{{" .` depuis la racine du dépôt)
 pour vérifier qu'il n'en reste aucune une fois cette liste traitée.
 
-- [ ] `{{DOMAIN}}` — nom de domaine du site, ex. `clinchy.app` (utilisé dans les balises
-      canonical, OG, JSON-LD, `robots.txt`, `sitemap.xml`)
+- [x] `{{DOMAIN}}` — résolu : `getclinchy.com` (déjà remplacé partout, `CNAME` créé,
+      DNS configuré chez OVH)
 - [ ] `{{APPSTORE_URL}}` — lien App Store. Tant qu'il est vide, les badges affichent
       « Bientôt » (voir § Badges de stores)
 - [ ] `{{PLAYSTORE_URL}}` — lien Google Play. Même comportement que ci-dessus.
@@ -21,8 +21,6 @@ pour vérifier qu'il n'en reste aucune une fois cette liste traitée.
 - [ ] `{{PUBLISHER_ADDRESS}}` — adresse postale de l'éditeur
 - [ ] `{{SIRET}}` — si applicable
 - [ ] `{{JURISDICTION}}` — droit applicable, ex. `France`
-- [ ] `{{PRICE_PRO}}` — prix de l'abonnement Pro, ex. `4,99 €`
-- [ ] `{{PRICE_FAMILY}}` — prix de l'abonnement Family, ex. `7,99 €`
 - [ ] `{{MIN_AGE}}` — âge minimum, ex. `13`
 - [ ] `{{DELETION_SLA_DAYS}}` — délai de traitement d'une demande, ex. `30`
 - [ ] `{{RETENTION_MONTHS}}` — durée de conservation résiduelle, ex. `12`
@@ -46,25 +44,27 @@ clair, pas un avis juridique.**
 
 ---
 
-## 🚀 Déployer sur GitHub Pages
+## 🚀 Déploiement sur GitHub Pages
 
+Déjà en place pour ce dépôt : poussé sur `github.com/KevinCinetx/Clinchyweb`
+(branche `main`), domaine personnalisé `getclinchy.com` configuré (fichier `CNAME` +
+DNS chez OVH : 4 enregistrements `A` sur la racine vers les IPs GitHub Pages, plus
+une redirection `www` → racine). Reste à activer **Settings → Pages → Enforce
+HTTPS** une fois que GitHub a validé le DNS.
+
+Pour redéployer ailleurs ou repartir de zéro :
 1. Pousse ce dépôt sur GitHub (branche `main` par défaut).
 2. Dans **Settings → Pages** du dépôt, choisis la source **Deploy from a branch**,
    branche `main`, dossier `/ (root)`.
 3. Le fichier `.nojekyll` à la racine est indispensable : sans lui, GitHub Pages
    utilise Jekyll par défaut et peut ignorer les dossiers commençant par un
    underscore ou mal servir `.well-known/`. Ne le supprime pas.
-4. **Domaine personnalisé (optionnel) :** si tu veux un domaine du type
-   `www.clinchy.app` plutôt que `usera.github.io/clinchy/`, crée un fichier `CNAME`
-   à la racine du dépôt contenant uniquement ton nom de domaine (une ligne, sans
-   `http://`, ex. `clinchy.app`), puis configure un enregistrement DNS `CNAME` (ou
-   `A`) chez ton registrar pointant vers GitHub Pages. Ce fichier `CNAME` n'est pas
-   inclus dans ce dépôt car il doit contenir un domaine réel, pas la variable
-   `{{DOMAIN}}` — remplace `{{DOMAIN}}` partout dans le site par ce même domaine.
-5. Si tu déploies sans domaine personnalisé (sur `usera.github.io/clinchy/`), tous
-   les chemins du site sont relatifs (`./assets/…`) : aucune modification
-   supplémentaire n'est nécessaire.
-6. Attends quelques minutes puis vérifie `https://<ton-domaine>/index.html`.
+4. **Domaine personnalisé :** le fichier `CNAME` à la racine contient déjà
+   `getclinchy.com`. Pour changer de domaine, remplace son contenu par le nouveau
+   nom de domaine (une ligne, sans `http://`), puis mets à jour les DNS chez ton
+   registrar (4 `A` sur la racine vers `185.199.108.153`, `.109.153`, `.110.153`,
+   `.111.153`, plus un `CNAME` `www` vers `<compte>.github.io.`).
+5. Attends quelques minutes puis vérifie `https://getclinchy.com/index.html`.
 
 ---
 
@@ -85,19 +85,27 @@ partir des nouveaux fichiers sources, avec l'outil de ton choix (ImageMagick,
 Squoosh, Figma…).
 
 ### Captures d'écran
-`assets/screens/*.webp` sont des **maquettes stylisées générées pour ce livrable**
+`assets/screens/*.png` sont des **maquettes stylisées générées pour ce livrable**
 (pas de vraies captures de l'app), aux dimensions attendues (1290 × 2796, plus une
-variante `@1x` à moitié résolution pour le `srcset`). Remplace-les par de vraies
-captures du simulateur iOS ou d'un appareil Android, en conservant exactement les
-mêmes noms de fichiers :
+variante `@1x` à moitié résolution pour le `srcset`). Remplace-les par les vraies
+captures de l'app (fond transparent, sans bezel de téléphone — le site ajoute déjà
+son propre cadre en CSS autour de chaque image), en conservant exactement les mêmes
+noms de fichiers :
 
 ```
-market.webp   store.webp   activity.webp   stats.webp
-pomodoro.webp kid-mode.webp profile.webp   paywall.webp
+market.png   shop.png    activity.png  pomodoro.png  planner.png
+stats.png    equity.png  kid.png       family.png
 ```
 
-Génère aussi la variante `@1x` (moitié résolution, ex. `market@1x.webp`) pour
-chaque nouvelle capture si tu veux garder le `srcset` 1x/2x utilisé dans le carrousel.
+Génère aussi la variante `@1x` (moitié résolution, ex. `market@1x.png`) pour chaque
+nouvelle capture si tu veux garder le `srcset` 1x/2x utilisé dans le carrousel.
+
+**À faire dès que les 9 captures réelles sont disponibles :** les déposer dans
+`assets/screens/` avec ces noms exacts (elles remplacent directement les
+placeholders, aucune modification de code nécessaire). Deux emplacements attendent
+encore une image dédiée sans y en avoir une : Widget Android et Dynamic Island seuls
+utilisent volontairement une icône générique plutôt qu'un faux écran, en attendant
+de vraies captures.
 
 ### Badges App Store / Google Play
 `assets/img/badge-appstore-fr.svg`, `badge-appstore-en.svg`,
@@ -128,6 +136,17 @@ Google Forms…) :
 3. Dans `assets/js/main.js`, décommente le bloc `fetch(...)` situé juste après
    chaque gestionnaire de soumission (`/* Voie optionnelle : … */`) — le code est
    déjà écrit, seulement inactif.
+
+---
+
+## 👑 Formules
+
+Deux formules, prix codés en dur dans le site (pas de variable) : **Clinchy Basic**
+(gratuit) et **Clinchy +** (2,99 € / mois ou 24,99 € / an). Si le prix change, une
+recherche globale de `2,99 €` / `2.99` et `24,99 €` / `24.99` dans les fichiers HTML
++ le JSON-LD de `index.html` (FR et EN) localise tous les emplacements à mettre à
+jour. Le mot « Premium » est volontairement absent du texte visible : on dit
+« Clinchy + » partout, y compris dans les pastilles de fonctionnalité (`CLINCHY +`).
 
 ---
 
@@ -179,15 +198,16 @@ python3 -m http.server 8000
 
 ## 📋 Ce qui reste à faire côté humain avant mise en ligne
 
-- [ ] Remplacer toutes les variables `{{…}}` (voir check-list ci-dessus)
-- [ ] Remplacer le wordmark, l'icône et les captures d'écran par les fichiers de
-      production réels de l'app
+- [x] Domaine `getclinchy.com` configuré (`{{DOMAIN}}` remplacé, `CNAME`, DNS OVH)
+- [ ] Activer **Enforce HTTPS** dans Settings → Pages une fois le DNS validé par GitHub
+- [ ] Remplacer les 9 captures placeholder par les vraies (voir § Captures d'écran)
+- [ ] Remplacer toutes les autres variables `{{…}}` (voir check-list ci-dessus)
+- [ ] Remplacer le wordmark et l'icône par les fichiers de production réels de l'app
 - [ ] Faire relire les 4 pages légales (+ leurs versions `en/`) par une personne
       compétente
 - [ ] Renseigner `{{APPSTORE_URL}}` / `{{PLAYSTORE_URL}}` puis activer les vrais
       liens des badges (voir § Badges)
 - [ ] Décider si un service de formulaire tiers est nécessaire, sinon laisser le
       comportement `mailto:` par défaut
-- [ ] Créer le fichier `CNAME` si un domaine personnalisé est utilisé
 - [ ] Vérifier `{{APPLE_TEAM_ID}}` / `{{ANDROID_SHA256}}` si les liens profonds
       Universal Links / App Links doivent fonctionner

@@ -859,37 +859,6 @@ strong { color: var(--text); font-weight: 700; }
 }
 
 /* --------------------------------------------------------------------------
-   Mode switch (Maison / Travail)
-   -------------------------------------------------------------------------- */
-.mode-switch-wrap { display: flex; justify-content: center; margin-bottom: 40px; }
-.mode-switch {
-  display: inline-flex;
-  padding: 6px;
-  border-radius: var(--r-full);
-  background: var(--card-sunken);
-  box-shadow: var(--shadow-clay-inset);
-  gap: 4px;
-}
-.mode-switch__btn {
-  padding: 10px 22px;
-  border-radius: var(--r-full);
-  font-family: var(--font-display);
-  font-weight: 800;
-  color: var(--text-secondary);
-  transition: background 220ms var(--ease-clay), color 220ms var(--ease-clay), box-shadow 220ms var(--ease-clay);
-}
-.mode-switch__btn[aria-pressed="true"] {
-  background: var(--grad-accent-deep);
-  color: #fff;
-  box-shadow: var(--glow-accent);
-}
-.mode-demo-grid { display: grid; gap: 20px; grid-template-columns: 1fr; }
-@media (min-width: 768px) { .mode-demo-grid { grid-template-columns: repeat(3, 1fr); } }
-.mode-demo-card { padding: 24px; }
-.mode-demo-card__label { color: var(--text-muted); font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px; }
-.mode-demo-card__value { font-family: var(--font-display); font-weight: 800; font-size: 1.15rem; }
-
-/* --------------------------------------------------------------------------
    Bento grid
    -------------------------------------------------------------------------- */
 .bento {
@@ -1057,6 +1026,9 @@ strong { color: var(--text); font-weight: 700; }
   grid-template-columns: 1fr;
 }
 @media (min-width: 860px) { .pricing-grid { grid-template-columns: repeat(3, 1fr); align-items: start; } }
+@media (min-width: 640px) {
+  .pricing-grid--two { grid-template-columns: repeat(2, 1fr); max-width: 720px; margin-inline: auto; }
+}
 .price-card {
   padding: clamp(26px, 3vw, 34px);
   display: flex;
@@ -1447,7 +1419,7 @@ strong { color: var(--text); font-weight: 700; }
 .hero__grid > *, .hero__visual, .hero__visual > *, .hero__badges > *,
 .demo > *, .gamify > *, .footer__grid > *, .nav__inner > *, .nav__actions > *,
 .cta-band__badges > *, .bento > *, .pricing-grid > *, .usecases > *,
-.problem-grid > *, .mode-demo-grid > *, .steps > *, .compare-table-wrap,
+.problem-grid > *, .steps > *, .compare-table-wrap,
 .feature-detail > *, .price-callout, .join-hero > *, .demo__side > * {
   min-width: 0;
 }
