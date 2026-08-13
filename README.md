@@ -35,8 +35,8 @@ pour vérifier qu'il n'en reste aucune une fois cette liste traitée.
 script `sed`) est le plus sûr. **Ne remplace jamais un identifiant à la main dans un
 seul fichier** : les deux langues et tous les usages doivent rester cohérents.
 
-⚠️ **Les pages légales (`confidentialite.html`, `conditions.html`,
-`suppression-compte.html`, `mentions-legales.html`, et leurs équivalents `en/`)
+⚠️ **Les pages légales (`confidentialite/`, `conditions/`,
+`suppression-compte/`, `mentions-legales/`, et leurs équivalents `en/`)
 contiennent un encadré HTML commenté en haut du fichier source listant les points à
 vérifier. Elles doivent être relues par une personne compétente (juriste ou
 responsable produit) avant mise en ligne : ce sont des modèles rédigés en langage
@@ -64,48 +64,35 @@ Pour redéployer ailleurs ou repartir de zéro :
    nom de domaine (une ligne, sans `http://`), puis mets à jour les DNS chez ton
    registrar (4 `A` sur la racine vers `185.199.108.153`, `.109.153`, `.110.153`,
    `.111.153`, plus un `CNAME` `www` vers `<compte>.github.io.`).
-5. Attends quelques minutes puis vérifie `https://getclinchy.com/index.html`.
+5. Attends quelques minutes puis vérifie `https://getclinchy.com/`.
 
 ---
 
 ## 🖼️ Remplacer les visuels
 
 ### Logo et icône
-`assets/img/clinchy-wordmark.png` et `assets/img/icon.png` sont des **versions
-provisoires générées programmatiquement** pour ce livrable (ratio et style fidèles à
-la charte décrite, mais pas les fichiers de production de l'app). Remplace-les par
-les fichiers officiels de la marque avant mise en ligne :
-- `clinchy-wordmark.png` : ratio natif attendu 2209 × 576, fond transparent.
-- `icon.png` : 1024 × 1024, fond transparent ou dégradé plein.
-
-Après remplacement, régénère les favicons (`favicon.ico`, `favicon-16x16.png`,
-`favicon-32x32.png`, `favicon-48x48.png`, `favicon-192x192.png`,
-`favicon-512x512.png`, `apple-touch-icon.png`) et `og-image.png` (1200 × 630) à
-partir des nouveaux fichiers sources, avec l'outil de ton choix (ImageMagick,
-Squoosh, Figma…).
+`assets/img/clinchy-wordmark.png` (2174 × 602, fond transparent) et
+`assets/img/icon.png` (1024 × 1024) sont les **fichiers de marque réels**. Les
+favicons (`favicon.ico`, `favicon-16x16.png`, `favicon-32x32.png`,
+`favicon-48x48.png`, `favicon-192x192.png`, `favicon-512x512.png`,
+`apple-touch-icon.png`) et `og-image.png` (1200 × 630) en sont dérivés. Si le logo
+change, régénère l'ensemble à partir des nouveaux fichiers sources (ImageMagick,
+Squoosh, Figma…) et mets à jour les attributs `width`/`height` des `<img>` du
+wordmark si le ratio change.
 
 ### Captures d'écran
-`assets/screens/*.png` sont des **maquettes stylisées générées pour ce livrable**
-(pas de vraies captures de l'app), aux dimensions attendues (1290 × 2796, plus une
-variante `@1x` à moitié résolution pour le `srcset`). Remplace-les par les vraies
-captures de l'app (fond transparent, sans bezel de téléphone — le site ajoute déjà
-son propre cadre en CSS autour de chaque image), en conservant exactement les mêmes
-noms de fichiers :
+`assets/screens/*.png` sont les **vraies captures de l'app** (chaque PNG contient
+déjà son propre cadre de téléphone avec coins transparents ; le site ne rajoute
+aucun bezel CSS par-dessus, juste une ombre portée via `.shot`) :
 
 ```
 market.png   shop.png    activity.png  pomodoro.png  planner.png
 stats.png    equity.png  kid.png       family.png
 ```
 
-Génère aussi la variante `@1x` (moitié résolution, ex. `market@1x.png`) pour chaque
-nouvelle capture si tu veux garder le `srcset` 1x/2x utilisé dans le carrousel.
-
-**À faire dès que les 9 captures réelles sont disponibles :** les déposer dans
-`assets/screens/` avec ces noms exacts (elles remplacent directement les
-placeholders, aucune modification de code nécessaire). Deux emplacements attendent
-encore une image dédiée sans y en avoir une : Widget Android et Dynamic Island seuls
-utilisent volontairement une icône générique plutôt qu'un faux écran, en attendant
-de vraies captures.
+Chaque fichier a une variante `@1x` (moitié résolution, ex. `market@1x.png`) pour le
+`srcset` 1x/2x utilisé dans le carrousel. Si tu remplaces une capture, régénère sa
+variante `@1x` en conservant le même nom.
 
 ### Badges App Store / Google Play
 `assets/img/badge-appstore-fr.svg`, `badge-appstore-en.svg`,
@@ -123,8 +110,8 @@ source.
 
 ## ✉️ Brancher un vrai formulaire (optionnel)
 
-Par défaut, le formulaire de suppression de compte (`suppression-compte.html`) et le
-formulaire de contact (`support.html`) fonctionnent **sans aucun service tiers** : ils
+Par défaut, le formulaire de suppression de compte (`suppression-compte/`) et le
+formulaire de contact (`support/`) fonctionnent **sans aucun service tiers** : ils
 composent un email pré-rempli (`mailto:`) vers `{{CONTACT_EMAIL}}` et affichent un
 bloc « copier le message » en secours.
 
@@ -153,12 +140,25 @@ jour. Le mot « Premium » est volontairement absent du texte visible : on dit
 ## 🌍 Langues
 
 Le site est disponible en français (racine) et en anglais (`/en/`). Les deux
-versions utilisent **les mêmes noms de fichiers** (`fonctionnalites.html`,
-`tarifs.html`, etc.) et **les mêmes ancres** (`#comment-ca-marche`, `#tarifs`…) pour
+versions utilisent **les mêmes chemins d'URL** (`/fonctionnalites/`,
+`/tarifs/`, etc.) et **les mêmes ancres** (`#comment-ca-marche`, `#tarifs`…) pour
 que les liens `hreflang` et le sélecteur de langue en pied de page pointent
 correctement d'une langue à l'autre. Si tu ajoutes l'espagnol ou l'allemand, respecte
-cette même convention (`/es/fonctionnalites.html`, `/de/tarifs.html`…) et mets à jour
+cette même convention (`/es/fonctionnalites/`, `/de/tarifs/`…) et mets à jour
 les balises `hreflang` sur toutes les pages ainsi que `sitemap.xml`.
+
+---
+
+## 🔗 Structure des URLs
+
+Le site utilise des URLs « propres », sans extension `.html` visible
+(`/fonctionnalites/` plutôt que `/fonctionnalites.html`). Comme GitHub Pages ne
+permet aucune réécriture d'URL côté serveur, chaque page (hors accueil et `404.html`)
+vit dans son propre dossier sous la forme `nom/index.html` : un serveur statique
+résout automatiquement `/nom/` vers `nom/index.html`. L'accueil (`index.html`,
+`en/index.html`) reste à la racine de son dossier de langue. Si tu ajoutes une
+nouvelle page, respecte cette convention (`nouvelle-page/index.html`) et recalcule
+les chemins relatifs (`href`/`src`) en fonction de la profondeur du dossier.
 
 ---
 
@@ -176,8 +176,8 @@ thème.
 ## 🧩 Liens profonds
 
 `.well-known/apple-app-site-association` et `.well-known/assetlinks.json` sont prêts
-pour les Universal Links (iOS) et App Links (Android) vers `join.html`, une fois
-`{{APPLE_TEAM_ID}}` et `{{ANDROID_SHA256}}` renseignés. `join.html` lit `?code=XXXXXX`
+pour les Universal Links (iOS) et App Links (Android) vers `/join/`, une fois
+`{{APPLE_TEAM_ID}}` et `{{ANDROID_SHA256}}` renseignés. La page lit `?code=XXXXXX`
 dans l'URL, tente d'ouvrir `clinchy://join?code=XXXXXX`, et affiche après 1,5 s les
 badges de stores et le code (copiable) si l'app ne s'est pas ouverte.
 
@@ -200,9 +200,9 @@ python3 -m http.server 8000
 
 - [x] Domaine `getclinchy.com` configuré (`{{DOMAIN}}` remplacé, `CNAME`, DNS OVH)
 - [ ] Activer **Enforce HTTPS** dans Settings → Pages une fois le DNS validé par GitHub
-- [ ] Remplacer les 9 captures placeholder par les vraies (voir § Captures d'écran)
+- [x] Remplacer les 9 captures placeholder par les vraies (voir § Captures d'écran)
 - [ ] Remplacer toutes les autres variables `{{…}}` (voir check-list ci-dessus)
-- [ ] Remplacer le wordmark et l'icône par les fichiers de production réels de l'app
+- [x] Remplacer le wordmark et l'icône par les fichiers de production réels de l'app
 - [ ] Faire relire les 4 pages légales (+ leurs versions `en/`) par une personne
       compétente
 - [ ] Renseigner `{{APPSTORE_URL}}` / `{{PLAYSTORE_URL}}` puis activer les vrais

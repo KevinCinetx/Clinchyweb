@@ -114,17 +114,17 @@
 
 <header class="nav" id="nav">
   <div class="container nav__inner">
-    <a class="nav__logo" href="./index.html" aria-label="Clinchy · accueil">
-      <img src="./assets/img/clinchy-wordmark.png" alt="Clinchy" width="150" height="39">
+    <a class="nav__logo" href="./" aria-label="Clinchy · accueil">
+      <img src="./assets/img/clinchy-wordmark.png" alt="Clinchy" width="150" height="42">
     </a>
     <nav class="nav__links" aria-label="Navigation principale">
-      <a class="nav__link" href="./fonctionnalites.html">Fonctionnalités</a>
-      <a class="nav__link" href="./index.html#comment-ca-marche">Comment ça marche</a>
-      <a class="nav__link" href="./tarifs.html">Tarifs</a>
-      <a class="nav__link" href="./index.html#faq">FAQ</a>
+      <a class="nav__link" href="./fonctionnalites/">Fonctionnalités</a>
+      <a class="nav__link" href="./#comment-ca-marche">Comment ça marche</a>
+      <a class="nav__link" href="./tarifs/">Tarifs</a>
+      <a class="nav__link" href="./#faq">FAQ</a>
     </nav>
     <div class="nav__actions">
-      <a class="btn btn--accent nav__cta" href="./index.html#hero-download">Télécharger</a>
+      <a class="btn btn--accent nav__cta" href="./#hero-download">Télécharger</a>
       <button class="nav__burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobile-menu" id="burger-btn">
         <svg class="icon-burger" width="22" height="22"><use href="#icon-burger"/></svg>
         <svg class="icon-close" width="22" height="22"><use href="#icon-close"/></svg>
@@ -135,20 +135,20 @@
 
 <div class="nav__mobile" id="mobile-menu">
   <div class="nav__mobile-top">
-    <img src="./assets/img/clinchy-wordmark.png" alt="Clinchy" width="140" height="36">
+    <img src="./assets/img/clinchy-wordmark.png" alt="Clinchy" width="140" height="39">
     <button class="nav__burger" type="button" aria-label="Fermer le menu" id="mobile-close-btn">
       <svg width="22" height="22"><use href="#icon-close"/></svg>
     </button>
   </div>
   <nav class="nav__mobile-links" aria-label="Navigation mobile">
-    <a href="./fonctionnalites.html">Fonctionnalités</a>
-    <a href="./index.html#comment-ca-marche">Comment ça marche</a>
-    <a href="./tarifs.html">Tarifs</a>
-    <a href="./index.html#faq">FAQ</a>
-    <a href="./support.html">Support</a>
+    <a href="./fonctionnalites/">Fonctionnalités</a>
+    <a href="./#comment-ca-marche">Comment ça marche</a>
+    <a href="./tarifs/">Tarifs</a>
+    <a href="./#faq">FAQ</a>
+    <a href="./support/">Support</a>
   </nav>
   <div class="nav__mobile-foot">
-    <a class="btn btn--accent btn--block" href="./index.html#hero-download">Télécharger Clinchy</a>
+    <a class="btn btn--accent btn--block" href="./#hero-download">Télécharger Clinchy</a>
   </div>
 </div>
 
@@ -158,7 +158,6 @@
   <section class="hero">
     <div class="container hero__grid">
       <div>
-        <span class="eyebrow">🎯 Premier arrivé, premier servi</span>
         <h1 data-reveal>Les corvées, en mode <span class="grad-text">marché</span>.</h1>
         <p class="lede" data-reveal>Publie une mission, sa valeur baisse tant que personne ne la prend. Le premier qui s'y colle empoche les points, et les dépense dans la boutique que vous avez créée ensemble.</p>
         <div class="hero__badges" id="hero-download" data-reveal>
@@ -169,7 +168,7 @@
             <span class="store-badge__soon">Bientôt</span>
           </span>
           <!-- Une fois {{APPSTORE_URL}} renseigné, remplace le bloc ci-dessus par :
-          <a class="store-badge" href="{{APPSTORE_URL}}" aria-label="Télécharger Clinchy dans l'App Store">
+          <a class="store-badge" href="./{{APPSTORE_URL}}" aria-label="Télécharger Clinchy dans l'App Store">
             <img src="./assets/img/badge-appstore-fr.svg" alt="" width="180" height="54" loading="eager" decoding="async">
           </a> -->
           <span class="store-badge-wrap">
@@ -179,7 +178,7 @@
             <span class="store-badge__soon">Bientôt</span>
           </span>
           <!-- Une fois {{PLAYSTORE_URL}} renseigné, remplace le bloc ci-dessus par :
-          <a class="store-badge" href="{{PLAYSTORE_URL}}" aria-label="Télécharger Clinchy sur Google Play">
+          <a class="store-badge" href="./{{PLAYSTORE_URL}}" aria-label="Télécharger Clinchy sur Google Play">
             <img src="./assets/img/badge-googleplay-fr.png" alt="" width="182" height="54" loading="eager" decoding="async">
           </a> -->
         </div>
@@ -268,7 +267,7 @@
             <div class="mission-card__progress" aria-hidden="true">
               <div class="mission-card__progress-bar" id="demo-progress-bar"></div>
             </div>
-            <p class="mission-card__next" id="demo-next">Prochain −2 pts dans 1,2 s</p>
+            <p class="mission-card__next" id="demo-next">Prochain −2 pts dans 30 s</p>
             <button class="btn btn--accent mission-card__cta" id="demo-cta" type="button">Prendre · 30 pts</button>
             <div class="mission-card__status" id="demo-status" role="status">✅ Prise ! +<span id="demo-earned">30</span> points</div>
             <button class="btn btn--ghost mission-card__replay" id="demo-replay" type="button" hidden>🔁 Rejouer</button>
@@ -285,7 +284,7 @@
             </div>
             <span style="font-size:2rem" aria-hidden="true">🪙</span>
           </div>
-          <p class="demo__caption" data-reveal>Chaque palier fait baisser la valeur. Le code couleur suit l'urgence : vert, ambre, orange 🔥, puis rouge 🚨 si personne ne s'en occupe. Le premier qui appuie sur « Prendre » empoche le prix affiché à cet instant.</p>
+          <p class="demo__caption" data-reveal>Chaque palier fait baisser la valeur. Le code couleur suit l'urgence : vert, ambre, puis orange 🔥 si personne ne s'en occupe. Le premier qui appuie sur « Prendre » empoche le prix affiché à cet instant.</p>
           <p class="demo__caption" data-reveal>Ton geste déclenche des confettis, une petite validation satisfaisante, comme dans l'app.</p>
         </div>
       </div>
@@ -299,7 +298,7 @@
       <div class="section-head">
         <span class="eyebrow">🧩 Tout Clinchy</span>
         <h2 id="bento-title">Une seule app, un système complet</h2>
-        <p class="lede">Le détail de chaque fonctionnalité est sur la <a href="./fonctionnalites.html" style="color:var(--accent-bright);text-decoration:underline">page dédiée</a>.</p>
+        <p class="lede">Le détail de chaque fonctionnalité est sur la <a href="./fonctionnalites/" style="color:var(--accent-bright);text-decoration:underline">page dédiée</a>.</p>
       </div>
       <div class="bento">
         <article class="bento-item bento-item--lg card" data-reveal>
@@ -437,9 +436,15 @@
     <div class="container">
       <div class="section-head section-head--center">
         <span class="eyebrow">👥 Pour qui</span>
-        <h2 id="usecases-title">Un système, quatre terrains</h2>
+        <h2 id="usecases-title">Un système, cinq terrains</h2>
       </div>
       <div class="usecases">
+        <article class="card usecase-card" data-reveal>
+          <span class="usecase-card__emoji" aria-hidden="true">🧍</span>
+          <h3>En solo</h3>
+          <p>Pas besoin d'être plusieurs pour en profiter. Transforme ta propre liste de tâches en missions qui te motivent, et récompense-toi à ta façon.</p>
+          <div class="usecase-card__example"><b>Mission :</b> Ranger le bureau · 12 pts<br><b>Récompense :</b> Un épisode bonus de ta série · 20 pts</div>
+        </article>
         <article class="card usecase-card" data-reveal>
           <span class="usecase-card__emoji" aria-hidden="true">💑</span>
           <h3>En couple</h3>
@@ -542,7 +547,7 @@
             <li><svg width="18" height="18"><use href="#icon-check"/></svg> Bibliothèques &amp; boutique</li>
             <li><svg width="18" height="18"><use href="#icon-check"/></svg> Publicités présentes</li>
           </ul>
-          <a class="btn btn--outline btn--block" href="./tarifs.html">Voir le détail</a>
+          <a class="btn btn--outline btn--block" href="./tarifs/">Voir le détail</a>
         </div>
         <div class="card price-card price-card--featured" data-reveal>
           <span class="price-card__badge">Populaire</span>
@@ -557,7 +562,7 @@
             <li><svg width="18" height="18"><use href="#icon-check"/></svg> Mode parent / enfant</li>
             <li><svg width="18" height="18"><use href="#icon-check"/></svg> Thèmes Gold, Neon, 8-bit</li>
           </ul>
-          <a class="btn btn--accent btn--block" href="./tarifs.html">Voir le détail</a>
+          <a class="btn btn--accent btn--block" href="./tarifs/">Voir le détail</a>
         </div>
       </div>
       <div class="price-callout" data-reveal>
@@ -567,7 +572,7 @@
           <p style="margin-top:6px">Si l'admin d'un espace a Clinchy +, tout l'espace passe à 50 membres et missions illimitées. Les membres gratuits gardent la publicité.</p>
         </div>
       </div>
-      <p class="legal-note">Abonnement renouvelé automatiquement, résiliable à tout moment depuis les réglages de ton compte App Store / Google Play. Détails complets sur la <a href="./tarifs.html" style="color:var(--accent-bright)">page tarifs</a>.</p>
+      <p class="legal-note">Abonnement renouvelé automatiquement, résiliable à tout moment depuis les réglages de ton compte App Store / Google Play. Détails complets sur la <a href="./tarifs/" style="color:var(--accent-bright)">page tarifs</a>.</p>
     </div>
   </section>
 
@@ -646,7 +651,7 @@
         </details>
         <details class="faq-item">
           <summary>Comment supprimer mon compte ? <span class="faq-item__icon" aria-hidden="true"><svg width="14" height="14"><use href="#icon-plus"/></svg></span></summary>
-          <div class="faq-item__body"><p>Depuis l'app (Profil → Réglages → Supprimer mon compte) ou, si tu n'as plus l'app, via le formulaire public de la <a href="./suppression-compte.html">page de suppression de compte</a>.</p></div>
+          <div class="faq-item__body"><p>Depuis l'app (Profil → Réglages → Supprimer mon compte) ou, si tu n'as plus l'app, via le formulaire public de la <a href="./suppression-compte/">page de suppression de compte</a>.</p></div>
         </details>
       </div>
     </div>
@@ -656,7 +661,7 @@
   <section class="section">
     <div class="container">
       <div class="cta-band" data-reveal>
-        <img class="cta-band__logo" src="./assets/img/clinchy-wordmark.png" alt="Clinchy" width="170" height="44">
+        <img class="cta-band__logo" src="./assets/img/clinchy-wordmark.png" alt="Clinchy" width="170" height="47">
         <h2>Ce soir, quelqu'un va enfin vider le lave-vaisselle.</h2>
         <p>Gratuit, sans engagement.</p>
         <div class="cta-band__badges">
@@ -683,32 +688,32 @@
   <div class="container">
     <div class="footer__grid">
       <div class="footer__brand">
-        <img src="./assets/img/clinchy-wordmark.png" alt="Clinchy" width="130" height="34">
+        <img src="./assets/img/clinchy-wordmark.png" alt="Clinchy" width="130" height="36">
         <p>Gère tes missions. Gagne des récompenses. L'app qui transforme les corvées partagées en marché de missions.</p>
       </div>
       <div class="footer__col">
         <h4>Produit</h4>
         <ul>
-          <li><a href="./fonctionnalites.html">Fonctionnalités</a></li>
-          <li><a href="./tarifs.html">Tarifs</a></li>
-          <li><a href="./index.html#captures">Captures d'écran</a></li>
+          <li><a href="./fonctionnalites/">Fonctionnalités</a></li>
+          <li><a href="./tarifs/">Tarifs</a></li>
+          <li><a href="./#captures">Captures d'écran</a></li>
         </ul>
       </div>
       <div class="footer__col">
         <h4>Aide</h4>
         <ul>
-          <li><a href="./support.html">Support</a></li>
-          <li><a href="./index.html#faq">FAQ</a></li>
-          <li><a href="./support.html#contact">Contact</a></li>
+          <li><a href="./support/">Support</a></li>
+          <li><a href="./#faq">FAQ</a></li>
+          <li><a href="./support/#contact">Contact</a></li>
         </ul>
       </div>
       <div class="footer__col">
         <h4>Légal</h4>
         <ul>
-          <li><a href="./confidentialite.html">Confidentialité</a></li>
-          <li><a href="./conditions.html">Conditions (CGU)</a></li>
-          <li><a href="./suppression-compte.html">Suppression de compte</a></li>
-          <li><a href="./mentions-legales.html">Mentions légales</a></li>
+          <li><a href="./confidentialite/">Confidentialité</a></li>
+          <li><a href="./conditions/">Conditions (CGU)</a></li>
+          <li><a href="./suppression-compte/">Suppression de compte</a></li>
+          <li><a href="./mentions-legales/">Mentions légales</a></li>
         </ul>
       </div>
     </div>
@@ -716,8 +721,8 @@
       <div class="switcher-group">
         <span class="switcher-label">Langue</span>
         <div class="switcher-row">
-          <a class="switcher-btn" href="./index.html" aria-current="true">FR</a>
-          <a class="switcher-btn" href="./en/index.html">EN</a>
+          <a class="switcher-btn" href="./" aria-current="true">FR</a>
+          <a class="switcher-btn" href="./en/">EN</a>
         </div>
       </div>
       <div class="switcher-group">

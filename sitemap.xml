@@ -11,58 +11,58 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://getclinchy.com/fonctionnalites.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://getclinchy.com/fonctionnalites.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://getclinchy.com/en/fonctionnalites.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://getclinchy.com/fonctionnalites.html"/>
+    <loc>https://getclinchy.com/fonctionnalites/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://getclinchy.com/fonctionnalites/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getclinchy.com/en/fonctionnalites/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getclinchy.com/fonctionnalites/"/>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://getclinchy.com/tarifs.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://getclinchy.com/tarifs.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://getclinchy.com/en/tarifs.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://getclinchy.com/tarifs.html"/>
+    <loc>https://getclinchy.com/tarifs/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://getclinchy.com/tarifs/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getclinchy.com/en/tarifs/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getclinchy.com/tarifs/"/>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://getclinchy.com/support.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://getclinchy.com/support.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://getclinchy.com/en/support.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://getclinchy.com/support.html"/>
+    <loc>https://getclinchy.com/support/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://getclinchy.com/support/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getclinchy.com/en/support/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getclinchy.com/support/"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://getclinchy.com/suppression-compte.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://getclinchy.com/suppression-compte.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://getclinchy.com/en/suppression-compte.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://getclinchy.com/suppression-compte.html"/>
+    <loc>https://getclinchy.com/suppression-compte/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://getclinchy.com/suppression-compte/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getclinchy.com/en/suppression-compte/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getclinchy.com/suppression-compte/"/>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://getclinchy.com/confidentialite.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://getclinchy.com/confidentialite.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://getclinchy.com/en/confidentialite.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://getclinchy.com/confidentialite.html"/>
+    <loc>https://getclinchy.com/confidentialite/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://getclinchy.com/confidentialite/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getclinchy.com/en/confidentialite/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getclinchy.com/confidentialite/"/>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://getclinchy.com/conditions.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://getclinchy.com/conditions.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://getclinchy.com/en/conditions.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://getclinchy.com/conditions.html"/>
+    <loc>https://getclinchy.com/conditions/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://getclinchy.com/conditions/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getclinchy.com/en/conditions/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getclinchy.com/conditions/"/>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://getclinchy.com/mentions-legales.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://getclinchy.com/mentions-legales.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://getclinchy.com/en/mentions-legales.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://getclinchy.com/mentions-legales.html"/>
+    <loc>https://getclinchy.com/mentions-legales/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://getclinchy.com/mentions-legales/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getclinchy.com/en/mentions-legales/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getclinchy.com/mentions-legales/"/>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -76,58 +76,58 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://getclinchy.com/en/fonctionnalites.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://getclinchy.com/fonctionnalites.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://getclinchy.com/en/fonctionnalites.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://getclinchy.com/fonctionnalites.html"/>
+    <loc>https://getclinchy.com/en/fonctionnalites/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://getclinchy.com/fonctionnalites/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getclinchy.com/en/fonctionnalites/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getclinchy.com/fonctionnalites/"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://getclinchy.com/en/tarifs.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://getclinchy.com/tarifs.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://getclinchy.com/en/tarifs.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://getclinchy.com/tarifs.html"/>
+    <loc>https://getclinchy.com/en/tarifs/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://getclinchy.com/tarifs/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getclinchy.com/en/tarifs/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getclinchy.com/tarifs/"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://getclinchy.com/en/support.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://getclinchy.com/support.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://getclinchy.com/en/support.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://getclinchy.com/support.html"/>
+    <loc>https://getclinchy.com/en/support/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://getclinchy.com/support/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getclinchy.com/en/support/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getclinchy.com/support/"/>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://getclinchy.com/en/suppression-compte.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://getclinchy.com/suppression-compte.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://getclinchy.com/en/suppression-compte.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://getclinchy.com/suppression-compte.html"/>
+    <loc>https://getclinchy.com/en/suppression-compte/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://getclinchy.com/suppression-compte/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getclinchy.com/en/suppression-compte/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getclinchy.com/suppression-compte/"/>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://getclinchy.com/en/confidentialite.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://getclinchy.com/confidentialite.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://getclinchy.com/en/confidentialite.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://getclinchy.com/confidentialite.html"/>
+    <loc>https://getclinchy.com/en/confidentialite/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://getclinchy.com/confidentialite/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getclinchy.com/en/confidentialite/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getclinchy.com/confidentialite/"/>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://getclinchy.com/en/conditions.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://getclinchy.com/conditions.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://getclinchy.com/en/conditions.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://getclinchy.com/conditions.html"/>
+    <loc>https://getclinchy.com/en/conditions/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://getclinchy.com/conditions/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getclinchy.com/en/conditions/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getclinchy.com/conditions/"/>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://getclinchy.com/en/mentions-legales.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://getclinchy.com/mentions-legales.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://getclinchy.com/en/mentions-legales.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://getclinchy.com/mentions-legales.html"/>
+    <loc>https://getclinchy.com/en/mentions-legales/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://getclinchy.com/mentions-legales/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getclinchy.com/en/mentions-legales/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getclinchy.com/mentions-legales/"/>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>

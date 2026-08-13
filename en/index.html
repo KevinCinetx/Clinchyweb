@@ -114,17 +114,17 @@
 
 <header class="nav" id="nav">
   <div class="container nav__inner">
-    <a class="nav__logo" href="./index.html" aria-label="Clinchy · home">
-      <img src="../assets/img/clinchy-wordmark.png" alt="Clinchy" width="150" height="39">
+    <a class="nav__logo" href="./" aria-label="Clinchy · home">
+      <img src="../assets/img/clinchy-wordmark.png" alt="Clinchy" width="150" height="42">
     </a>
     <nav class="nav__links" aria-label="Main navigation">
-      <a class="nav__link" href="./fonctionnalites.html">Features</a>
-      <a class="nav__link" href="./index.html#comment-ca-marche">How it works</a>
-      <a class="nav__link" href="./tarifs.html">Pricing</a>
-      <a class="nav__link" href="./index.html#faq">FAQ</a>
+      <a class="nav__link" href="./fonctionnalites/">Features</a>
+      <a class="nav__link" href="./#comment-ca-marche">How it works</a>
+      <a class="nav__link" href="./tarifs/">Pricing</a>
+      <a class="nav__link" href="./#faq">FAQ</a>
     </nav>
     <div class="nav__actions">
-      <a class="btn btn--accent nav__cta" href="./index.html#hero-download">Download</a>
+      <a class="btn btn--accent nav__cta" href="./#hero-download">Download</a>
       <button class="nav__burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" id="burger-btn">
         <svg class="icon-burger" width="22" height="22"><use href="#icon-burger"/></svg>
         <svg class="icon-close" width="22" height="22"><use href="#icon-close"/></svg>
@@ -135,20 +135,20 @@
 
 <div class="nav__mobile" id="mobile-menu">
   <div class="nav__mobile-top">
-    <img src="../assets/img/clinchy-wordmark.png" alt="Clinchy" width="140" height="36">
+    <img src="../assets/img/clinchy-wordmark.png" alt="Clinchy" width="140" height="39">
     <button class="nav__burger" type="button" aria-label="Close menu" id="mobile-close-btn">
       <svg width="22" height="22"><use href="#icon-close"/></svg>
     </button>
   </div>
   <nav class="nav__mobile-links" aria-label="Mobile navigation">
-    <a href="./fonctionnalites.html">Features</a>
-    <a href="./index.html#comment-ca-marche">How it works</a>
-    <a href="./tarifs.html">Pricing</a>
-    <a href="./index.html#faq">FAQ</a>
-    <a href="./support.html">Support</a>
+    <a href="./fonctionnalites/">Features</a>
+    <a href="./#comment-ca-marche">How it works</a>
+    <a href="./tarifs/">Pricing</a>
+    <a href="./#faq">FAQ</a>
+    <a href="./support/">Support</a>
   </nav>
   <div class="nav__mobile-foot">
-    <a class="btn btn--accent btn--block" href="./index.html#hero-download">Download Clinchy</a>
+    <a class="btn btn--accent btn--block" href="./#hero-download">Download Clinchy</a>
   </div>
 </div>
 
@@ -158,7 +158,6 @@
   <section class="hero">
     <div class="container hero__grid">
       <div>
-        <span class="eyebrow">🎯 First come, first served</span>
         <h1 data-reveal>Chores, <span class="grad-text">marketplace</span> style.</h1>
         <p class="lede" data-reveal>Post a mission, its value drops as long as nobody takes it. Whoever grabs it first pockets the points, and spends them in the reward shop you built together.</p>
         <div class="hero__badges" id="hero-download" data-reveal>
@@ -260,7 +259,7 @@
             <div class="mission-card__progress" aria-hidden="true">
               <div class="mission-card__progress-bar" id="demo-progress-bar"></div>
             </div>
-            <p class="mission-card__next" id="demo-next">Next −2 pts in 1.2s</p>
+            <p class="mission-card__next" id="demo-next">Next −2 pts in 30s</p>
             <button class="btn btn--accent mission-card__cta" id="demo-cta" type="button">Take it · 30 pts</button>
             <div class="mission-card__status" id="demo-status" role="status">✅ Taken! +<span id="demo-earned">30</span> points</div>
             <button class="btn btn--ghost mission-card__replay" id="demo-replay" type="button" hidden>🔁 Replay</button>
@@ -277,7 +276,7 @@
             </div>
             <span style="font-size:2rem" aria-hidden="true">🪙</span>
           </div>
-          <p class="demo__caption" data-reveal>Every step drops the value. The color follows urgency: green, amber, orange 🔥, then red 🚨 if nobody handles it. Whoever taps "Take it" first pockets the price shown at that instant.</p>
+          <p class="demo__caption" data-reveal>Every step drops the value. The color follows urgency: green, amber, then orange 🔥 if nobody handles it. Whoever taps "Take it" first pockets the price shown at that instant.</p>
           <p class="demo__caption" data-reveal>Your tap triggers confetti, a small, satisfying confirmation, just like in the app.</p>
         </div>
       </div>
@@ -291,7 +290,7 @@
       <div class="section-head">
         <span class="eyebrow">🧩 All of Clinchy</span>
         <h2 id="bento-title">One app, one complete system</h2>
-        <p class="lede">The full detail of every feature is on the <a href="./fonctionnalites.html" style="color:var(--accent-bright);text-decoration:underline">dedicated page</a>.</p>
+        <p class="lede">The full detail of every feature is on the <a href="./fonctionnalites/" style="color:var(--accent-bright);text-decoration:underline">dedicated page</a>.</p>
       </div>
       <div class="bento">
         <article class="bento-item bento-item--lg card" data-reveal>
@@ -429,9 +428,15 @@
     <div class="container">
       <div class="section-head section-head--center">
         <span class="eyebrow">👥 Who it's for</span>
-        <h2 id="usecases-title">One system, four settings</h2>
+        <h2 id="usecases-title">One system, five settings</h2>
       </div>
       <div class="usecases">
+        <article class="card usecase-card" data-reveal>
+          <span class="usecase-card__emoji" aria-hidden="true">🧍</span>
+          <h3>Solo</h3>
+          <p>You don't need other people to benefit. Turn your own to-do list into missions that motivate you, and reward yourself your way.</p>
+          <div class="usecase-card__example"><b>Mission:</b> Tidy the desk · 12 pts<br><b>Reward:</b> A bonus episode of your show · 20 pts</div>
+        </article>
         <article class="card usecase-card" data-reveal>
           <span class="usecase-card__emoji" aria-hidden="true">💑</span>
           <h3>As a couple</h3>
@@ -534,7 +539,7 @@
             <li><svg width="18" height="18"><use href="#icon-check"/></svg> Libraries &amp; shop</li>
             <li><svg width="18" height="18"><use href="#icon-check"/></svg> Ads included</li>
           </ul>
-          <a class="btn btn--outline btn--block" href="./tarifs.html">See the details</a>
+          <a class="btn btn--outline btn--block" href="./tarifs/">See the details</a>
         </div>
         <div class="card price-card price-card--featured" data-reveal>
           <span class="price-card__badge">Popular</span>
@@ -549,7 +554,7 @@
             <li><svg width="18" height="18"><use href="#icon-check"/></svg> Parent / Kid mode</li>
             <li><svg width="18" height="18"><use href="#icon-check"/></svg> Gold, Neon, 8-bit themes</li>
           </ul>
-          <a class="btn btn--accent btn--block" href="./tarifs.html">See the details</a>
+          <a class="btn btn--accent btn--block" href="./tarifs/">See the details</a>
         </div>
       </div>
       <div class="price-callout" data-reveal>
@@ -559,7 +564,7 @@
           <p style="margin-top:6px">If a space's admin has Clinchy +, the whole space gets 50 members and unlimited missions. Free members keep their ads.</p>
         </div>
       </div>
-      <p class="legal-note">Subscription automatically renews, cancel anytime from your App Store / Google Play account settings. Full details on the <a href="./tarifs.html" style="color:var(--accent-bright)">pricing page</a>.</p>
+      <p class="legal-note">Subscription automatically renews, cancel anytime from your App Store / Google Play account settings. Full details on the <a href="./tarifs/" style="color:var(--accent-bright)">pricing page</a>.</p>
     </div>
   </section>
 
@@ -638,7 +643,7 @@
         </details>
         <details class="faq-item">
           <summary>How do I delete my account? <span class="faq-item__icon" aria-hidden="true"><svg width="14" height="14"><use href="#icon-plus"/></svg></span></summary>
-          <div class="faq-item__body"><p>From the app (Profile → Settings → Delete my account) or, if you no longer have the app, through the public form on the <a href="./suppression-compte.html">account deletion page</a>.</p></div>
+          <div class="faq-item__body"><p>From the app (Profile → Settings → Delete my account) or, if you no longer have the app, through the public form on the <a href="./suppression-compte/">account deletion page</a>.</p></div>
         </details>
       </div>
     </div>
@@ -648,7 +653,7 @@
   <section class="section">
     <div class="container">
       <div class="cta-band" data-reveal>
-        <img class="cta-band__logo" src="../assets/img/clinchy-wordmark.png" alt="Clinchy" width="170" height="44">
+        <img class="cta-band__logo" src="../assets/img/clinchy-wordmark.png" alt="Clinchy" width="170" height="47">
         <h2>Tonight, someone's finally emptying the dishwasher.</h2>
         <p>Free, no commitment.</p>
         <div class="cta-band__badges">
@@ -675,32 +680,32 @@
   <div class="container">
     <div class="footer__grid">
       <div class="footer__brand">
-        <img src="../assets/img/clinchy-wordmark.png" alt="Clinchy" width="130" height="34">
+        <img src="../assets/img/clinchy-wordmark.png" alt="Clinchy" width="130" height="36">
         <p>Manage your chores. Earn rewards. The app that turns shared chores into a mission marketplace.</p>
       </div>
       <div class="footer__col">
         <h4>Product</h4>
         <ul>
-          <li><a href="./fonctionnalites.html">Features</a></li>
-          <li><a href="./tarifs.html">Pricing</a></li>
-          <li><a href="./index.html#captures">Screenshots</a></li>
+          <li><a href="./fonctionnalites/">Features</a></li>
+          <li><a href="./tarifs/">Pricing</a></li>
+          <li><a href="./#captures">Screenshots</a></li>
         </ul>
       </div>
       <div class="footer__col">
         <h4>Help</h4>
         <ul>
-          <li><a href="./support.html">Support</a></li>
-          <li><a href="./index.html#faq">FAQ</a></li>
-          <li><a href="./support.html#contact">Contact</a></li>
+          <li><a href="./support/">Support</a></li>
+          <li><a href="./#faq">FAQ</a></li>
+          <li><a href="./support/#contact">Contact</a></li>
         </ul>
       </div>
       <div class="footer__col">
         <h4>Legal</h4>
         <ul>
-          <li><a href="./confidentialite.html">Privacy</a></li>
-          <li><a href="./conditions.html">Terms of use</a></li>
-          <li><a href="./suppression-compte.html">Delete account</a></li>
-          <li><a href="./mentions-legales.html">Legal notice</a></li>
+          <li><a href="./confidentialite/">Privacy</a></li>
+          <li><a href="./conditions/">Terms of use</a></li>
+          <li><a href="./suppression-compte/">Delete account</a></li>
+          <li><a href="./mentions-legales/">Legal notice</a></li>
         </ul>
       </div>
     </div>
@@ -708,8 +713,8 @@
       <div class="switcher-group">
         <span class="switcher-label">Language</span>
         <div class="switcher-row">
-          <a class="switcher-btn" href="../index.html">FR</a>
-          <a class="switcher-btn" href="./index.html" aria-current="true">EN</a>
+          <a class="switcher-btn" href="../">FR</a>
+          <a class="switcher-btn" href="./" aria-current="true">EN</a>
         </div>
       </div>
       <div class="switcher-group">

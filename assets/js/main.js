@@ -249,8 +249,8 @@
   if (demoCard) {
     var START_PRICE = 30;
     var STEP = 2;
-    var FLOOR = -6;
-    var TICK_MS = 1200;
+    var FLOOR = 1;
+    var TICK_MS = 30000;
     var priceEl = document.getElementById("demo-price");
     var badgeEl = document.getElementById("demo-badge");
     var progressBar = document.getElementById("demo-progress-bar");
@@ -272,8 +272,7 @@
     function stateFor(p) {
       if (p >= 20) return { varName: "--up", badge: "Tranquille" };
       if (p >= 10) return { varName: "--warm", badge: "Normale" };
-      if (p >= 1) return { varName: "--hot", badge: "Urgente 🔥" };
-      return { varName: "--ultra", badge: "En pénalité 🚨" };
+      return { varName: "--hot", badge: "Urgente 🔥" };
     }
 
     function render() {
@@ -282,7 +281,7 @@
       priceEl.style.color = "var(" + st.varName + ")";
       badgeEl.textContent = st.badge;
       badgeEl.style.color = "var(" + st.varName + ")";
-      ctaBtn.textContent = price >= 0 ? "Prendre · " + price + " pts" : "Prendre quand même · " + price + " pts";
+      ctaBtn.textContent = "Prendre · " + price + " pts";
     }
 
     function updateProgress() {
@@ -290,7 +289,7 @@
       var remaining = Math.max(0, TICK_MS - elapsed);
       var frac = remaining / TICK_MS;
       progressBar.style.transform = "scaleX(" + frac + ")";
-      nextEl.textContent = "Prochain −2 pts dans " + (remaining / 1000).toFixed(1) + " s";
+      nextEl.textContent = "Prochain −2 pts dans " + Math.ceil(remaining / 1000) + " s";
     }
 
     function decrement() {
@@ -328,15 +327,10 @@
       bal += price;
       balanceEl.textContent = String(bal);
       earnedEl.textContent = String(price);
-      if (price >= 0) {
-        statusEl.style.color = "var(--up-bright)";
-        statusEl.innerHTML = "✅ Prise ! +<span id=\"demo-earned\">" + price + "</span> points";
-        var rect = ctaBtn.getBoundingClientRect();
-        burstConfetti(rect.left + rect.width / 2, rect.top + window.scrollY);
-      } else {
-        statusEl.style.color = "var(--ultra)";
-        statusEl.innerHTML = "⚠️ Prise en pénalité : <span id=\"demo-earned\">" + price + "</span> points";
-      }
+      statusEl.style.color = "var(--up-bright)";
+      statusEl.innerHTML = "✅ Prise ! +<span id=\"demo-earned\">" + price + "</span> points";
+      var rect = ctaBtn.getBoundingClientRect();
+      burstConfetti(rect.left + rect.width / 2, rect.top + window.scrollY);
       demoCard.classList.add("is-taken");
       replayBtn.hidden = false;
     }
@@ -346,7 +340,7 @@
       price = START_PRICE;
       render();
       progressBar.style.transform = "scaleX(1)";
-      nextEl.textContent = "Prochain −2 pts dans 1,2 s";
+      nextEl.textContent = "Prochain −2 pts dans 30 s";
       demoCard.classList.remove("is-taken");
       replayBtn.hidden = true;
       startTimers();
@@ -502,7 +496,7 @@
     });
   }
 
-  /* ---------- Deep link (join.html) ---------- */
+  /* ---------- Deep link (/join/) ---------- */
   var joinCodeEl = document.getElementById("join-code");
   if (joinCodeEl) {
     var params = new URLSearchParams(window.location.search);

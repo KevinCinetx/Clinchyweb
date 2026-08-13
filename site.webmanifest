@@ -2,7 +2,7 @@
   "name": "Clinchy — Gère tes missions. Gagne des récompenses.",
   "short_name": "Clinchy",
   "description": "Clinchy transforme les tâches partagées en marché de missions dont la valeur décote avec le temps.",
-  "start_url": "./index.html",
+  "start_url": "./",
   "scope": "./",
   "display": "standalone",
   "lang": "fr",
