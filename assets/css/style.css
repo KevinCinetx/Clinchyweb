@@ -596,39 +596,9 @@ strong { color: var(--text); font-weight: 700; }
 @media (prefers-reduced-motion: reduce) { .scroll-cue__mouse::before { animation: none; } }
 
 /* --------------------------------------------------------------------------
-   Phone mockups (pure CSS)
+   Phone mockups — positioning/tilt only. Real screenshots already include
+   their own device frame (see .shot below), these modifiers just place them.
    -------------------------------------------------------------------------- */
-.phone {
-  width: min(300px, 72vw);
-  aspect-ratio: 300 / 610;
-  background: #0a0812;
-  border-radius: 46px;
-  padding: 12px;
-  box-shadow: 0 30px 60px rgba(4,3,10,0.7), inset 0 1px 0 rgba(255,255,255,0.06);
-  position: relative;
-}
-.phone__notch {
-  position: absolute;
-  top: 12px; left: 50%;
-  transform: translateX(-50%);
-  width: 34%; height: 22px;
-  background: #0a0812;
-  border-radius: var(--r-full);
-  z-index: 3;
-}
-.phone__screen {
-  width: 100%; height: 100%;
-  border-radius: 34px;
-  overflow: hidden;
-  position: relative;
-  background: var(--card);
-}
-.phone__screen img { width: 100%; height: 100%; object-fit: cover; }
-.phone__sheen {
-  position: absolute; inset: 0;
-  background: linear-gradient(120deg, rgba(255,255,255,0.16), transparent 40%);
-  pointer-events: none;
-}
 .phone--primary {
   transform: rotateY(-12deg) rotateX(4deg);
   transition: transform 500ms var(--ease-clay);
@@ -650,6 +620,16 @@ strong { color: var(--text); font-weight: 700; }
 @media (max-width: 640px) {
   .phone--secondary { display: none; }
 }
+
+/* --------------------------------------------------------------------------
+   Real screenshots — already include their own device frame with
+   transparent corners, so no extra bezel is added here (unlike .phone).
+   -------------------------------------------------------------------------- */
+.shot {
+  width: min(300px, 72vw);
+  filter: drop-shadow(0 26px 46px rgba(4,3,10,0.55));
+}
+.shot img { display: block; width: 100%; height: auto; }
 
 /* --------------------------------------------------------------------------
    Store badges
