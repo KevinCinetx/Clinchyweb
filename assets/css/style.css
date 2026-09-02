@@ -477,7 +477,7 @@ strong { color: var(--text); font-weight: 700; }
 .nav__links {
   display: none;
   align-items: center;
-  gap: 32px;
+  gap: 26px;
 }
 .nav__link {
   font-weight: 700;
@@ -1407,3 +1407,154 @@ strong { color: var(--text); font-weight: 700; }
 .stack { display: flex; flex-direction: column; gap: 16px; }
 .row { display: flex; gap: 14px; flex-wrap: wrap; }
 .row--center { justify-content: center; align-items: center; }
+
+/* --------------------------------------------------------------------------
+   Footer — bloc légal éditeur (obligatoire : LCEN art. 6-III, DSA art. 12,
+   Apple Developer Program — identification de l'organisation)
+   -------------------------------------------------------------------------- */
+.footer__legal {
+  padding-top: 28px;
+  margin-bottom: 24px;
+  border-top: 1px solid var(--card-border);
+  font-size: 0.82rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+}
+.footer__legal-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+.footer__legal address {
+  font-style: normal;
+  color: var(--text-secondary);
+}
+.footer__legal strong { color: var(--text); }
+.footer__legal a {
+  color: var(--accent-bright);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.footer__legal a:hover { color: var(--text); }
+
+.footer__legal-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  margin-top: 4px;
+}
+.footer__legal-links a {
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.footer__legal-links a:hover { color: var(--text); }
+
+/* --------------------------------------------------------------------------
+   Page studio CINETX — carte d'identité de l'organisation
+   -------------------------------------------------------------------------- */
+.org-card {
+  background: var(--card);
+  border-radius: var(--r-card);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--shadow-clay);
+  padding: clamp(24px, 3vw, 34px);
+  margin-block: 28px;
+}
+.org-card__title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.05rem;
+  margin-bottom: 18px;
+}
+
+.org-facts {
+  display: grid;
+  gap: 0;
+  margin: 0;
+}
+.org-facts > div {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--card-border);
+}
+.org-facts > div:last-child { border-bottom: 0; padding-bottom: 0; }
+.org-facts > div:first-child { padding-top: 0; }
+@media (min-width: 640px) {
+  .org-facts > div { grid-template-columns: 210px 1fr; gap: 16px; align-items: baseline; }
+}
+.org-facts dt {
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-weight: 700;
+}
+.org-facts dd {
+  margin: 0;
+  color: var(--text);
+  font-size: 0.98rem;
+}
+.org-facts dd a {
+  color: var(--accent-bright);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.org-facts dd address { font-style: normal; }
+
+.org-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+  margin-block: 28px;
+}
+/* Inside a full-width band the heading block already supplies the top spacing. */
+.section-head + .org-grid { margin-top: 0; }
+@media (min-width: 720px) { .org-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1040px) { .org-grid--3 { grid-template-columns: repeat(3, 1fr); } }
+
+.org-tile {
+  background: var(--card);
+  border-radius: var(--r-lg);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--shadow-clay-sm);
+  padding: 24px 26px;
+}
+.org-tile__emoji { font-size: 1.6rem; display: block; margin-bottom: 12px; }
+.org-tile h3 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.02rem;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+.org-tile p { color: var(--text-secondary); font-size: 0.94rem; margin: 0; }
+
+.org-verify {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+.org-verify a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: var(--r-full);
+  background: var(--card-raised);
+  box-shadow: var(--shadow-clay-sm);
+  color: var(--text-secondary);
+  font-size: 0.86rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 160ms, transform 160ms var(--ease-clay);
+}
+.org-verify a:hover { color: var(--text); transform: translateY(-2px); }

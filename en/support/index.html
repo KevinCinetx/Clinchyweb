@@ -33,7 +33,6 @@
 <meta name="twitter:title" content="Support &amp; FAQ · Clinchy">
 <meta name="twitter:description" content="All the answers about Clinchy, grouped by topic.">
 <meta name="twitter:image" content="https://getclinchy.com/assets/img/og-image.png">
-<meta name="apple-itunes-app" content="app-id={{APPLE_APP_ID}}">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -58,6 +57,7 @@
       <a class="nav__link" href="../#comment-ca-marche">How it works</a>
       <a class="nav__link" href="../tarifs/">Pricing</a>
       <a class="nav__link" href="../#faq">FAQ</a>
+      <a class="nav__link" href="../cinetx/">Studio</a>
     </nav>
     <div class="nav__actions">
       <a class="btn btn--accent nav__cta" href="../#hero-download">Download</a>
@@ -82,6 +82,7 @@
     <a href="../tarifs/">Pricing</a>
     <a href="../#faq">FAQ</a>
     <a href="./">Support</a>
+    <a href="../cinetx/">Studio</a>
   </nav>
   <div class="nav__mobile-foot">
     <a class="btn btn--accent btn--block" href="../#hero-download">Download Clinchy</a>
@@ -92,7 +93,7 @@
   <section class="page-hero container">
     <p class="page-hero__kicker">🆘 Support</p>
     <h1>How can we help?</h1>
-    <p class="lede">Over 20 answers grouped by topic. Can't find yours? Write to us: we usually reply within {{DELETION_SLA_DAYS}} business days, often much faster.</p>
+    <p class="lede">Over 20 answers grouped by topic. Can't find yours? Write to us: we usually reply within 2 business days, often much faster.</p>
     <div class="row" style="margin-top:20px">
       <a class="btn btn--ghost" href="#contact">✉️ Contact us</a>
       <a class="btn btn--ghost" href="../suppression-compte/">🗑️ Delete my account</a>
@@ -157,7 +158,7 @@
           <details class="faq-item"><summary>How do I change my email address?<span class="faq-item__icon" aria-hidden="true">＋</span></summary><div class="faq-item__body"><p>From Profile → Settings → Account. A verification email is sent to the new address.</p></div></details>
           <details class="faq-item"><summary>How do I delete my account?<span class="faq-item__icon" aria-hidden="true">＋</span></summary><div class="faq-item__body"><p>From the app (Profile → Settings → Delete my account) or via the <a href="../suppression-compte/">public deletion form</a> if you no longer have the app.</p></div></details>
           <details class="faq-item"><summary>Is my data shared with third parties?<span class="faq-item__icon" aria-hidden="true">＋</span></summary><div class="faq-item__body"><p>Only with the processors necessary for the service to run (hosting, advertising, subscription management). Details in our <a href="../confidentialite/">privacy policy</a>.</p></div></details>
-          <details class="faq-item"><summary>Can I get my data before deleting my account?<span class="faq-item__icon" aria-hidden="true">＋</span></summary><div class="faq-item__body"><p>Write to us at {{CONTACT_EMAIL}} before starting the deletion: we'll send you a data export whenever possible.</p></div></details>
+          <details class="faq-item"><summary>Can I get my data before deleting my account?<span class="faq-item__icon" aria-hidden="true">＋</span></summary><div class="faq-item__body"><p>Write to us at admin.cinetx@getclinchy.com before starting the deletion: we'll send you a data export whenever possible.</p></div></details>
         </div>
       </div>
 
@@ -178,14 +179,14 @@
       <div class="section-head">
         <span class="eyebrow">✉️ Contact</span>
         <h2>Another question?</h2>
-        <p class="lede">Write to us, we usually reply within {{DELETION_SLA_DAYS}} business days.</p>
+        <p class="lede">Write to us, we usually reply within 2 business days.</p>
       </div>
       <div class="card contact-card">
         <!-- By default this form composes a pre-filled mailto: email, no third-party service.
              To wire up a form service (Formspree, Getform, Google Forms), replace the action
              attribute below with your endpoint and uncomment the matching fetch logic in
              assets/js/main.js (see the "Contact form" comment). -->
-        <form id="contact-form" action="{{FORM_ENDPOINT}}" novalidate>
+        <form id="contact-form" novalidate>
           <div class="form-field">
             <label for="contact-email">Your email</label>
             <input type="email" id="contact-email" name="email" placeholder="you@example.com" required autocomplete="email">
@@ -201,7 +202,7 @@
           </div>
           <button class="btn btn--accent btn--block" type="submit">Send message</button>
           <p class="form-success" id="contact-success" aria-live="polite">
-            Your email client will open with the message pre-filled. If it doesn't open automatically, write to us directly at <a href="mailto:{{CONTACT_EMAIL}}" style="color:var(--accent-bright)">{{CONTACT_EMAIL}}</a>.
+            Your email client will open with the message pre-filled. If it doesn't open automatically, write to us directly at <a href="mailto:admin.cinetx@getclinchy.com" style="color:var(--accent-bright)">admin.cinetx@getclinchy.com</a>.
           </p>
         </form>
       </div>
@@ -260,8 +261,25 @@
         </div>
       </div>
     </div>
+    <div class="footer__legal">
+      <p class="footer__legal-title">Publisher of this website and of the Clinchy app</p>
+      <address>
+        <strong>KEVIN IHOUA (CINETX)</strong> — Sole proprietorship (French <em>entreprise individuelle</em>)<br>
+        SIRET (French business registration no.): 10834840000012<br>
+        Registered office: 30 bis rue de Ferrières, 77600 Bussy-Saint-Georges, France<br>
+        Publication director: Kevin Ihoua<br>
+        Contact: <a href="mailto:admin.cinetx@getclinchy.com">admin.cinetx@getclinchy.com</a>
+      </address>
+      <nav class="footer__legal-links" aria-label="Legal links">
+        <a href="../cinetx/">About CINETX</a>
+        <a href="../confidentialite/">Privacy Policy</a>
+        <a href="../conditions/">Terms of Use</a>
+        <a href="../mentions-legales/">Legal notice</a>
+        <a href="../suppression-compte/">Delete account</a>
+      </nav>
+    </div>
     <div class="footer__bottom">
-      <p>© 2026 Clinchy. All rights reserved.</p>
+      <p>© 2026 CINETX. All rights reserved. Clinchy is an app published by CINETX.</p>
       <p>Clinchy is not affiliated with Apple or Google.</p>
       <p>App Store is a trademark of Apple Inc. Google Play and the Google Play logo are trademarks of Google LLC.</p>
     </div>

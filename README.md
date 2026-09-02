@@ -3,44 +3,92 @@
 Site vitrine 100 % statique (HTML/CSS/JS vanilla, sans build, sans dépendance) pour
 l'application Clinchy, prêt à être déployé sur GitHub Pages.
 
-## ✅ Check-list des variables à remplir
+## ✅ Check-list des variables
 
-Toutes les variables `{{…}}` du dépôt doivent être remplacées avant mise en ligne
-définitive. Fais une recherche globale (`grep -rn "{{" .` depuis la racine du dépôt)
-pour vérifier qu'il n'en reste aucune une fois cette liste traitée.
+Toutes les variables `{{…}}` qui apparaissaient dans du contenu visible ont été
+résolues. Vérification :
 
-- [x] `{{DOMAIN}}` — résolu : `getclinchy.com` (déjà remplacé partout, `CNAME` créé,
-      DNS configuré chez OVH)
-- [ ] `{{APPSTORE_URL}}` — lien App Store. Tant qu'il est vide, les badges affichent
-      « Bientôt » (voir § Badges de stores)
-- [ ] `{{PLAYSTORE_URL}}` — lien Google Play. Même comportement que ci-dessus.
-- [ ] `{{APPLE_APP_ID}}` — identifiant numérique App Store (balise
-      `apple-itunes-app` pour le Smart App Banner iOS)
-- [ ] `{{CONTACT_EMAIL}}` — adresse de support et de suppression de compte
-- [ ] `{{PUBLISHER_NAME}}` — éditeur (personne ou société)
-- [ ] `{{PUBLISHER_ADDRESS}}` — adresse postale de l'éditeur
-- [ ] `{{SIRET}}` — si applicable
-- [ ] `{{JURISDICTION}}` — droit applicable, ex. `France`
-- [ ] `{{MIN_AGE}}` — âge minimum, ex. `13`
-- [ ] `{{DELETION_SLA_DAYS}}` — délai de traitement d'une demande, ex. `30`
-- [ ] `{{RETENTION_MONTHS}}` — durée de conservation résiduelle, ex. `12`
-- [ ] `{{FORM_ENDPOINT}}` — endpoint de formulaire tiers (optionnel, voir plus bas)
+```bash
+grep -rn "{{" --include="*.html" --include="*.js" .
+```
+
+Il ne doit plus rester que des occurrences **dans des commentaires** de
+`index.html` et `assets/js/main.js`, qui décrivent quoi faire le jour où l'app
+sera publiée sur les stores.
+
+### Résolues
+
+| Variable                | Valeur                                                    |
+| ----------------------- | --------------------------------------------------------- |
+| `{{DOMAIN}}`            | `getclinchy.com` (`CNAME` créé, DNS OVH configuré)         |
+| `{{PUBLISHER_NAME}}`    | `KEVIN IHOUA (CINETX)`                                      |
+| `{{PUBLISHER_ADDRESS}}` | `30 bis rue de Ferrières, 77600 Bussy-Saint-Georges, France`|
+| `{{SIRET}}`             | `10834840000012` (SIREN `108348400`)                        |
+| `{{CONTACT_EMAIL}}`     | `admin.cinetx@getclinchy.com`                               |
+| `{{JURISDICTION}}`      | droit français                                              |
+| `{{MIN_AGE}}`           | `13`                                                        |
+| `{{DELETION_SLA_DAYS}}` | `30` jours (suppression) — `2` jours ouvrés (réponse support) |
+| `{{RETENTION_MONTHS}}`  | `12`                                                        |
+| `{{FORM_ENDPOINT}}`     | supprimé — les formulaires basculent sur `mailto:` en JS    |
+
+### En attente de la publication de l'app
+
+- [ ] `{{APPSTORE_URL}}` — lien App Store. Tant qu'il est vide, les badges
+      affichent « Bientôt » (voir § Badges de stores).
+- [ ] `{{PLAYSTORE_URL}}` — lien Google Play. Même comportement.
+- [ ] `{{APPLE_APP_ID}}` — identifiant numérique App Store. La balise
+      `<meta name="apple-itunes-app">` a été **retirée** de toutes les pages :
+      elle était invalide sans identifiant. À réintroduire une fois l'app publiée.
 - [ ] `{{APPLE_TEAM_ID}}` — pour `.well-known/apple-app-site-association`
-- [ ] `{{ANDROID_SHA256}}` — empreinte SHA-256 de signature, pour
-      `.well-known/assetlinks.json`
+- [ ] `{{ANDROID_SHA256}}` — empreinte SHA-256, pour `.well-known/assetlinks.json`
 
-**Où chercher :** ces variables apparaissent dans les 16 pages HTML (FR + EN),
-`sitemap.xml`, `robots.txt`, `site.webmanifest` et les deux fichiers de
-`.well-known/`. Un remplacement global (rechercher/remplacer dans ton éditeur ou un
-script `sed`) est le plus sûr. **Ne remplace jamais un identifiant à la main dans un
-seul fichier** : les deux langues et tous les usages doivent rester cohérents.
+⚠️ **Les pages légales** (`confidentialite/`, `conditions/`,
+`suppression-compte/`, `mentions-legales/`, `cinetx/` et leurs équivalents `en/`)
+sont rédigées en langage clair et alignées sur l'identité légale réelle de
+l'éditeur. Elles restent **des textes rédigés par un non-juriste** : une relecture
+par un professionnel est recommandée, en particulier la clause de médiation, le
+droit de rétractation et la clause sur la boutique de points.
 
-⚠️ **Les pages légales (`confidentialite/`, `conditions/`,
-`suppression-compte/`, `mentions-legales/`, et leurs équivalents `en/`)
-contiennent un encadré HTML commenté en haut du fichier source listant les points à
-vérifier. Elles doivent être relues par une personne compétente (juriste ou
-responsable produit) avant mise en ligne : ce sont des modèles rédigés en langage
-clair, pas un avis juridique.**
+---
+
+## 🏢 Identité de l'organisation (CINETX)
+
+Le site est la vitrine officielle du studio **CINETX**, nom commercial sous lequel
+**KEVIN IHOUA** édite l'application Clinchy. Ces informations apparaissent à
+**cinq endroits** ; toute correction doit être répercutée partout :
+
+1. le bloc `footer__legal` — présent sur **toutes** les pages ;
+2. `cinetx/index.html` et `en/cinetx/index.html` — la page studio ;
+3. `mentions-legales/index.html` et son équivalent `en/` ;
+4. le JSON-LD `Organization` dans le `<head>` de `index.html` et `en/index.html` ;
+5. `cinetx-subdomain/index.html` — le site du sous-domaine (dépôt séparé).
+
+Pour retrouver toutes les occurrences d'un coup :
+
+```bash
+grep -rn "10834840000012\|Ferrières\|admin.cinetx@" --include="*.html" .
+```
+
+### Sous-domaine `cinetx.getclinchy.com`
+
+Le dossier `cinetx-subdomain/` contient un site autonome (un seul fichier HTML,
+CSS intégré) prêt à être déployé sur ce sous-domaine. **Il ne peut pas être servi
+par ce dépôt** : GitHub Pages ne sert qu'un domaine personnalisé par dépôt, et
+celui-ci est déjà pris par `getclinchy.com`. Voir `cinetx-subdomain/README.md`
+pour les deux options de déploiement (second dépôt, ou redirection OVH).
+
+En attendant, la page studio est déjà en ligne sur le domaine principal :
+**<https://getclinchy.com/cinetx/>**.
+
+### URL stables pour les stores
+
+À déclarer dans App Store Connect et la Play Console — elles ne bougeront plus, et
+redirigent automatiquement vers la version française ou anglaise selon la langue
+du navigateur :
+
+- Confidentialité : `https://getclinchy.com/privacy/`
+- Conditions : `https://getclinchy.com/terms/`
+- Suppression de compte : `https://getclinchy.com/suppression-compte/`
 
 ---
 
@@ -160,6 +208,22 @@ résout automatiquement `/nom/` vers `nom/index.html`. L'accueil (`index.html`,
 nouvelle page, respecte cette convention (`nouvelle-page/index.html`) et recalcule
 les chemins relatifs (`href`/`src`) en fonction de la profondeur du dossier.
 
+### Pages ajoutées pour la conformité Apple
+
+| URL                     | Fichier                    | Rôle                                          |
+| ----------------------- | -------------------------- | --------------------------------------------- |
+| `/cinetx/`              | `cinetx/index.html`        | Page studio : identité légale complète         |
+| `/en/cinetx/`           | `en/cinetx/index.html`     | Version anglaise                               |
+| `/privacy/`             | `privacy/index.html`       | Alias stable → `/confidentialite/` ou `/en/…`  |
+| `/terms/`               | `terms/index.html`         | Alias stable → `/conditions/` ou `/en/…`       |
+
+`/privacy/` et `/terms/` sont des **redirections** : un script choisit la langue
+d'après `navigator.language`, avec un `<meta http-equiv="refresh">` en repli sans
+JS et deux boutons de choix manuel. Elles portent `noindex, follow` et un
+`canonical` vers la page française, pour ne pas créer de contenu dupliqué. Ce sont
+les URL à donner aux stores : elles ne bougeront plus même si les pages sous-jacentes
+sont renommées.
+
 ---
 
 ## 🎨 Thèmes
@@ -198,16 +262,39 @@ python3 -m http.server 8000
 
 ## 📋 Ce qui reste à faire côté humain avant mise en ligne
 
-- [x] Domaine `getclinchy.com` configuré (`{{DOMAIN}}` remplacé, `CNAME`, DNS OVH)
-- [ ] Activer **Enforce HTTPS** dans Settings → Pages une fois le DNS validé par GitHub
-- [x] Remplacer les 9 captures placeholder par les vraies (voir § Captures d'écran)
-- [ ] Remplacer toutes les autres variables `{{…}}` (voir check-list ci-dessus)
-- [x] Remplacer le wordmark et l'icône par les fichiers de production réels de l'app
-- [ ] Faire relire les 4 pages légales (+ leurs versions `en/`) par une personne
-      compétente
-- [ ] Renseigner `{{APPSTORE_URL}}` / `{{PLAYSTORE_URL}}` puis activer les vrais
-      liens des badges (voir § Badges)
+### Fait
+
+- [x] Domaine `getclinchy.com` configuré (`CNAME`, DNS OVH)
+- [x] Les 9 captures d'écran réelles sont en place
+- [x] Wordmark et icône de production
+- [x] Toutes les variables `{{…}}` visibles remplacées par l'identité réelle
+- [x] Bloc légal éditeur (nom, SIRET, siège, contact) sur **toutes** les pages
+- [x] Page studio `/cinetx/` + version anglaise, avec JSON-LD `Organization`
+- [x] Alias stables `/privacy/` et `/terms/` pour les stores
+- [x] Mentions légales enrichies : forme juridique, TVA, hébergeur des données,
+      point de contact DSA, signalement de contenu, médiation de la consommation
+- [x] Politique de confidentialité : détail Firebase (Auth / Firestore / Storage),
+      engagement de non-revente, procédure de suppression et purge
+- [x] CGU : clause complète sur les points et la boutique de récompenses,
+      droit de rétractation
+
+### À faire
+
+- [ ] Activer **Enforce HTTPS** dans Settings → Pages
+- [ ] Déployer `cinetx-subdomain/` sur `cinetx.getclinchy.com`
+      (voir `cinetx-subdomain/README.md`), **ou** créer la redirection OVH
+- [ ] Déclarer le site de l'organisation dans le dossier Apple Developer
+      (`https://cinetx.getclinchy.com/` une fois en ligne, sinon
+      `https://getclinchy.com/cinetx/`)
+- [ ] Vérifier que le WHOIS de `getclinchy.com` chez OVH porte bien le nom
+      **KEVIN IHOUA** ou **CINETX**, et la même adresse que le D-U-N-S — c'est ce
+      qu'Apple recoupe
+- [ ] Confirmer la mention TVA (« TVA non applicable, art. 293 B du CGI ») :
+      exacte en micro-entreprise sous les seuils, à corriger si assujetti
+- [ ] Faire relire les pages légales par un professionnel
+- [ ] Renseigner `{{APPSTORE_URL}}` / `{{PLAYSTORE_URL}}` / `{{APPLE_APP_ID}}`
+      quand l'app sera publiée, puis réactiver les badges et la balise
+      `apple-itunes-app`
 - [ ] Décider si un service de formulaire tiers est nécessaire, sinon laisser le
       comportement `mailto:` par défaut
-- [ ] Vérifier `{{APPLE_TEAM_ID}}` / `{{ANDROID_SHA256}}` si les liens profonds
-      Universal Links / App Links doivent fonctionner
+- [ ] Vérifier `{{APPLE_TEAM_ID}}` / `{{ANDROID_SHA256}}` pour les liens profonds

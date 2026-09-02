@@ -33,20 +33,8 @@
 <meta name="twitter:title" content="Supprimer mon compte · Clinchy">
 <meta name="twitter:description" content="Comment supprimer définitivement ton compte Clinchy.">
 <meta name="twitter:image" content="https://getclinchy.com/assets/img/og-image.png">
-<meta name="apple-itunes-app" content="app-id={{APPLE_APP_ID}}">
 </head>
 <body>
-<!--
-  ⚠️ À VÉRIFIER PAR LE RESPONSABLE DU SITE AVANT MISE EN LIGNE :
-  - {{PUBLISHER_NAME}} : identité légale de l'éditeur affichée plus bas
-  - {{CONTACT_EMAIL}} : adresse qui recevra les demandes de suppression
-  - {{DELETION_SLA_DAYS}} : délai de traitement réellement praticable
-  - {{RETENTION_MONTHS}} : durée de conservation résiduelle réelle (obligations légales/comptables)
-  - Vérifier que les captures/étapes du parcours in-app (§ Méthode 1) correspondent
-    exactement au libellé des écrans actuels de l'app avant publication.
-  Cette page est exigée par Google Play (Play Console > Sécurité des données) et doit
-  rester accessible publiquement, sans connexion, à une URL stable.
--->
 <a class="skip-link" href="#main">Aller au contenu</a>
 <div class="ambient" aria-hidden="true">
   <div class="ambient__blob ambient__blob--1"></div>
@@ -69,6 +57,7 @@
       <a class="nav__link" href="../#comment-ca-marche">Comment ça marche</a>
       <a class="nav__link" href="../tarifs/">Tarifs</a>
       <a class="nav__link" href="../#faq">FAQ</a>
+      <a class="nav__link" href="../cinetx/">Studio</a>
     </nav>
     <div class="nav__actions">
       <a class="btn btn--accent nav__cta" href="../#hero-download">Télécharger</a>
@@ -93,6 +82,7 @@
     <a href="../tarifs/">Tarifs</a>
     <a href="../#faq">FAQ</a>
     <a href="../support/">Support</a>
+    <a href="../cinetx/">Studio</a>
   </nav>
   <div class="nav__mobile-foot">
     <a class="btn btn--accent btn--block" href="../#hero-download">Télécharger Clinchy</a>
@@ -103,7 +93,7 @@
   <section class="page-hero container">
     <p class="page-hero__kicker">⚠️ Page de conformité</p>
     <h1>Supprimer votre compte Clinchy</h1>
-    <p class="lede">Application <strong>Clinchy</strong>, éditée par <strong>{{PUBLISHER_NAME}}</strong>. Cette page est accessible publiquement, sans connexion et sans avoir l'app installée, conformément aux exigences d'Apple et de Google.</p>
+    <p class="lede">Application <strong>Clinchy</strong>, éditée par <strong>KEVIN IHOUA (CINETX)</strong>. Cette page est accessible publiquement, sans connexion et sans avoir l'app installée, conformément aux exigences d'Apple et de Google.</p>
     <div class="toc">
       <a href="#methode-app">📱 Depuis l'app</a>
       <a href="#methode-web">🌐 Depuis le web</a>
@@ -136,14 +126,14 @@
     </div>
 
     <h2 id="methode-web">Méthode 2 : par le web (si tu n'as plus l'app)</h2>
-    <p>Remplis ce formulaire pour demander la suppression de ton compte. Nous traitons les demandes sous <strong>{{DELETION_SLA_DAYS}} jours</strong> et t'envoyons une confirmation par email une fois la suppression effectuée.</p>
+    <p>Remplis ce formulaire pour demander la suppression de ton compte. Nous traitons les demandes sous <strong>30 jours</strong> et t'envoyons une confirmation par email une fois la suppression effectuée.</p>
 
     <div class="card contact-card">
-      <!-- Par défaut ce formulaire compose un e-mail (mailto:) pré-rempli vers {{CONTACT_EMAIL}}, sans service tiers.
+      <!-- Par défaut ce formulaire compose un e-mail (mailto:) pré-rempli vers admin.cinetx@getclinchy.com, sans service tiers.
            Pour brancher un service de formulaire (Formspree, Getform, Google Forms), remplace l'attribut
            action ci-dessous par ton endpoint et décommente la logique fetch dans assets/js/main.js
            (voir commentaire "Voie optionnelle" dans le gestionnaire de #deletion-form). -->
-      <form id="deletion-form" action="{{FORM_ENDPOINT}}" novalidate>
+      <form id="deletion-form" novalidate>
         <div class="form-field">
           <label for="deletion-email">Email associé à ton compte</label>
           <input type="email" id="deletion-email" name="email" placeholder="toi@exemple.com" required autocomplete="email">
@@ -165,13 +155,13 @@
         <button class="btn btn--accent btn--block" type="submit">Demander la suppression de mon compte</button>
 
         <div class="form-success" id="deletion-success" aria-live="polite">
-          <p style="color:var(--text)"><strong>Ta demande est prête.</strong> Ton client email va s'ouvrir avec le message pré-rempli à destination de {{CONTACT_EMAIL}}. S'il ne s'ouvre pas, copie le message ci-dessous et envoie-le toi-même.</p>
+          <p style="color:var(--text)"><strong>Ta demande est prête.</strong> Ton client email va s'ouvrir avec le message pré-rempli à destination de admin.cinetx@getclinchy.com. S'il ne s'ouvre pas, copie le message ci-dessous et envoie-le toi-même.</p>
           <p>Numéro de demande à conserver :</p>
           <p class="form-success__id" id="deletion-ticket">CLY-…</p>
           <div class="copy-block" id="deletion-message-body">…</div>
           <div class="row">
             <button class="btn btn--ghost btn--sm" type="button" data-copy-target="#deletion-message-body">📋 Copier le message</button>
-            <a class="btn btn--outline btn--sm" id="deletion-mailto" href="mailto:{{CONTACT_EMAIL}}">Ouvrir mon client email</a>
+            <a class="btn btn--outline btn--sm" id="deletion-mailto" href="mailto:admin.cinetx@getclinchy.com">Ouvrir mon client email</a>
           </div>
         </div>
       </form>
@@ -194,7 +184,7 @@
       <li><strong>Justificatifs de facturation :</strong> conservés le temps de l'obligation légale et comptable applicable.</li>
       <li><strong>Journaux techniques anonymisés :</strong> conservés à des fins de sécurité et de lutte contre l'abus.</li>
     </ul>
-    <p>Durée maximale de conservation de ces données résiduelles : <strong>{{RETENTION_MONTHS}} mois</strong>.</p>
+    <p>Durée maximale de conservation de ces données résiduelles : <strong>12 mois</strong>.</p>
 
     <div class="callout callout--warn" id="abonnements">
       <span class="callout__title">⚠️ La suppression du compte ne résilie pas ton abonnement</span>
@@ -207,7 +197,7 @@
     <p>Avant de supprimer ton compte, pense à ton espace : si tu en es le seul administrateur, désigne un successeur (promeus un autre membre admin depuis les réglages de l'espace) ou supprime l'espace toi-même. Sans cela, les autres membres pourraient perdre l'accès à l'historique partagé.</p>
 
     <h2>Contact</h2>
-    <p>Une question avant de te décider ? Écris-nous à <a href="mailto:{{CONTACT_EMAIL}}">{{CONTACT_EMAIL}}</a>. On préfère t'aider à résoudre un problème plutôt que te voir partir.</p>
+    <p>Une question avant de te décider ? Écris-nous à <a href="mailto:admin.cinetx@getclinchy.com">admin.cinetx@getclinchy.com</a>. On préfère t'aider à résoudre un problème plutôt que te voir partir.</p>
   </section>
 </main>
 
@@ -262,10 +252,27 @@
         </div>
       </div>
     </div>
+    <div class="footer__legal">
+      <p class="footer__legal-title">Éditeur du site et de l’application Clinchy</p>
+      <address>
+        <strong>KEVIN IHOUA (CINETX)</strong> — Entreprise individuelle (micro-entreprise)<br>
+        SIRET : 10834840000012<br>
+        Siège social : 30 bis rue de Ferrières, 77600 Bussy-Saint-Georges, France<br>
+        Directeur de la publication : Kevin Ihoua<br>
+        Contact : <a href="mailto:admin.cinetx@getclinchy.com">admin.cinetx@getclinchy.com</a>
+      </address>
+      <nav class="footer__legal-links" aria-label="Liens légaux">
+        <a href="../cinetx/">À propos de CINETX</a>
+        <a href="../confidentialite/">Politique de confidentialité</a>
+        <a href="../conditions/">Conditions générales d’utilisation</a>
+        <a href="../mentions-legales/">Mentions légales</a>
+        <a href="../suppression-compte/">Suppression de compte</a>
+      </nav>
+    </div>
     <div class="footer__bottom">
-      <p>© 2026 Clinchy. Tous droits réservés.</p>
-      <p>Clinchy n'est affilié ni à Apple ni à Google.</p>
-      <p>App Store est une marque d'Apple Inc. Google Play et le logo Google Play sont des marques de Google LLC.</p>
+      <p>© 2026 CINETX. Tous droits réservés. Clinchy est une application éditée par CINETX.</p>
+      <p>Clinchy n’est affilié ni à Apple ni à Google.</p>
+      <p>App Store est une marque d’Apple Inc. Google Play et le logo Google Play sont des marques de Google LLC.</p>
     </div>
   </div>
 </footer>

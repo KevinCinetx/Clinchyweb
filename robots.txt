@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
 
+# Dossier de préparation du sous-domaine cinetx.getclinchy.com : il part dans un
+# dépôt séparé (voir cinetx-subdomain/README.md) et ne doit pas être indexé ici.
+Disallow: /cinetx-subdomain/
+
 Sitemap: https://getclinchy.com/sitemap.xml

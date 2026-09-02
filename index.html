@@ -34,7 +34,6 @@
 <meta name="twitter:title" content="Clinchy · Gère tes missions. Gagne des récompenses.">
 <meta name="twitter:description" content="Les corvées, en mode marché. Premier arrivé, premier servi.">
 <meta name="twitter:image" content="https://getclinchy.com/assets/img/og-image.png">
-<meta name="apple-itunes-app" content="app-id={{APPLE_APP_ID}}">
 
 <script type="application/ld+json">
 {
@@ -47,22 +46,20 @@
   "description": "Clinchy transforme les tâches partagées en marché de missions dont la valeur décote avec le temps.",
   "publisher": {
     "@type": "Organization",
-    "name": "{{PUBLISHER_NAME}}"
+    "name": "KEVIN IHOUA (CINETX)"
   },
   "offers": [
     {
       "@type": "Offer",
       "name": "Clinchy + (mensuel)",
       "price": "2.99",
-      "priceCurrency": "EUR",
-      "url": "{{APPSTORE_URL}}"
+      "priceCurrency": "EUR"
     },
     {
       "@type": "Offer",
       "name": "Clinchy + (annuel)",
       "price": "24.99",
-      "priceCurrency": "EUR",
-      "url": "{{APPSTORE_URL}}"
+      "priceCurrency": "EUR"
     }
   ]
 }
@@ -71,9 +68,49 @@
 {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "Clinchy",
-  "url": "https://getclinchy.com/",
-  "logo": "https://getclinchy.com/assets/img/icon.png"
+  "@id": "https://getclinchy.com/#cinetx",
+  "name": "CINETX",
+  "legalName": "KEVIN IHOUA (CINETX)",
+  "alternateName": "CINETX \u2014 \u00e9diteur de Clinchy",
+  "description": "CINETX est le studio ind\u00e9pendant fran\u00e7ais qui con\u00e7oit et \u00e9dite l\u2019application mobile Clinchy.",
+  "url": "https://cinetx.getclinchy.com/",
+  "logo": "https://getclinchy.com/assets/img/icon.png",
+  "image": "https://getclinchy.com/assets/img/og-image.png",
+  "email": "admin.cinetx@getclinchy.com",
+  "foundingDate": "2025",
+  "founder": {
+    "@type": "Person",
+    "name": "Kevin Ihoua"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "30 bis rue de Ferri\u00e8res",
+    "postalCode": "77600",
+    "addressLocality": "Bussy-Saint-Georges",
+    "addressRegion": "\u00cele-de-France",
+    "addressCountry": "FR"
+  },
+  "identifier": [
+    { "@type": "PropertyValue", "name": "SIRET", "value": "10834840000012" },
+    { "@type": "PropertyValue", "name": "SIREN", "value": "108348400" }
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer support",
+    "email": "admin.cinetx@getclinchy.com",
+    "areaServed": "FR",
+    "availableLanguage": ["fr", "en"]
+  },
+  "sameAs": ["https://getclinchy.com/"],
+  "makesOffer": {
+    "@type": "Offer",
+    "itemOffered": {
+      "@type": "SoftwareApplication",
+      "name": "Clinchy",
+      "applicationCategory": "ProductivityApplication",
+      "operatingSystem": "iOS, Android"
+    }
+  }
 }
 </script>
 <script type="application/ld+json">
@@ -122,6 +159,7 @@
       <a class="nav__link" href="./#comment-ca-marche">Comment ça marche</a>
       <a class="nav__link" href="./tarifs/">Tarifs</a>
       <a class="nav__link" href="./#faq">FAQ</a>
+      <a class="nav__link" href="./cinetx/">Studio</a>
     </nav>
     <div class="nav__actions">
       <a class="btn btn--accent nav__cta" href="./#hero-download">Télécharger</a>
@@ -146,6 +184,7 @@
     <a href="./tarifs/">Tarifs</a>
     <a href="./#faq">FAQ</a>
     <a href="./support/">Support</a>
+    <a href="./cinetx/">Studio</a>
   </nav>
   <div class="nav__mobile-foot">
     <a class="btn btn--accent btn--block" href="./#hero-download">Télécharger Clinchy</a>
@@ -162,7 +201,7 @@
         <p class="lede" data-reveal>Publie une mission, sa valeur baisse tant que personne ne la prend. Le premier qui s'y colle empoche les points, et les dépense dans la boutique que vous avez créée ensemble.</p>
         <div class="hero__badges" id="hero-download" data-reveal>
           <span class="store-badge-wrap">
-            <span class="store-badge store-badge--disabled" aria-disabled="true" title="Lien à activer : renseigne {{APPSTORE_URL}}">
+            <span class="store-badge store-badge--disabled" aria-disabled="true" title="Clinchy arrive bientôt sur l’App Store">
               <img src="./assets/img/badge-appstore-fr.svg" alt="Télécharger dans l'App Store" width="180" height="54" loading="eager" decoding="async">
             </span>
             <span class="store-badge__soon">Bientôt</span>
@@ -172,7 +211,7 @@
             <img src="./assets/img/badge-appstore-fr.svg" alt="" width="180" height="54" loading="eager" decoding="async">
           </a> -->
           <span class="store-badge-wrap">
-            <span class="store-badge store-badge--disabled" aria-disabled="true" title="Lien à activer : renseigne {{PLAYSTORE_URL}}">
+            <span class="store-badge store-badge--disabled" aria-disabled="true" title="Clinchy arrive bientôt sur Google Play">
               <img src="./assets/img/badge-googleplay-fr.png" alt="Disponible sur Google Play" width="182" height="54" loading="eager" decoding="async">
             </span>
             <span class="store-badge__soon">Bientôt</span>
@@ -666,13 +705,13 @@
         <p>Gratuit, sans engagement.</p>
         <div class="cta-band__badges">
           <span class="store-badge-wrap">
-            <span class="store-badge store-badge--disabled" aria-disabled="true" title="Lien à activer : renseigne {{APPSTORE_URL}}">
+            <span class="store-badge store-badge--disabled" aria-disabled="true" title="Clinchy arrive bientôt sur l’App Store">
               <img src="./assets/img/badge-appstore-fr.svg" alt="Télécharger dans l'App Store" width="180" height="54" loading="lazy" decoding="async">
             </span>
             <span class="store-badge__soon">Bientôt</span>
           </span>
           <span class="store-badge-wrap">
-            <span class="store-badge store-badge--disabled" aria-disabled="true" title="Lien à activer : renseigne {{PLAYSTORE_URL}}">
+            <span class="store-badge store-badge--disabled" aria-disabled="true" title="Clinchy arrive bientôt sur Google Play">
               <img src="./assets/img/badge-googleplay-fr.png" alt="Disponible sur Google Play" width="182" height="54" loading="lazy" decoding="async">
             </span>
             <span class="store-badge__soon">Bientôt</span>
@@ -735,10 +774,27 @@
         </div>
       </div>
     </div>
+    <div class="footer__legal">
+      <p class="footer__legal-title">Éditeur du site et de l’application Clinchy</p>
+      <address>
+        <strong>KEVIN IHOUA (CINETX)</strong> — Entreprise individuelle (micro-entreprise)<br>
+        SIRET : 10834840000012<br>
+        Siège social : 30 bis rue de Ferrières, 77600 Bussy-Saint-Georges, France<br>
+        Directeur de la publication : Kevin Ihoua<br>
+        Contact : <a href="mailto:admin.cinetx@getclinchy.com">admin.cinetx@getclinchy.com</a>
+      </address>
+      <nav class="footer__legal-links" aria-label="Liens légaux">
+        <a href="./cinetx/">À propos de CINETX</a>
+        <a href="./confidentialite/">Politique de confidentialité</a>
+        <a href="./conditions/">Conditions générales d’utilisation</a>
+        <a href="./mentions-legales/">Mentions légales</a>
+        <a href="./suppression-compte/">Suppression de compte</a>
+      </nav>
+    </div>
     <div class="footer__bottom">
-      <p>© 2026 Clinchy. Tous droits réservés.</p>
-      <p>Clinchy n'est affilié ni à Apple ni à Google.</p>
-      <p>App Store est une marque d'Apple Inc. Google Play et le logo Google Play sont des marques de Google LLC.</p>
+      <p>© 2026 CINETX. Tous droits réservés. Clinchy est une application éditée par CINETX.</p>
+      <p>Clinchy n’est affilié ni à Apple ni à Google.</p>
+      <p>App Store est une marque d’Apple Inc. Google Play et le logo Google Play sont des marques de Google LLC.</p>
     </div>
   </div>
 </footer>

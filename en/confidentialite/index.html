@@ -35,15 +35,6 @@
 <meta name="twitter:image" content="https://getclinchy.com/assets/img/og-image.png">
 </head>
 <body>
-<!--
-  ⚠️ TO VERIFY BEFORE PUBLISHING (site owner):
-  - {{PUBLISHER_NAME}}, {{PUBLISHER_ADDRESS}}, {{CONTACT_EMAIL}} : the actual data controller identity
-  - {{MIN_AGE}} : the minimum age actually set in the Terms of Use
-  - The list of subprocessors (Firebase, AdMob, RevenueCat) must be confirmed and kept up to
-    date if the tech stack changes.
-  - This policy should be reviewed by a lawyer before final publication: this text is a
-    plain-language template, not legal advice.
--->
 <a class="skip-link" href="#main">Skip to content</a>
 <div class="ambient" aria-hidden="true">
   <div class="ambient__blob ambient__blob--1"></div>
@@ -66,6 +57,7 @@
       <a class="nav__link" href="../#comment-ca-marche">How it works</a>
       <a class="nav__link" href="../tarifs/">Pricing</a>
       <a class="nav__link" href="../#faq">FAQ</a>
+      <a class="nav__link" href="../cinetx/">Studio</a>
     </nav>
     <div class="nav__actions">
       <a class="btn btn--accent nav__cta" href="../#hero-download">Download</a>
@@ -90,6 +82,7 @@
     <a href="../tarifs/">Pricing</a>
     <a href="../#faq">FAQ</a>
     <a href="../support/">Support</a>
+    <a href="../cinetx/">Studio</a>
   </nav>
   <div class="nav__mobile-foot">
     <a class="btn btn--accent btn--block" href="../#hero-download">Download Clinchy</a>
@@ -100,21 +93,32 @@
   <section class="page-hero container">
     <p class="page-hero__kicker">🔒 Privacy</p>
     <h1>Privacy Policy</h1>
-    <p class="lede">Last updated: August 4, 2026. Written in plain English, because you have the right to understand what we do with your data.</p>
+    <p class="lede">Last updated: September 1, 2026. Written in plain English, because you have the right to understand what we do with your data.</p>
   </section>
 
   <section class="container prose">
-    <h2>1. Who's responsible for your data</h2>
-    <p>The data controller is <strong>{{PUBLISHER_NAME}}</strong>, located at {{PUBLISHER_ADDRESS}}, reachable at <a href="mailto:{{CONTACT_EMAIL}}">{{CONTACT_EMAIL}}</a>.</p>
+    <h2>1. Who’s responsible for your data</h2>
+    <p>The data controller within the meaning of the GDPR is:</p>
+    <p>
+      <strong>KEVIN IHOUA (CINETX)</strong> — sole proprietorship<br>
+      SIRET: 10834840000012<br>
+      30 bis rue de Ferrières, 77600 Bussy-Saint-Georges, France<br>
+      <a href="mailto:admin.cinetx@getclinchy.com">admin.cinetx@getclinchy.com</a>
+    </p>
+    <p>CINETX is the studio that publishes Clinchy — see the <a href="../cinetx/">About CINETX</a> page. Given its size, CINETX is not required to appoint a Data Protection Officer; the address above is the single point of contact for any question about your data.</p>
 
     <h2>2. Data we collect</h2>
+    <p>Clinchy runs on <strong>Google Firebase</strong>. Here is exactly what is stored, and where:</p>
     <ul>
-      <li><strong>Account:</strong> email address, first name, profile photo (optional)</li>
-      <li><strong>Content you create:</strong> missions, rewards, activity history, statistics</li>
-      <li><strong>Space membership:</strong> households, shared houses or teams you join</li>
-      <li><strong>Technical identifiers:</strong> device ID, app version, operational logs</li>
-      <li><strong>Advertising identifier:</strong> for free-tier users, subject to your consent</li>
+      <li><strong>Account (Firebase Authentication):</strong> your email address and a unique technical identifier (UID). Your password is <strong>never</strong> stored in clear text nor accessible to us: Firebase Authentication keeps only an encrypted hash of it. If you sign in with Apple or Google, we receive nothing beyond the email and identifier the provider passes on.</li>
+      <li><strong>Profile (Cloud Firestore):</strong> your first name or nickname, your avatar, your theme, your notification preferences, your level and your XP.</li>
+      <li><strong>Profile photo (Cloud Storage for Firebase):</strong> only if you choose one. It is optional — a generated avatar is offered by default.</li>
+      <li><strong>Content you create (Cloud Firestore):</strong> missions, point values, shop rewards, activity history and statistics.</li>
+      <li><strong>Space membership (Cloud Firestore):</strong> the households, shared houses or teams you join, and your role in each.</li>
+      <li><strong>Technical identifiers:</strong> device ID, push notification token, app version and operational logs.</li>
+      <li><strong>Advertising identifier:</strong> for free-tier users, and only subject to your consent.</li>
     </ul>
+    <p>We collect <strong>no location data, no contacts, no messages and no banking data</strong>: subscription payments are handled exclusively by Apple and Google, who pass us no payment details whatsoever.</p>
 
     <h2>3. Why, and on what legal basis (GDPR)</h2>
     <ul>
@@ -132,7 +136,13 @@
       <li><strong>RevenueCat:</strong> Clinchy + subscription management</li>
       <li><strong>Apple App Store / Google Play:</strong> subscription payment processing</li>
     </ul>
-    <p>These providers may host data outside the European Union; in that case, the transfer is governed by Standard Contractual Clauses approved by the European Commission.</p>
+    <p>These providers may host data outside the European Union; in that case, the transfer is governed by Standard Contractual Clauses approved by the European Commission. They act as <strong>processors</strong>: they handle the data on our behalf, on our instructions, and are not allowed to reuse it for their own purposes.</p>
+
+    <div class="callout">
+      <span class="callout__title">We do not sell your data. Ever.</span>
+      <p>CINETX does not sell, rent, transfer or trade <strong>any</strong> personal data with third parties, at any time, in any form, at any price. We do no data brokering either, and we share no data with data brokers or ad networks beyond the strict ad delivery described in § 6.</p>
+      <p style="margin-bottom:0">Our business model rests solely on the Clinchy + subscription and on advertising in the free tier. The only situation in which we could be compelled to disclose data is a <strong>judicial order</strong> from a competent French authority — and we would tell you about it, unless legally barred from doing so.</p>
+    </div>
 
     <h2>5. Permissions requested on your phone</h2>
     <ul>
@@ -145,17 +155,40 @@
     <h2>6. Advertising</h2>
     <p>The Basic tier shows banner and rewarded ads. Clinchy + subscribers see <strong>no ads at all</strong>. In Europe, a consent screen lets you choose, and change your mind anytime from the app's settings.</p>
 
-    <h2>7. Retention and deletion</h2>
-    <p>Your data is kept as long as your account is active. You can request its deletion at any time from the <a href="../suppression-compte/">Delete my account</a> page.</p>
+    <h2>7. Retention and deleting your account</h2>
+    <p>Your data is kept as long as your account is active. You can delete it at any time, without giving a reason, and without going through support.</p>
+
+    <h3>From the app, in three taps</h3>
+    <p>This is the fastest route, and it takes effect immediately:</p>
+    <ol>
+      <li>Open the <strong>Profile</strong> tab.</li>
+      <li>Go to <strong>Settings</strong>.</li>
+      <li>Tap <strong>Delete my account</strong>, then confirm.</li>
+    </ol>
+
+    <h3>From this website, if you no longer have the app</h3>
+    <p>A public form, with no sign-in required, is available on the <a href="../suppression-compte/">Delete my account</a> page. Requests are processed within <strong>30 days</strong>, with a confirmation email once the purge is complete.</p>
+
+    <h3>What actually gets erased</h3>
+    <p>Deletion is <strong>permanent and irreversible</strong>. It triggers:</p>
+    <ul>
+      <li>deletion of your identity in <strong>Firebase Authentication</strong> (email and UID) — you can no longer sign in;</li>
+      <li>the purge of your profile document and all related documents in <strong>Cloud Firestore</strong>: missions, history, statistics, XP, space memberships, shop entries;</li>
+      <li>deletion of your profile photo in <strong>Cloud Storage for Firebase</strong>;</li>
+      <li>revocation of your push notification tokens.</li>
+    </ul>
+    <p>If you are the last administrator of a shared space, the space and its content are deleted along with your account. If other members remain, the space continues to exist: the missions you had already completed stay there under a <em>“deleted member”</em> label, with no data that could identify you, so as not to distort the other members’ history.</p>
+    <p>Firebase’s encrypted backups may retain residual fragments for a short technical period before rotation, without them being reachable by the app. Data we are legally required to keep (billing, accounting obligations) is retained for at most <strong>12 months</strong>, isolated and unusable for any other purpose.</p>
+    <p>Your Clinchy + subscription, if active, is managed by Apple or Google: deleting your account <strong>does not cancel it automatically</strong>. Remember to cancel it from your App Store or Google Play settings.</p>
 
     <h2>8. Your rights</h2>
-    <p>Under GDPR, you have the right to access, rectify, erase, port, object to and restrict the processing of your data, and to withdraw your consent at any time. To exercise them, write to <a href="mailto:{{CONTACT_EMAIL}}">{{CONTACT_EMAIL}}</a>. You may also file a complaint with your local data protection authority (for France, the <a href="https://www.cnil.fr/en/plaintes" target="_blank" rel="noopener">CNIL</a>).</p>
+    <p>Under GDPR, you have the right to access, rectify, erase, port, object to and restrict the processing of your data, and to withdraw your consent at any time. To exercise them, write to <a href="mailto:admin.cinetx@getclinchy.com">admin.cinetx@getclinchy.com</a>. You may also file a complaint with your local data protection authority (for France, the <a href="https://www.cnil.fr/en/plaintes" target="_blank" rel="noopener">CNIL</a>).</p>
 
     <h2>9. Children</h2>
-    <p>Kid Mode 🧸 is a simplified display inside an adult's account: it does not create a separate account. Clinchy isn't intended for autonomous use by a minor under {{MIN_AGE}} years old; it's the parent who creates and administers the space.</p>
+    <p>Kid Mode 🧸 is a simplified display inside an adult's account: it does not create a separate account. Clinchy isn't intended for autonomous use by a minor under 13 years old; it's the parent who creates and administers the space.</p>
 
     <h2>10. Security, changes, contact</h2>
-    <p>We implement reasonable technical and organizational measures to protect your data. This policy may evolve; the date at the top reflects the latest update. For any question: <a href="mailto:{{CONTACT_EMAIL}}">{{CONTACT_EMAIL}}</a>.</p>
+    <p>We implement reasonable technical and organizational measures to protect your data. This policy may evolve; the date at the top reflects the latest update. For any question: <a href="mailto:admin.cinetx@getclinchy.com">admin.cinetx@getclinchy.com</a>.</p>
 
     <h2>11. This website</h2>
     <p>This site is hosted on GitHub Pages. It sets <strong>no cookies</strong>, uses <strong>no trackers</strong> and integrates <strong>no analytics tool</strong>, which is why it doesn't show you a consent banner. Only the host's standard technical logs (IP address, timestamp) may apply, outside our direct control.</p>
@@ -213,8 +246,25 @@
         </div>
       </div>
     </div>
+    <div class="footer__legal">
+      <p class="footer__legal-title">Publisher of this website and of the Clinchy app</p>
+      <address>
+        <strong>KEVIN IHOUA (CINETX)</strong> — Sole proprietorship (French <em>entreprise individuelle</em>)<br>
+        SIRET (French business registration no.): 10834840000012<br>
+        Registered office: 30 bis rue de Ferrières, 77600 Bussy-Saint-Georges, France<br>
+        Publication director: Kevin Ihoua<br>
+        Contact: <a href="mailto:admin.cinetx@getclinchy.com">admin.cinetx@getclinchy.com</a>
+      </address>
+      <nav class="footer__legal-links" aria-label="Legal links">
+        <a href="../cinetx/">About CINETX</a>
+        <a href="../confidentialite/">Privacy Policy</a>
+        <a href="../conditions/">Terms of Use</a>
+        <a href="../mentions-legales/">Legal notice</a>
+        <a href="../suppression-compte/">Delete account</a>
+      </nav>
+    </div>
     <div class="footer__bottom">
-      <p>© 2026 Clinchy. All rights reserved.</p>
+      <p>© 2026 CINETX. All rights reserved. Clinchy is an app published by CINETX.</p>
       <p>Clinchy is not affiliated with Apple or Google.</p>
       <p>App Store is a trademark of Apple Inc. Google Play and the Google Play logo are trademarks of Google LLC.</p>
     </div>

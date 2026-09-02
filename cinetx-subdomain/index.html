@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CINETX — studio indépendant, éditeur de l'application Clinchy</title>
+<meta name="description" content="CINETX est le studio indépendant français dirigé par Kevin Ihoua, éditeur de l'application mobile Clinchy. Identité légale, SIRET 10834840000012, siège social à Bussy-Saint-Georges et contact officiel.">
+<link rel="canonical" href="https://cinetx.getclinchy.com/">
+
+<link rel="icon" href="./assets/favicon.ico" sizes="32x32">
+<link rel="icon" href="./assets/favicon-192x192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+<meta name="theme-color" content="#13111E">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CINETX">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="CINETX — studio indépendant, éditeur de l'application Clinchy">
+<meta property="og:description" content="Studio indépendant français dirigé par Kevin Ihoua, éditeur de l'application mobile Clinchy.">
+<meta property="og:url" content="https://cinetx.getclinchy.com/">
+<meta property="og:image" content="https://getclinchy.com/assets/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://cinetx.getclinchy.com/#organization",
+  "name": "CINETX",
+  "legalName": "KEVIN IHOUA (CINETX)",
+  "description": "Studio indépendant français qui conçoit, développe et édite l'application mobile Clinchy.",
+  "url": "https://cinetx.getclinchy.com/",
+  "logo": "https://getclinchy.com/assets/img/icon.png",
+  "image": "https://getclinchy.com/assets/img/og-image.png",
+  "email": "admin.cinetx@getclinchy.com",
+  "founder": { "@type": "Person", "name": "Kevin Ihoua" },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "30 bis rue de Ferrières",
+    "postalCode": "77600",
+    "addressLocality": "Bussy-Saint-Georges",
+    "addressRegion": "Île-de-France",
+    "addressCountry": "FR"
+  },
+  "identifier": [
+    { "@type": "PropertyValue", "name": "SIRET", "value": "10834840000012" },
+    { "@type": "PropertyValue", "name": "SIREN", "value": "108348400" }
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer support",
+    "email": "admin.cinetx@getclinchy.com",
+    "areaServed": "FR",
+    "availableLanguage": ["fr", "en"]
+  },
+  "sameAs": [
+    "https://getclinchy.com/",
+    "https://getclinchy.com/cinetx/",
+    "https://annuaire-entreprises.data.gouv.fr/entreprise/108348400"
+  ],
+  "makesOffer": {
+    "@type": "Offer",
+    "itemOffered": {
+      "@type": "SoftwareApplication",
+      "name": "Clinchy",
+      "applicationCategory": "ProductivityApplication",
+      "operatingSystem": "iOS, Android",
+      "url": "https://getclinchy.com/"
+    }
+  }
+}
+</script>
+
+<style>
+  /* ==========================================================================
+     CINETX — page officielle du studio.
+     Feuille de style intégrée : ce site tient en un seul fichier, sans
+     dépendance externe, pour rester servable depuis n'importe quel hébergeur.
+     Palette reprise du design system Clinchy (claymorphisme sombre).
+     ========================================================================== */
+  :root {
+    --bg: #13111E;
+    --bg-deep: #0C0A14;
+    --card: #221E36;
+    --card-raised: #2A2542;
+    --card-border: rgba(255, 255, 255, 0.06);
+    --clay-light: rgba(255, 255, 255, 0.10);
+    --accent: #8B6CFF;
+    --accent-bright: #B49CFF;
+    --up: #3DDC97;
+    --warm: #FBBF24;
+    --hot: #FB8C4B;
+    --ultra: #FF6B6B;
+    --text: #F4F2FB;
+    --text-secondary: #A39FBC;
+    --text-muted: #6E6889;
+    --shadow: 0 14px 28px rgba(8, 6, 16, 0.6), inset 0 1px 0 var(--clay-light);
+    --shadow-sm: 0 8px 16px rgba(8, 6, 16, 0.5), inset 0 1px 0 var(--clay-light);
+    --r-card: 30px;
+    --r-lg: 22px;
+    --r-full: 999px;
+    --font: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --font-display: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font);
+    font-size: 17px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3 { font-family: var(--font-display); font-weight: 800; line-height: 1.2; margin: 0; }
+  h1 { font-size: clamp(2.4rem, 7vw, 4rem); letter-spacing: -0.02em; }
+  h2 { font-size: clamp(1.5rem, 3.4vw, 2.1rem); margin-bottom: 18px; }
+  h3 { font-size: 1.05rem; margin-bottom: 8px; }
+  p { margin: 0 0 16px; }
+  a { color: var(--accent-bright); text-decoration: underline; text-underline-offset: 3px; }
+  a:hover { color: var(--text); }
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.88em;
+    background: var(--bg-deep);
+    padding: 2px 7px;
+    border-radius: 6px;
+  }
+
+  .skip-link {
+    position: absolute; left: -9999px; top: 0; z-index: 99;
+    background: var(--accent); color: #fff; padding: 12px 20px;
+    border-radius: 0 0 12px 0; text-decoration: none; font-weight: 700;
+  }
+  .skip-link:focus { left: 0; }
+  :focus-visible { outline: 3px solid var(--accent-bright); outline-offset: 3px; border-radius: 6px; }
+
+  .container { width: min(1080px, 100% - 44px); margin-inline: auto; }
+
+  /* Halos d'ambiance ----------------------------------------------------- */
+  .ambient { position: fixed; inset: 0; pointer-events: none; z-index: -1; overflow: hidden; }
+  .ambient span {
+    position: absolute; border-radius: 50%; filter: blur(90px); opacity: 0.5;
+  }
+  .ambient span:nth-child(1) { width: 460px; height: 460px; background: rgba(139, 108, 255, 0.30); top: -140px; left: -110px; }
+  .ambient span:nth-child(2) { width: 380px; height: 380px; background: rgba(255, 111, 181, 0.16); top: 42%; right: -130px; }
+  .ambient span:nth-child(3) { width: 420px; height: 420px; background: rgba(61, 220, 151, 0.12); bottom: -160px; left: 28%; }
+
+  /* En-tête -------------------------------------------------------------- */
+  .site-head {
+    position: sticky; top: 0; z-index: 20;
+    background: rgba(19, 17, 30, 0.82);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--card-border);
+  }
+  .site-head__inner {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 20px; padding: 14px 0;
+  }
+  .brand {
+    display: inline-flex; align-items: center; gap: 12px;
+    font-family: var(--font-display); font-weight: 900; font-size: 1.3rem;
+    letter-spacing: 0.14em; color: var(--text); text-decoration: none;
+  }
+  .brand__mark {
+    width: 38px; height: 38px; border-radius: 12px;
+    display: grid; place-items: center;
+    background: linear-gradient(140deg, var(--accent), #6D4DEB);
+    box-shadow: var(--shadow-sm);
+    font-size: 1.05rem; letter-spacing: 0;
+  }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 12px 22px; border-radius: var(--r-full);
+    font-family: var(--font-display); font-weight: 800; font-size: 0.95rem;
+    text-decoration: none; border: 0; cursor: pointer;
+    transition: transform 200ms cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 200ms;
+  }
+  .btn--accent { background: linear-gradient(140deg, var(--accent), #6D4DEB); color: #fff; box-shadow: var(--shadow-sm); }
+  .btn--ghost { background: var(--card-raised); color: var(--text-secondary); box-shadow: var(--shadow-sm); }
+  .btn:hover { transform: translateY(-2px); color: #fff; }
+
+  /* Sections ------------------------------------------------------------- */
+  main { display: block; }
+  .section { padding-block: clamp(48px, 8vh, 90px); }
+  .hero { padding-top: clamp(56px, 10vh, 110px); padding-bottom: clamp(30px, 5vh, 56px); }
+  .kicker {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: var(--font-display); font-weight: 800; font-size: 0.8rem;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--accent-bright); margin-bottom: 14px;
+  }
+  .lede { font-size: clamp(1.05rem, 2vw, 1.2rem); color: var(--text-secondary); max-width: 66ch; }
+  .prose { max-width: 780px; }
+  .prose ul { margin: 0 0 16px; padding-left: 22px; color: var(--text-secondary); }
+  .prose li { margin-bottom: 8px; }
+  .prose li::marker { color: var(--accent-bright); }
+  .prose strong { color: var(--text); }
+  .grad {
+    background: linear-gradient(100deg, var(--accent-bright), #FF9BD0);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+
+  /* Carte d'identité ----------------------------------------------------- */
+  .card {
+    background: var(--card); border: 1px solid var(--card-border);
+    border-radius: var(--r-card); box-shadow: var(--shadow);
+    padding: clamp(24px, 3vw, 36px);
+  }
+  .card__title {
+    font-family: var(--font-display); font-weight: 800; font-size: 1.05rem;
+    margin-bottom: 18px;
+  }
+  .facts { margin: 0; }
+  .facts > div {
+    display: grid; grid-template-columns: 1fr; gap: 2px;
+    padding: 14px 0; border-bottom: 1px solid var(--card-border);
+  }
+  .facts > div:first-child { padding-top: 0; }
+  .facts > div:last-child { border-bottom: 0; padding-bottom: 0; }
+  @media (min-width: 640px) {
+    .facts > div { grid-template-columns: 220px 1fr; gap: 16px; align-items: baseline; }
+  }
+  .facts dt {
+    font-size: 0.78rem; letter-spacing: 0.05em; text-transform: uppercase;
+    color: var(--text-muted); font-weight: 700;
+  }
+  .facts dd { margin: 0; color: var(--text); font-size: 0.98rem; }
+  .facts address { font-style: normal; }
+
+  .verify { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+  .verify a {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 10px 16px; border-radius: var(--r-full);
+    background: var(--card-raised); box-shadow: var(--shadow-sm);
+    color: var(--text-secondary); font-size: 0.86rem; font-weight: 700;
+    text-decoration: none;
+    transition: transform 160ms cubic-bezier(0.2, 0.8, 0.2, 1), color 160ms;
+  }
+  .verify a:hover { transform: translateY(-2px); color: var(--text); }
+
+  /* Grilles -------------------------------------------------------------- */
+  .grid { display: grid; gap: 20px; grid-template-columns: 1fr; margin-top: 30px; }
+  @media (min-width: 720px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1000px) { .grid--3 { grid-template-columns: repeat(3, 1fr); } }
+  .tile {
+    background: var(--card); border: 1px solid var(--card-border);
+    border-radius: var(--r-lg); box-shadow: var(--shadow-sm); padding: 24px 26px;
+  }
+  .tile__emoji { font-size: 1.6rem; display: block; margin-bottom: 12px; }
+  .tile p { color: var(--text-secondary); font-size: 0.94rem; margin: 0; }
+
+  /* Échelle d'urgence ---------------------------------------------------- */
+  .decay { display: flex; flex-wrap: wrap; gap: 10px; margin: 22px 0 0; padding: 0; list-style: none; }
+  .decay li {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 9px 16px; border-radius: var(--r-full);
+    background: var(--card-raised); box-shadow: var(--shadow-sm);
+    font-family: var(--font-display); font-weight: 800; font-size: 0.86rem;
+  }
+  .decay .dot { width: 10px; height: 10px; border-radius: 50%; }
+
+  .callout {
+    padding: 22px 26px; border-radius: var(--r-lg);
+    background: var(--card-raised); border-left: 4px solid var(--accent);
+    margin-block: 26px;
+  }
+  .callout strong { display: block; font-family: var(--font-display); margin-bottom: 6px; }
+
+  /* Pied de page --------------------------------------------------------- */
+  .site-foot {
+    background: var(--bg-deep); border-top: 1px solid var(--card-border);
+    padding-block: 44px 34px; margin-top: clamp(40px, 7vh, 80px);
+    font-size: 0.84rem; color: var(--text-secondary);
+  }
+  .site-foot__title {
+    font-family: var(--font-display); font-weight: 800; font-size: 0.78rem;
+    letter-spacing: 0.05em; text-transform: uppercase; color: var(--text-muted);
+    margin-bottom: 10px;
+  }
+  .site-foot address { font-style: normal; line-height: 1.75; }
+  .site-foot strong { color: var(--text); }
+  .foot-links { display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 20px 0; }
+  .foot-links a { color: var(--text-secondary); font-size: 0.84rem; }
+  .foot-bottom { padding-top: 20px; border-top: 1px solid var(--card-border); }
+  .foot-bottom p { margin: 0 0 6px; }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Aller au contenu</a>
+
+<div class="ambient" aria-hidden="true"><span></span><span></span><span></span></div>
+
+<header class="site-head">
+  <div class="container site-head__inner">
+    <a class="brand" href="./" aria-label="CINETX · accueil">
+      <span class="brand__mark" aria-hidden="true">CX</span>
+      CINETX
+    </a>
+    <a class="btn btn--accent" href="https://getclinchy.com/">Découvrir Clinchy</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="container hero">
+    <p class="kicker">🏢 Studio indépendant · France</p>
+    <h1>Nous éditons <span class="grad">Clinchy</span>.</h1>
+    <p class="lede">CINETX est un studio indépendant français, basé à Bussy-Saint-Georges en Seine-et-Marne, qui conçoit, développe et publie des applications mobiles grand public. Notre première application est <strong>Clinchy</strong>, un gestionnaire de corvées domestiques fondé sur un système d'enchères inversées.</p>
+    <p style="margin-top:26px">
+      <a class="btn btn--accent" href="https://getclinchy.com/">Voir l'application Clinchy</a>
+      <a class="btn btn--ghost" href="#identite">Identité de l'organisation</a>
+    </p>
+  </section>
+
+  <section class="container section" id="identite">
+    <h2>Identité de l'organisation</h2>
+    <p class="lede">CINETX est le nom commercial sous lequel <strong>KEVIN IHOUA</strong> exerce son activité d'édition de logiciels. Ces informations sont publiques et vérifiables auprès des registres officiels français.</p>
+
+    <div class="card" style="margin-top:28px">
+      <p class="card__title">Carte d'identité légale</p>
+      <dl class="facts">
+        <div>
+          <dt>Raison sociale</dt>
+          <dd>KEVIN IHOUA (CINETX)</dd>
+        </div>
+        <div>
+          <dt>Nom commercial</dt>
+          <dd>CINETX</dd>
+        </div>
+        <div>
+          <dt>Forme juridique</dt>
+          <dd>Entreprise individuelle — régime de la micro-entreprise (droit français)</dd>
+        </div>
+        <div>
+          <dt>SIRET</dt>
+          <dd>10834840000012</dd>
+        </div>
+        <div>
+          <dt>SIREN</dt>
+          <dd>108 348 400</dd>
+        </div>
+        <div>
+          <dt>Siège social</dt>
+          <dd><address>30 bis rue de Ferrières<br>77600 Bussy-Saint-Georges<br>France</address></dd>
+        </div>
+        <div>
+          <dt>Représentant légal</dt>
+          <dd>Kevin Ihoua, entrepreneur individuel</dd>
+        </div>
+        <div>
+          <dt>Activité</dt>
+          <dd>Édition de logiciels applicatifs et d'applications mobiles</dd>
+        </div>
+        <div>
+          <dt>TVA</dt>
+          <dd>TVA non applicable — article 293 B du Code général des impôts</dd>
+        </div>
+        <div>
+          <dt>Contact officiel</dt>
+          <dd><a href="mailto:admin.cinetx@getclinchy.com">admin.cinetx@getclinchy.com</a></dd>
+        </div>
+        <div>
+          <dt>Domaine détenu</dt>
+          <dd><a href="https://getclinchy.com/">getclinchy.com</a> — enregistré au nom de l'éditeur. Ce site occupe le sous-domaine <code>cinetx.getclinchy.com</code>.</dd>
+        </div>
+      </dl>
+
+      <p class="site-foot__title" style="margin-top:28px;margin-bottom:0">Vérifier ces informations</p>
+      <div class="verify">
+        <a href="https://annuaire-entreprises.data.gouv.fr/entreprise/108348400" target="_blank" rel="noopener">🔎 Annuaire des Entreprises (data.gouv.fr)</a>
+        <a href="https://www.pappers.fr/recherche?q=108348400" target="_blank" rel="noopener">📄 Pappers</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="container section" id="activite">
+    <h2>Ce que fait CINETX</h2>
+    <p class="lede">Nous couvrons l'intégralité du cycle de vie de nos applications : ni la conception, ni le développement, ni la relation avec les utilisateurs ne sont sous-traités.</p>
+    <div class="grid grid--3">
+      <div class="tile">
+        <span class="tile__emoji" aria-hidden="true">🎨</span>
+        <h3>Conception produit &amp; design</h3>
+        <p>Recherche utilisateur, mécaniques d'engagement, direction artistique et design system. Clinchy repose sur une identité claymorphique sombre entièrement conçue en interne.</p>
+      </div>
+      <div class="tile">
+        <span class="tile__emoji" aria-hidden="true">⚙️</span>
+        <h3>Développement &amp; infrastructure</h3>
+        <p>Applications iOS et Android, back-end temps réel, authentification, synchronisation multi-appareils et sécurité des données.</p>
+      </div>
+      <div class="tile">
+        <span class="tile__emoji" aria-hidden="true">🤝</span>
+        <h3>Édition &amp; support</h3>
+        <p>Publication sur l'App Store et Google Play, support en français et en anglais, conformité RGPD et traitement des demandes de suppression de données.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container section prose" id="clinchy">
+    <h2>Notre application : Clinchy</h2>
+    <p><strong>Clinchy</strong> est une application mobile de gestion des corvées domestiques, pensée pour les couples, les colocations et les familles. Elle répond à un problème très concret : dans un foyer partagé, tout le monde sait ce qu'il y a à faire, mais personne ne veut s'y coller en premier.</p>
+
+    <h3 style="margin-top:28px">Le principe : une enchère inversée sur les corvées</h3>
+    <p>Clinchy applique aux tâches ménagères le mécanisme de l'<strong>enchère inversée</strong> (ou <em>enchère hollandaise</em>) : chaque mission est publiée avec une valeur en points de départ, et cette valeur <strong>décroît par paliers tant que personne ne la prend</strong>.</p>
+    <p>Plus une corvée traîne, plus elle devient urgente. Le premier membre du foyer qui accepte la mission empoche la valeur affichée à cet instant précis. Si personne ne s'en occupe, la valeur finit par devenir négative : la mission se transforme en pénalité, ce qui crée une pression collective naturelle sans qu'aucun « chef de corvées » n'ait à distribuer les tâches.</p>
+
+    <ul class="decay" aria-label="Échelle d'urgence d'une mission">
+      <li><span class="dot" style="background:var(--up)" aria-hidden="true"></span> Valeur pleine</li>
+      <li><span class="dot" style="background:var(--warm)" aria-hidden="true"></span> En baisse</li>
+      <li><span class="dot" style="background:var(--hot)" aria-hidden="true"></span> Urgente</li>
+      <li><span class="dot" style="background:var(--ultra)" aria-hidden="true"></span> Pénalité</li>
+    </ul>
+
+    <h3 style="margin-top:32px">Ce que ça change</h3>
+    <ul>
+      <li><strong>Plus de charge mentale à répartir.</strong> Le marché arbitre à la place des habitants du foyer.</li>
+      <li><strong>Une équité mesurable.</strong> Les points gagnés rendent visible la contribution réelle de chacun, au lieu d'un ressenti.</li>
+      <li><strong>Une récompense concrète.</strong> Les points se dépensent dans une boutique de récompenses que les membres définissent eux-mêmes.</li>
+      <li><strong>Un mode enfant.</strong> Une interface simplifiée, avec des étoiles à la place des points, à l'intérieur du compte d'un parent qui administre l'espace.</li>
+    </ul>
+
+    <h3 style="margin-top:28px">Design</h3>
+    <p>Clinchy adopte un <strong>claymorphisme sombre haut de gamme</strong> : des surfaces douces et matiérées sur un fond profond (<code>#13111E</code>), des cartes en relief (<code>#221E36</code> et <code>#2A2542</code>), des accents violet et bleu, et un code couleur d'urgence — vert, jaune, orange puis rouge — qui traduit visuellement la décote d'une mission au fil du temps.</p>
+
+    <div class="callout">
+      <strong>Site officiel de l'application</strong>
+      <p style="margin-bottom:0">Fonctionnalités détaillées, captures d'écran, tarifs et documents légaux : <a href="https://getclinchy.com/">getclinchy.com</a></p>
+    </div>
+  </section>
+
+  <section class="container section prose" id="engagements">
+    <h2>Nos engagements</h2>
+    <ul>
+      <li><strong>Aucune revente de données.</strong> CINETX ne vend, ne loue et n'échange les données de ses utilisateurs avec aucun tiers, dans aucune circonstance.</li>
+      <li><strong>Suppression réelle et complète.</strong> Toute personne peut supprimer son compte depuis l'application ou depuis le site, et obtenir la purge effective de ses données.</li>
+      <li><strong>Conformité RGPD.</strong> Nos traitements sont documentés dans la <a href="https://getclinchy.com/confidentialite/">politique de confidentialité</a>, et les droits d'accès, de rectification, d'effacement et de portabilité sont pleinement applicables.</li>
+      <li><strong>Un interlocuteur identifiable.</strong> Une adresse de contact unique, un éditeur nommé, une adresse postale réelle.</li>
+    </ul>
+  </section>
+
+  <section class="container section prose" id="contact">
+    <h2>Contact</h2>
+    <p>Pour toute demande — presse, partenariat, question juridique, exercice des droits RGPD, signalement de contenu — une seule adresse :</p>
+    <p><strong><a href="mailto:admin.cinetx@getclinchy.com">admin.cinetx@getclinchy.com</a></strong></p>
+    <p>Courrier postal : KEVIN IHOUA (CINETX), 30 bis rue de Ferrières, 77600 Bussy-Saint-Georges, France.</p>
+    <p>Support utilisateur de l'application : <a href="https://getclinchy.com/support/">getclinchy.com/support</a></p>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="container">
+    <p class="site-foot__title">Éditeur</p>
+    <address>
+      <strong>KEVIN IHOUA (CINETX)</strong> — Entreprise individuelle (micro-entreprise)<br>
+      SIRET : 10834840000012<br>
+      Siège social : 30 bis rue de Ferrières, 77600 Bussy-Saint-Georges, France<br>
+      Directeur de la publication : Kevin Ihoua<br>
+      Contact : <a href="mailto:admin.cinetx@getclinchy.com">admin.cinetx@getclinchy.com</a>
+    </address>
+
+    <nav class="foot-links" aria-label="Liens légaux">
+      <a href="https://getclinchy.com/">Site de Clinchy</a>
+      <a href="https://getclinchy.com/confidentialite/">Politique de confidentialité</a>
+      <a href="https://getclinchy.com/conditions/">Conditions générales d'utilisation</a>
+      <a href="https://getclinchy.com/mentions-legales/">Mentions légales</a>
+      <a href="https://getclinchy.com/suppression-compte/">Suppression de compte</a>
+      <a href="https://getclinchy.com/en/cinetx/">English</a>
+    </nav>
+
+    <div class="foot-bottom">
+      <p>© 2026 CINETX. Tous droits réservés. Clinchy est une application éditée par CINETX.</p>
+      <p>Hébergement : GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis.</p>
+      <p>CINETX n'est affilié ni à Apple ni à Google. App Store est une marque d'Apple Inc. Google Play et le logo Google Play sont des marques de Google LLC.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

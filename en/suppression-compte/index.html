@@ -33,20 +33,8 @@
 <meta name="twitter:title" content="Delete my account · Clinchy">
 <meta name="twitter:description" content="How to permanently delete your Clinchy account.">
 <meta name="twitter:image" content="https://getclinchy.com/assets/img/og-image.png">
-<meta name="apple-itunes-app" content="app-id={{APPLE_APP_ID}}">
 </head>
 <body>
-<!--
-  ⚠️ TO VERIFY BEFORE PUBLISHING (site owner):
-  - {{PUBLISHER_NAME}} : the editor's legal identity shown below
-  - {{CONTACT_EMAIL}} : the address that will receive deletion requests
-  - {{DELETION_SLA_DAYS}} : the actually achievable processing time
-  - {{RETENTION_MONTHS}} : the actual residual retention period (legal/accounting obligations)
-  - Check that the in-app flow steps (see "Method 1") match the current app screens
-    exactly before publishing.
-  This page is required by Google Play (Play Console > Data safety) and must remain
-  publicly accessible, without login, at a stable URL.
--->
 <a class="skip-link" href="#main">Skip to content</a>
 <div class="ambient" aria-hidden="true">
   <div class="ambient__blob ambient__blob--1"></div>
@@ -69,6 +57,7 @@
       <a class="nav__link" href="../#comment-ca-marche">How it works</a>
       <a class="nav__link" href="../tarifs/">Pricing</a>
       <a class="nav__link" href="../#faq">FAQ</a>
+      <a class="nav__link" href="../cinetx/">Studio</a>
     </nav>
     <div class="nav__actions">
       <a class="btn btn--accent nav__cta" href="../#hero-download">Download</a>
@@ -93,6 +82,7 @@
     <a href="../tarifs/">Pricing</a>
     <a href="../#faq">FAQ</a>
     <a href="../support/">Support</a>
+    <a href="../cinetx/">Studio</a>
   </nav>
   <div class="nav__mobile-foot">
     <a class="btn btn--accent btn--block" href="../#hero-download">Download Clinchy</a>
@@ -103,7 +93,7 @@
   <section class="page-hero container">
     <p class="page-hero__kicker">⚠️ Compliance page</p>
     <h1>Delete your Clinchy account</h1>
-    <p class="lede">App <strong>Clinchy</strong>, published by <strong>{{PUBLISHER_NAME}}</strong>. This page is publicly accessible, without login and without the app installed, in line with Apple's and Google's requirements.</p>
+    <p class="lede">App <strong>Clinchy</strong>, published by <strong>KEVIN IHOUA (CINETX)</strong>. This page is publicly accessible, without login and without the app installed, in line with Apple's and Google's requirements.</p>
     <div class="toc">
       <a href="#method-app">📱 From the app</a>
       <a href="#method-web">🌐 From the web</a>
@@ -136,14 +126,14 @@
     </div>
 
     <h2 id="method-web">Method 2: from the web (if you no longer have the app)</h2>
-    <p>Fill out this form to request your account's deletion. We process requests within <strong>{{DELETION_SLA_DAYS}} days</strong> and send you a confirmation email once the deletion is complete.</p>
+    <p>Fill out this form to request your account's deletion. We process requests within <strong>30 days</strong> and send you a confirmation email once the deletion is complete.</p>
 
     <div class="card contact-card">
-      <!-- By default this form composes a pre-filled mailto: email to {{CONTACT_EMAIL}}, no third-party
+      <!-- By default this form composes a pre-filled mailto: email to admin.cinetx@getclinchy.com, no third-party
            service. To wire up a form service (Formspree, Getform, Google Forms), replace the action
            attribute below with your endpoint and uncomment the fetch logic in assets/js/main.js
            (see the "Optional path" comment inside the #deletion-form handler). -->
-      <form id="deletion-form" action="{{FORM_ENDPOINT}}" novalidate>
+      <form id="deletion-form" novalidate>
         <div class="form-field">
           <label for="deletion-email">Email linked to your account</label>
           <input type="email" id="deletion-email" name="email" placeholder="you@example.com" required autocomplete="email">
@@ -165,13 +155,13 @@
         <button class="btn btn--accent btn--block" type="submit">Request account deletion</button>
 
         <div class="form-success" id="deletion-success" aria-live="polite">
-          <p style="color:var(--text)"><strong>Your request is ready.</strong> Your email client will open with the pre-filled message addressed to {{CONTACT_EMAIL}}. If it doesn't open, copy the message below and send it yourself.</p>
+          <p style="color:var(--text)"><strong>Your request is ready.</strong> Your email client will open with the pre-filled message addressed to admin.cinetx@getclinchy.com. If it doesn't open, copy the message below and send it yourself.</p>
           <p>Request number to keep:</p>
           <p class="form-success__id" id="deletion-ticket">CLY-…</p>
           <div class="copy-block" id="deletion-message-body">…</div>
           <div class="row">
             <button class="btn btn--ghost btn--sm" type="button" data-copy-target="#deletion-message-body">📋 Copy message</button>
-            <a class="btn btn--outline btn--sm" id="deletion-mailto" href="mailto:{{CONTACT_EMAIL}}">Open my email client</a>
+            <a class="btn btn--outline btn--sm" id="deletion-mailto" href="mailto:admin.cinetx@getclinchy.com">Open my email client</a>
           </div>
         </div>
       </form>
@@ -194,7 +184,7 @@
       <li><strong>Billing records:</strong> kept for the duration of the applicable legal and accounting obligation.</li>
       <li><strong>Anonymized technical logs:</strong> kept for security and abuse-prevention purposes.</li>
     </ul>
-    <p>Maximum retention period for this residual data: <strong>{{RETENTION_MONTHS}} months</strong>.</p>
+    <p>Maximum retention period for this residual data: <strong>12 months</strong>.</p>
 
     <div class="callout callout--warn" id="subscriptions">
       <span class="callout__title">⚠️ Deleting your account does not cancel your subscription</span>
@@ -207,7 +197,7 @@
     <p>Before deleting your account, think about your space: if you're its only administrator, appoint a successor (promote another member to admin from the space's settings) or delete the space yourself. Otherwise, other members could lose access to the shared history.</p>
 
     <h2>Contact</h2>
-    <p>A question before you decide? Write to us at <a href="mailto:{{CONTACT_EMAIL}}">{{CONTACT_EMAIL}}</a>. We'd rather help you fix a problem than see you go.</p>
+    <p>A question before you decide? Write to us at <a href="mailto:admin.cinetx@getclinchy.com">admin.cinetx@getclinchy.com</a>. We'd rather help you fix a problem than see you go.</p>
   </section>
 </main>
 
@@ -262,8 +252,25 @@
         </div>
       </div>
     </div>
+    <div class="footer__legal">
+      <p class="footer__legal-title">Publisher of this website and of the Clinchy app</p>
+      <address>
+        <strong>KEVIN IHOUA (CINETX)</strong> — Sole proprietorship (French <em>entreprise individuelle</em>)<br>
+        SIRET (French business registration no.): 10834840000012<br>
+        Registered office: 30 bis rue de Ferrières, 77600 Bussy-Saint-Georges, France<br>
+        Publication director: Kevin Ihoua<br>
+        Contact: <a href="mailto:admin.cinetx@getclinchy.com">admin.cinetx@getclinchy.com</a>
+      </address>
+      <nav class="footer__legal-links" aria-label="Legal links">
+        <a href="../cinetx/">About CINETX</a>
+        <a href="../confidentialite/">Privacy Policy</a>
+        <a href="../conditions/">Terms of Use</a>
+        <a href="../mentions-legales/">Legal notice</a>
+        <a href="../suppression-compte/">Delete account</a>
+      </nav>
+    </div>
     <div class="footer__bottom">
-      <p>© 2026 Clinchy. All rights reserved.</p>
+      <p>© 2026 CINETX. All rights reserved. Clinchy is an app published by CINETX.</p>
       <p>Clinchy is not affiliated with Apple or Google.</p>
       <p>App Store is a trademark of Apple Inc. Google Play and the Google Play logo are trademarks of Google LLC.</p>
     </div>

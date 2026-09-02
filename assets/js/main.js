@@ -429,10 +429,10 @@
         "Je comprends que cette suppression est irréversible : oui"
       ];
       var body = bodyLines.join("\n");
-      var mailto = "mailto:{{CONTACT_EMAIL}}?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+      var mailto = "mailto:admin.cinetx@getclinchy.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
 
       ticketEl.textContent = ticket;
-      messageBody.textContent = "À : {{CONTACT_EMAIL}}\nObjet : " + subject + "\n\n" + body;
+      messageBody.textContent = "À : admin.cinetx@getclinchy.com\nObjet : " + subject + "\n\n" + body;
       mailtoLink.href = mailto;
       successBlock.classList.add("is-visible");
       successBlock.setAttribute("aria-live", "polite");
@@ -476,7 +476,7 @@
       cEmailError.classList.remove("is-visible");
       var subject = "[Support Clinchy] " + (cSubject.value.trim() || "Question");
       var body = "De : " + email + "\n\n" + cMessage.value.trim();
-      var mailto = "mailto:{{CONTACT_EMAIL}}?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+      var mailto = "mailto:admin.cinetx@getclinchy.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
       cSuccess.classList.add("is-visible");
       window.location.href = mailto;
 

@@ -35,15 +35,6 @@
 <meta name="twitter:image" content="https://getclinchy.com/assets/img/og-image.png">
 </head>
 <body>
-<!--
-  ⚠️ À VÉRIFIER PAR LE RESPONSABLE DU SITE AVANT MISE EN LIGNE :
-  - {{PUBLISHER_NAME}}, {{PUBLISHER_ADDRESS}}, {{CONTACT_EMAIL}} : identité réelle du responsable de traitement
-  - {{MIN_AGE}} : âge minimum réellement retenu dans les CGU
-  - La liste des sous-traitants (Firebase, AdMob, RevenueCat) doit être confirmée et mise à jour
-    si la stack technique change (ajout/retrait d'un prestataire).
-  - Cette politique doit être relue par un juriste avant mise en ligne définitive : ce texte est
-    un modèle rédigé en langage clair, pas un avis juridique.
--->
 <a class="skip-link" href="#main">Aller au contenu</a>
 <div class="ambient" aria-hidden="true">
   <div class="ambient__blob ambient__blob--1"></div>
@@ -66,6 +57,7 @@
       <a class="nav__link" href="../#comment-ca-marche">Comment ça marche</a>
       <a class="nav__link" href="../tarifs/">Tarifs</a>
       <a class="nav__link" href="../#faq">FAQ</a>
+      <a class="nav__link" href="../cinetx/">Studio</a>
     </nav>
     <div class="nav__actions">
       <a class="btn btn--accent nav__cta" href="../#hero-download">Télécharger</a>
@@ -90,6 +82,7 @@
     <a href="../tarifs/">Tarifs</a>
     <a href="../#faq">FAQ</a>
     <a href="../support/">Support</a>
+    <a href="../cinetx/">Studio</a>
   </nav>
   <div class="nav__mobile-foot">
     <a class="btn btn--accent btn--block" href="../#hero-download">Télécharger Clinchy</a>
@@ -100,21 +93,32 @@
   <section class="page-hero container">
     <p class="page-hero__kicker">🔒 Confidentialité</p>
     <h1>Politique de confidentialité</h1>
-    <p class="lede">Dernière mise à jour : 4 août 2026. Écrite en français clair, sans charabia juridique, parce que tu as le droit de comprendre ce qu'on fait de tes données.</p>
+    <p class="lede">Dernière mise à jour : 1<sup>er</sup> septembre 2026. Écrite en français clair, sans charabia juridique, parce que tu as le droit de comprendre ce qu'on fait de tes données.</p>
   </section>
 
   <section class="container prose">
     <h2>1. Qui est responsable de tes données</h2>
-    <p>Le responsable de traitement est <strong>{{PUBLISHER_NAME}}</strong>, domicilié·e à {{PUBLISHER_ADDRESS}}, joignable à <a href="mailto:{{CONTACT_EMAIL}}">{{CONTACT_EMAIL}}</a>.</p>
+    <p>Le responsable de traitement au sens du RGPD est :</p>
+    <p>
+      <strong>KEVIN IHOUA (CINETX)</strong> — entreprise individuelle<br>
+      SIRET : 10834840000012<br>
+      30 bis rue de Ferrières, 77600 Bussy-Saint-Georges, France<br>
+      <a href="mailto:admin.cinetx@getclinchy.com">admin.cinetx@getclinchy.com</a>
+    </p>
+    <p>CINETX est le studio qui édite Clinchy — voir la page <a href="../cinetx/">À propos de CINETX</a>. Compte tenu de sa taille, CINETX n’est pas tenu de désigner un délégué à la protection des données (DPO) ; l’adresse ci-dessus est le point de contact unique pour toute question relative à tes données.</p>
 
     <h2>2. Données que nous collectons</h2>
+    <p>Clinchy s’appuie sur <strong>Google Firebase</strong>. Voici précisément ce qui est stocké, et où :</p>
     <ul>
-      <li><strong>Compte :</strong> adresse email, prénom, photo de profil (optionnelle)</li>
-      <li><strong>Contenu que tu crées :</strong> missions, récompenses, historique d'activité, statistiques</li>
-      <li><strong>Appartenance aux espaces :</strong> foyers, colocations ou équipes que tu rejoins</li>
-      <li><strong>Identifiants techniques :</strong> identifiant d'appareil, version de l'app, journaux de fonctionnement</li>
-      <li><strong>Identifiant publicitaire :</strong> pour les utilisateurs de la version gratuite, sous réserve de ton consentement</li>
+      <li><strong>Compte (Firebase Authentication) :</strong> ton adresse email et un identifiant technique unique (UID). Ton mot de passe n’est <strong>jamais</strong> stocké en clair ni accessible par nous : Firebase Authentication en conserve uniquement une empreinte chiffrée. Si tu te connectes via Apple ou Google, nous ne recevons que l’email et l’identifiant transmis par le fournisseur.</li>
+      <li><strong>Profil (Cloud Firestore) :</strong> ton prénom ou pseudo, ton avatar, ton thème, tes préférences de notification, ton niveau et ton XP.</li>
+      <li><strong>Photo de profil (Cloud Storage for Firebase) :</strong> uniquement si tu en choisis une. Elle est facultative — un avatar généré est proposé par défaut.</li>
+      <li><strong>Contenu que tu crées (Cloud Firestore) :</strong> missions, valeurs en points, récompenses de la boutique, historique d’activité et statistiques.</li>
+      <li><strong>Appartenance aux espaces (Cloud Firestore) :</strong> les foyers, colocations ou équipes que tu rejoins, et ton rôle dans chacun.</li>
+      <li><strong>Identifiants techniques :</strong> identifiant d’appareil, jeton de notification push, version de l’app et journaux de fonctionnement.</li>
+      <li><strong>Identifiant publicitaire :</strong> pour les utilisateurs de la version gratuite, et uniquement sous réserve de ton consentement.</li>
     </ul>
+    <p>Nous ne collectons <strong>ni ta position géographique, ni tes contacts, ni tes messages, ni aucune donnée bancaire</strong> : les paiements d’abonnement sont traités exclusivement par Apple et Google, qui ne nous transmettent aucune coordonnée de paiement.</p>
 
     <h2>3. Pourquoi, et sur quelle base légale (RGPD)</h2>
     <ul>
@@ -132,7 +136,13 @@
       <li><strong>RevenueCat :</strong> gestion de l'abonnement Clinchy +</li>
       <li><strong>Apple App Store / Google Play :</strong> traitement des paiements d'abonnement</li>
     </ul>
-    <p>Ces prestataires peuvent héberger des données hors de l'Union européenne ; dans ce cas, le transfert est encadré par des clauses contractuelles types approuvées par la Commission européenne.</p>
+    <p>Ces prestataires peuvent héberger des données hors de l’Union européenne ; dans ce cas, le transfert est encadré par des clauses contractuelles types approuvées par la Commission européenne. Ils agissent comme <strong>sous-traitants</strong> : ils traitent les données pour notre compte, selon nos instructions, et n’ont pas le droit de les réutiliser à leurs propres fins.</p>
+
+    <div class="callout">
+      <span class="callout__title">Nous ne vendons pas tes données. Jamais.</span>
+      <p>CINETX ne vend, ne loue, ne cède et n’échange <strong>aucune</strong> donnée personnelle avec des tiers, à aucun moment, sous aucune forme et à aucun prix. Nous ne pratiquons pas non plus le <em>data brokering</em>, et nous ne partageons pas de données avec des courtiers en données ou des régies publicitaires en dehors du strict affichage de la publicité décrit au § 6.</p>
+      <p style="margin-bottom:0">Notre modèle économique repose uniquement sur l’abonnement Clinchy + et sur la publicité de la version gratuite. Le seul cas où nous pourrions être contraints de communiquer des données est une <strong>réquisition judiciaire</strong> d’une autorité française compétente — et nous t’en informerions, sauf interdiction légale.</p>
+    </div>
 
     <h2>5. Permissions demandées sur ton téléphone</h2>
     <ul>
@@ -145,17 +155,40 @@
     <h2>6. Publicité</h2>
     <p>La version Basic affiche des bannières et des publicités récompensées (regarder une pub pour débloquer un avantage). Les abonnés Clinchy + ne voient <strong>aucune publicité</strong>. En Europe, un écran de consentement te permet de choisir, et de changer d'avis à tout moment depuis les réglages de l'app.</p>
 
-    <h2>7. Durée de conservation et suppression</h2>
-    <p>Tes données sont conservées tant que ton compte est actif. Tu peux demander leur suppression à tout moment depuis la page <a href="../suppression-compte/">Supprimer mon compte</a>.</p>
+    <h2>7. Durée de conservation et suppression de ton compte</h2>
+    <p>Tes données sont conservées tant que ton compte est actif. Tu peux le supprimer à tout moment, sans avoir à te justifier, et sans passer par le support.</p>
+
+    <h3>Depuis l’application, en trois taps</h3>
+    <p>C’est la voie la plus rapide, et elle est immédiate :</p>
+    <ol>
+      <li>Ouvre l’onglet <strong>Profil</strong>.</li>
+      <li>Va dans <strong>Réglages</strong>.</li>
+      <li>Appuie sur <strong>Supprimer mon compte</strong>, puis confirme.</li>
+    </ol>
+
+    <h3>Depuis ce site, si tu n’as plus l’app</h3>
+    <p>Un formulaire public, sans connexion, est disponible sur la page <a href="../suppression-compte/">Supprimer mon compte</a>. Les demandes sont traitées sous <strong>30 jours</strong>, avec un email de confirmation une fois la purge effectuée.</p>
+
+    <h3>Ce qui est réellement effacé</h3>
+    <p>La suppression est <strong>définitive et irréversible</strong>. Elle déclenche :</p>
+    <ul>
+      <li>la suppression de ton identité dans <strong>Firebase Authentication</strong> (email et UID) — tu ne peux plus te connecter ;</li>
+      <li>la purge de ton document de profil et de tous tes documents liés dans <strong>Cloud Firestore</strong> : missions, historique, statistiques, XP, appartenances aux espaces, entrées de boutique ;</li>
+      <li>la suppression de ta photo de profil dans <strong>Cloud Storage for Firebase</strong> ;</li>
+      <li>la révocation de tes jetons de notification push.</li>
+    </ul>
+    <p>Si tu es le dernier administrateur d’un espace partagé, l’espace et son contenu sont supprimés avec ton compte. S’il reste d’autres membres, l’espace continue d’exister : les missions que tu avais déjà accomplies y demeurent sous une mention <em>« membre supprimé »</em>, sans aucune donnée permettant de t’identifier, afin de ne pas fausser l’historique des autres membres.</p>
+    <p>Les sauvegardes chiffrées de Firebase peuvent conserver des fragments résiduels pendant une courte période technique avant rotation, sans qu’ils soient accessibles à l’application. Les données que la loi nous impose de conserver (facturation, obligations comptables) sont conservées au maximum <strong>12 mois</strong>, isolées et inexploitables à d’autres fins.</p>
+    <p>Ton abonnement Clinchy +, s’il est actif, est géré par Apple ou Google : supprimer ton compte <strong>ne l’annule pas automatiquement</strong>. Pense à le résilier depuis les réglages de ton App Store ou de Google Play.</p>
 
     <h2>8. Tes droits</h2>
-    <p>Conformément au RGPD, tu disposes d'un droit d'accès, de rectification, d'effacement, de portabilité, d'opposition et de limitation du traitement, ainsi que du droit de retirer ton consentement à tout moment. Pour les exercer, écris à <a href="mailto:{{CONTACT_EMAIL}}">{{CONTACT_EMAIL}}</a>. Tu peux aussi introduire une réclamation auprès de la <a href="https://www.cnil.fr/fr/plaintes" target="_blank" rel="noopener">CNIL</a>.</p>
+    <p>Conformément au RGPD, tu disposes d'un droit d'accès, de rectification, d'effacement, de portabilité, d'opposition et de limitation du traitement, ainsi que du droit de retirer ton consentement à tout moment. Pour les exercer, écris à <a href="mailto:admin.cinetx@getclinchy.com">admin.cinetx@getclinchy.com</a>. Tu peux aussi introduire une réclamation auprès de la <a href="https://www.cnil.fr/fr/plaintes" target="_blank" rel="noopener">CNIL</a>.</p>
 
     <h2>9. Enfants</h2>
-    <p>Le mode enfant 🧸 est un affichage simplifié à l'intérieur du compte d'un adulte : il ne crée pas de compte séparé. Clinchy n'est pas destinée à un usage autonome par un mineur de moins de {{MIN_AGE}} ans ; c'est le parent qui crée et administre l'espace, avec une sortie du mode enfant protégée par validation parentale.</p>
+    <p>Le mode enfant 🧸 est un affichage simplifié à l'intérieur du compte d'un adulte : il ne crée pas de compte séparé. Clinchy n'est pas destinée à un usage autonome par un mineur de moins de 13 ans ; c'est le parent qui crée et administre l'espace, avec une sortie du mode enfant protégée par validation parentale.</p>
 
     <h2>10. Sécurité, modifications, contact</h2>
-    <p>Nous mettons en œuvre des mesures techniques et organisationnelles raisonnables pour protéger tes données. Cette politique peut évoluer ; la date de mise à jour en haut de page en fait foi. Pour toute question : <a href="mailto:{{CONTACT_EMAIL}}">{{CONTACT_EMAIL}}</a>.</p>
+    <p>Nous mettons en œuvre des mesures techniques et organisationnelles raisonnables pour protéger tes données. Cette politique peut évoluer ; la date de mise à jour en haut de page en fait foi. Pour toute question : <a href="mailto:admin.cinetx@getclinchy.com">admin.cinetx@getclinchy.com</a>.</p>
 
     <h2>11. Ce site web</h2>
     <p>Ce site est hébergé sur GitHub Pages. Il ne dépose <strong>aucun cookie</strong>, n'utilise <strong>aucun traceur</strong> et n'intègre <strong>aucun outil d'analytics</strong>, c'est pourquoi il ne t'affiche pas de bandeau de consentement. Seules les journalisations techniques standards de l'hébergeur (adresse IP, horodatage) peuvent s'appliquer, en dehors de notre contrôle direct.</p>
@@ -213,10 +246,27 @@
         </div>
       </div>
     </div>
+    <div class="footer__legal">
+      <p class="footer__legal-title">Éditeur du site et de l’application Clinchy</p>
+      <address>
+        <strong>KEVIN IHOUA (CINETX)</strong> — Entreprise individuelle (micro-entreprise)<br>
+        SIRET : 10834840000012<br>
+        Siège social : 30 bis rue de Ferrières, 77600 Bussy-Saint-Georges, France<br>
+        Directeur de la publication : Kevin Ihoua<br>
+        Contact : <a href="mailto:admin.cinetx@getclinchy.com">admin.cinetx@getclinchy.com</a>
+      </address>
+      <nav class="footer__legal-links" aria-label="Liens légaux">
+        <a href="../cinetx/">À propos de CINETX</a>
+        <a href="../confidentialite/">Politique de confidentialité</a>
+        <a href="../conditions/">Conditions générales d’utilisation</a>
+        <a href="../mentions-legales/">Mentions légales</a>
+        <a href="../suppression-compte/">Suppression de compte</a>
+      </nav>
+    </div>
     <div class="footer__bottom">
-      <p>© 2026 Clinchy. Tous droits réservés.</p>
-      <p>Clinchy n'est affilié ni à Apple ni à Google.</p>
-      <p>App Store est une marque d'Apple Inc. Google Play et le logo Google Play sont des marques de Google LLC.</p>
+      <p>© 2026 CINETX. Tous droits réservés. Clinchy est une application éditée par CINETX.</p>
+      <p>Clinchy n’est affilié ni à Apple ni à Google.</p>
+      <p>App Store est une marque d’Apple Inc. Google Play et le logo Google Play sont des marques de Google LLC.</p>
     </div>
   </div>
 </footer>
