@@ -2,46 +2,47 @@
    Clinchy — design system (style iOS, clair et sombre)
    Mêmes valeurs que src/theme.ts dans l'app : couleurs système d'iOS, une
    seule teinte d'accent (indigo), police système, aplats sans dégradés ni
-   halos. Le site suit le réglage clair / sombre de l'appareil, comme le mode
-   « Auto » de l'app.
+   halos. Toujours en clair, même quand l'appareil est en sombre.
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   Tokens — sombre (défaut)
+   Tokens — le site est toujours en clair (fonds groupés et cartes blanches,
+   comme Réglages), quel que soit le réglage de l'appareil : choix de Kevin,
+   plus lisible et plus « Apple » qu'un site qui bascule en noir.
    -------------------------------------------------------------------------- */
 :root {
-  --bg: #000000;
-  --bg-deep: #000000;
-  --bg-alt: #0D0D0F;
+  --bg: #F2F2F7;
+  --bg-deep: #FFFFFF;
+  --bg-alt: #FFFFFF;
 
-  --card: #1C1C1E;
-  --card-raised: #2C2C2E;
-  --card-sunken: #2C2C2E;
-  --card-border: rgba(84,84,88,0.45);
+  --card: #FFFFFF;
+  --card-raised: #FFFFFF;
+  --card-sunken: #EEEEF0;
+  --card-border: rgba(60,60,67,0.12);
   --clay-light: transparent;
-  --clay-light-strong: rgba(84,84,88,0.45);
+  --clay-light-strong: rgba(60,60,67,0.18);
   --clay-shadow: #000000;
   --clay-inner: transparent;
-  --separator: rgba(84,84,88,0.45);
-  --fill: #1C1C1F;
+  --separator: rgba(60,60,67,0.18);
+  --fill: #E4E4E9;
 
-  --accent: #5E5CE6;
-  --accent-bright: #7D7AFF;
-  --accent-deep: #4B49C8;
-  --accent-dim: rgba(94,92,230,0.22);
+  --accent: #5856D6;
+  --accent-bright: #5856D6;
+  --accent-deep: #4745B8;
+  --accent-dim: rgba(88,86,214,0.12);
   --accent-glow: transparent;
-  --pink: #FF375F;
-  --pink-bright: #FF6482;
+  --pink: #FF2D55;
+  --pink-bright: #E0244A;
 
-  --up: #30D158;
-  --up-bright: #5EDB7F;
-  --warm: #FFD60A;
-  --hot: #FF9F0A;
-  --ultra: #FF453A;
+  --up: #1F9D45;
+  --up-bright: #34C759;
+  --warm: #B87A00;
+  --hot: #E06A00;
+  --ultra: #FF3B30;
 
-  --text: #FFFFFF;
-  --text-secondary: #A1A1A6;
-  --text-muted: #8E8E93;
+  --text: #000000;
+  --text-secondary: #636366;
+  --text-muted: #6E6E73;
 
   --on-accent: #FFFFFF;
 
@@ -56,7 +57,7 @@
   --grad-success: var(--up);
   /* Jaune en REMPLISSAGE (pastilles, badges) : toujours le jaune vif, avec
      un texte noir. `--warm` sert au texte et s'assombrit en clair. */
-  --warm-fill: #FFD60A;
+  --warm-fill: #FFCC00;
   --grad-warm: var(--warm-fill);
   --grad-danger: var(--ultra);
   --grad-ambient: var(--bg);
@@ -65,7 +66,7 @@
   --shadow-clay-sm: none;
   --shadow-clay-inset: none;
   --glow-accent: none;
-  --shadow-float: 0 12px 32px rgba(0,0,0,0.4);
+  --shadow-float: 0 12px 32px rgba(0,0,0,0.10);
 
   --font-display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-body: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -77,39 +78,6 @@
   --ease-clay: cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
-/* --------------------------------------------------------------------------
-   Tokens — clair (fonds groupés et cartes blanches, comme Réglages)
-   -------------------------------------------------------------------------- */
-@media (prefers-color-scheme: light) {
-  :root {
-    --bg: #F2F2F7;
-    --bg-deep: #FFFFFF;
-    --bg-alt: #FFFFFF;
-    --card: #FFFFFF;
-    --card-raised: #FFFFFF;
-    --card-sunken: #EEEEF0;
-    --card-border: rgba(60,60,67,0.12);
-    --clay-light-strong: rgba(60,60,67,0.18);
-    --separator: rgba(60,60,67,0.18);
-    --fill: #E4E4E9;
-    --accent: #5856D6;
-    --accent-bright: #5856D6;
-    --accent-deep: #4745B8;
-    --accent-dim: rgba(88,86,214,0.12);
-    --pink: #FF2D55;
-    --pink-bright: #E0244A;
-    --up: #1F9D45;
-    --up-bright: #34C759;
-    --warm: #B87A00;
-    --warm-fill: #FFCC00;
-    --hot: #E06A00;
-    --ultra: #FF3B30;
-    --text: #000000;
-    --text-secondary: #636366;
-    --text-muted: #6E6E73;
-    --shadow-float: 0 12px 32px rgba(0,0,0,0.10);
-  }
-}
 
 /* --------------------------------------------------------------------------
    Reset & base
@@ -126,7 +94,7 @@ button { cursor: pointer; }
 a { color: inherit; text-decoration: none; }
 
 html {
-  color-scheme: light dark;
+  color-scheme: light;
   scroll-behavior: smooth;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -538,11 +506,9 @@ strong { color: var(--text); font-weight: 700; }
    -------------------------------------------------------------------------- */
 .shot {
   width: min(300px, 72vw);
-  filter: drop-shadow(0 24px 40px rgba(0,0,0,0.28));
+  filter: drop-shadow(0 18px 30px rgba(0,0,0,0.14));
 }
-@media (prefers-color-scheme: light) {
-  .shot { filter: drop-shadow(0 18px 30px rgba(0,0,0,0.14)); }
-}
+
 .shot img { display: block; width: 100%; height: auto; }
 
 /* --------------------------------------------------------------------------
@@ -1458,9 +1424,6 @@ strong { color: var(--text); font-weight: 700; }
 }
 .org-verify a:hover { color: var(--text); transform: translateY(-2px); }
 
-/* Logo : la version blanche disparaît sur les fonds clairs. On la remplace
-   par la version sombre (lettres noires, coche verte inchangée). `content`
-   sur une <img> est pris en charge par Safari, Chrome et Firefox récents. */
-@media (prefers-color-scheme: light) {
-  img[src$="clinchy-wordmark.png"] { content: url("../img/clinchy-wordmark-dark.png"); }
-}
+/* Logo : la version blanche disparaîtrait sur le fond clair. On sert la
+   version sombre (lettres noires, coche verte inchangée). */
+img[src$="clinchy-wordmark.png"] { content: url("../img/clinchy-wordmark-dark.png"); }

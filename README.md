@@ -231,12 +231,11 @@ sont renommées.
 ## 🌗 Apparence
 
 Le site reprend le design de l'app : style iOS, police système (SF Pro sur les
-appareils Apple), une seule teinte d'accent, aplats sans dégradés ni halos. Il suit
-le réglage clair / sombre de l'appareil (`prefers-color-scheme`), comme le mode
-« Auto » de l'app. Les couleurs sont les mêmes que `src/theme.ts` de l'app : tokens
-sombres dans `:root`, tokens clairs dans `@media (prefers-color-scheme: light)` en
-tête de `assets/css/style.css`. Le logo a une version sombre
-(`clinchy-wordmark-dark.png`), substituée en CSS sur fond clair.
+appareils Apple), une seule teinte d'accent, aplats sans dégradés ni halos. Il reste
+TOUJOURS en clair, même sur un appareil en mode sombre (choix délibéré : plus
+esthétique). Les couleurs sont celles du mode clair de l'app (`src/theme.ts`), dans
+`:root` en tête de `assets/css/style.css`. Le logo est servi dans sa version sombre
+(`clinchy-wordmark-dark.png`), substituée en CSS.
 
 Les anciens thèmes du site (Clay, Gold, Neon, 8-bit) et leur sélecteur ont été
 retirés en même temps que de l'app.
