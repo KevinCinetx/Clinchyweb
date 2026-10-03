@@ -3,31 +3,6 @@
 
   var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  /* ---------- Theme switcher ---------- */
-  var THEME_KEY = "clinchy-theme";
-  var themeButtons = document.querySelectorAll("[data-theme-btn]");
-  function applyTheme(name) {
-    if (name === "clay") {
-      delete document.documentElement.dataset.theme;
-    } else {
-      document.documentElement.dataset.theme = name;
-    }
-    themeButtons.forEach(function (btn) {
-      btn.setAttribute("aria-pressed", String(btn.getAttribute("data-theme-btn") === name));
-    });
-    try { localStorage.setItem(THEME_KEY, name); } catch (e) {}
-  }
-  themeButtons.forEach(function (btn) {
-    btn.addEventListener("click", function () {
-      applyTheme(btn.getAttribute("data-theme-btn"));
-    });
-  });
-  (function initTheme() {
-    var saved = null;
-    try { saved = localStorage.getItem(THEME_KEY); } catch (e) {}
-    if (saved) applyTheme(saved);
-  })();
-
   /* ---------- Nav scroll shadow ---------- */
   var nav = document.getElementById("nav");
   if (nav) {
@@ -269,10 +244,16 @@
     demoCard.dataset.reducedMotion = reduceMotion ? "true" : "false";
     if (reduceMotion && reducedControls) reducedControls.hidden = false;
 
+    // Libellés de la démo dans la langue de la page (<html lang>).
+    var EN = (document.documentElement.lang || "").slice(0, 2) === "en";
+    var L = EN
+      ? { chill: "Chill", normal: "Normal", urgent: "Urgent 🔥", take: "Take it", next: "Next −2 pts in " }
+      : { chill: "Tranquille", normal: "Normale", urgent: "Urgente 🔥", take: "Prendre", next: "Prochain −2 pts dans " };
+
     function stateFor(p) {
-      if (p >= 20) return { varName: "--up", badge: "Tranquille" };
-      if (p >= 10) return { varName: "--warm", badge: "Normale" };
-      return { varName: "--hot", badge: "Urgente 🔥" };
+      if (p >= 20) return { varName: "--up", badge: L.chill };
+      if (p >= 10) return { varName: "--warm", badge: L.normal };
+      return { varName: "--hot", badge: L.urgent };
     }
 
     function render() {
@@ -281,7 +262,7 @@
       priceEl.style.color = "var(" + st.varName + ")";
       badgeEl.textContent = st.badge;
       badgeEl.style.color = "var(" + st.varName + ")";
-      ctaBtn.textContent = "Prendre · " + price + " pts";
+      ctaBtn.textContent = L.take + " · " + price + " pts";
     }
 
     function updateProgress() {
@@ -289,7 +270,7 @@
       var remaining = Math.max(0, TICK_MS - elapsed);
       var frac = remaining / TICK_MS;
       progressBar.style.transform = "scaleX(" + frac + ")";
-      nextEl.textContent = "Prochain −2 pts dans " + Math.ceil(remaining / 1000) + " s";
+      nextEl.textContent = L.next + Math.ceil(remaining / 1000) + " s";
     }
 
     function decrement() {
@@ -340,7 +321,7 @@
       price = START_PRICE;
       render();
       progressBar.style.transform = "scaleX(1)";
-      nextEl.textContent = "Prochain −2 pts dans 30 s";
+      nextEl.textContent = L.next + "30 s";
       demoCard.classList.remove("is-taken");
       replayBtn.hidden = true;
       startTimers();

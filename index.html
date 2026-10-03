@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script>(function(){try{var t=localStorage.getItem('clinchy-theme');if(t&&t!=='clay'){document.documentElement.dataset.theme=t;}}catch(e){}})();</script>
 <title>Clinchy · Gère tes missions. Gagne des récompenses.</title>
 <meta name="description" content="Clinchy transforme les corvées en marché de missions. Leur valeur décote tant que personne ne les prend. Premier arrivé, premier servi.">
 <link rel="canonical" href="https://getclinchy.com/">
@@ -15,10 +14,9 @@
 <link rel="icon" href="./assets/img/favicon-192x192.png" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="./assets/img/apple-touch-icon.png">
 <link rel="manifest" href="./site.webmanifest">
-<meta name="theme-color" content="#13111E">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#F2F2F7" media="(prefers-color-scheme: light)">
 
-<link rel="preload" href="./assets/fonts/nunito-900.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="./assets/fonts/dmsans-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="./assets/css/style.css">
 
 <meta property="og:type" content="website">
@@ -118,7 +116,7 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {"@type": "Question", "name": "Est-ce que Clinchy est gratuit ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. Clinchy Basic gère jusqu'à 2 espaces, 6 membres par espace et 10 missions actives. Clinchy + débloque les limites, les statistiques et les thèmes."}},
+    {"@type": "Question", "name": "Est-ce que Clinchy est gratuit ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. Clinchy Basic gère jusqu'à 2 espaces, 6 membres par espace et 10 missions actives. Clinchy + débloque les limites, les statistiques, le mode enfant et les Live Activities."}},
     {"@type": "Question", "name": "Faut-il que tout le monde paie l'abonnement ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. Un seul abonné suffit : si l'admin de l'espace a Clinchy +, tout l'espace profite des limites élargies. Les membres gratuits gardent leurs publicités et leurs statistiques masquées."}},
     {"@type": "Question", "name": "Comment les points sont-ils calculés ?", "acceptedAnswer": {"@type": "Answer", "text": "Chaque mission a un prix de départ qui baisse par palier tant que personne ne la prend. Le premier membre qui la prend gagne le prix affiché à cet instant précis."}},
     {"@type": "Question", "name": "Que se passe-t-il si personne ne prend une mission ?", "acceptedAnswer": {"@type": "Answer", "text": "Sa valeur continue de baisser palier après palier, jusqu'à devenir négative : elle se transforme alors en pénalité pour inciter quelqu'un à s'en occuper."}},
@@ -134,11 +132,6 @@
 </head>
 <body>
 <a class="skip-link" href="#main">Aller au contenu</a>
-<div class="ambient" aria-hidden="true">
-  <div class="ambient__blob ambient__blob--1"></div>
-  <div class="ambient__blob ambient__blob--2"></div>
-  <div class="ambient__blob ambient__blob--3"></div>
-</div>
 
 <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
   <symbol id="icon-burger" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></symbol>
@@ -221,7 +214,7 @@
             <img src="./assets/img/badge-googleplay-fr.png" alt="" width="182" height="54" loading="eager" decoding="async">
           </a> -->
         </div>
-        <p class="hero__fineprint" data-reveal>Gratuit · sans compte bancaire · 4 langues</p>
+        <p class="hero__fineprint" data-reveal>Gratuit · sans compte bancaire · 6 langues</p>
       </div>
       <div class="hero__visual" data-reveal>
         <div class="shot phone--secondary" aria-hidden="true"><img src="./assets/screens/shop.png" alt="" width="380" height="776" loading="lazy" decoding="async"></div>
@@ -415,10 +408,9 @@
           <p>Deux vues : ton espace, et tes amis. Jamais de comparaison avec des inconnus.</p>
         </article>
         <article class="bento-item card" data-reveal>
-          <span class="bento-item__pro">CLINCHY +</span>
-          <div class="bento-item__icon" aria-hidden="true">🎨</div>
-          <h3>Thèmes &amp; sons</h3>
-          <p>Clay, Gold, Neon, 8-bit : essaie-les en bas de page.</p>
+          <div class="bento-item__icon" aria-hidden="true">🌗</div>
+          <h3>Clair ou sombre</h3>
+          <p>L'app suit le réglage de ton téléphone, ou garde celui que tu choisis.</p>
         </article>
         <article class="bento-item card" data-reveal>
           <div class="bento-item__icon" aria-hidden="true">📚</div>
@@ -432,8 +424,8 @@
         </article>
         <article class="bento-item card" data-reveal>
           <div class="bento-item__icon" aria-hidden="true">🌍</div>
-          <h3>4 langues</h3>
-          <p>Détectées automatiquement : français, anglais, espagnol, allemand.</p>
+          <h3>6 langues</h3>
+          <p>Détectées automatiquement : français, anglais, espagnol, allemand, portugais, italien.</p>
         </article>
       </div>
     </div>
@@ -538,6 +530,14 @@
             <p class="carousel__caption">Pomodoro intégré</p>
           </li>
           <li class="carousel__item">
+            <div class="shot carousel__phone"><img src="./assets/screens/live.png" alt="Live Activity du minuteur sur l'écran verrouillé de l'iPhone" width="380" height="776" loading="lazy" decoding="async"></div>
+            <p class="carousel__caption">Live Activity</p>
+          </li>
+          <li class="carousel__item">
+            <div class="shot carousel__phone"><img src="./assets/screens/island.png" alt="Minuteur en cours dans la Dynamic Island de l'iPhone" width="380" height="776" loading="lazy" decoding="async"></div>
+            <p class="carousel__caption">Dynamic Island</p>
+          </li>
+          <li class="carousel__item">
             <div class="shot carousel__phone"><img src="./assets/screens/planner.png" alt="Smart Planner : répartition automatique des missions sur la semaine" width="380" height="776" loading="lazy" decoding="async"></div>
             <p class="carousel__caption">Smart Planner</p>
           </li>
@@ -599,7 +599,6 @@
             <li><svg width="18" height="18"><use href="#icon-check"/></svg> Zéro publicité</li>
             <li><svg width="18" height="18"><use href="#icon-check"/></svg> Statistiques + export CSV</li>
             <li><svg width="18" height="18"><use href="#icon-check"/></svg> Mode parent / enfant</li>
-            <li><svg width="18" height="18"><use href="#icon-check"/></svg> Thèmes Gold, Neon, 8-bit</li>
           </ul>
           <a class="btn btn--accent btn--block" href="./tarifs/">Voir le détail</a>
         </div>
@@ -612,35 +611,6 @@
         </div>
       </div>
       <p class="legal-note">Abonnement renouvelé automatiquement, résiliable à tout moment depuis les réglages de ton compte App Store / Google Play. Détails complets sur la <a href="./tarifs/" style="color:var(--accent-bright)">page tarifs</a>.</p>
-    </div>
-  </section>
-
-  <!-- PERSONNALISATION / THEMES -->
-  <section class="section section--deep" id="personnalisation" aria-labelledby="theme-title">
-    <div class="container">
-      <div class="section-head section-head--center">
-        <span class="eyebrow">🎨 Personnalisation</span>
-        <h2 id="theme-title">Essaie les thèmes de l'app</h2>
-        <p class="lede" style="margin-inline:auto">Les thèmes sont réservés à Clinchy + dans l'app. Essaie-les ici, sur ce site.</p>
-      </div>
-      <div class="theme-picker" role="group" aria-label="Choisir un thème">
-        <button class="theme-swatch" data-theme-btn="clay" type="button" aria-pressed="true">
-          <span class="theme-swatch__dot" style="background:linear-gradient(135deg,#A78BFF,#6D4DEB)"></span>
-          <span class="theme-swatch__label">Clay 🫧</span>
-        </button>
-        <button class="theme-swatch" data-theme-btn="gold" type="button" aria-pressed="false">
-          <span class="theme-swatch__dot" style="background:linear-gradient(135deg,#F5D77A,#B8901A)"></span>
-          <span class="theme-swatch__label">Gold 👑</span>
-        </button>
-        <button class="theme-swatch" data-theme-btn="neon" type="button" aria-pressed="false">
-          <span class="theme-swatch__dot" style="background:linear-gradient(135deg,#7DF3FF,#00A8BD)"></span>
-          <span class="theme-swatch__label">Neon ⚡</span>
-        </button>
-        <button class="theme-swatch" data-theme-btn="8bit" type="button" aria-pressed="false">
-          <span class="theme-swatch__dot" style="background:linear-gradient(135deg,#D08CFF,#8A2FD1)"></span>
-          <span class="theme-swatch__label">8-bit 🕹️</span>
-        </button>
-      </div>
     </div>
   </section>
 
@@ -762,15 +732,6 @@
         <div class="switcher-row">
           <a class="switcher-btn" href="./" aria-current="true">FR</a>
           <a class="switcher-btn" href="./en/">EN</a>
-        </div>
-      </div>
-      <div class="switcher-group">
-        <span class="switcher-label">Thème</span>
-        <div class="switcher-row" role="group" aria-label="Choisir un thème">
-          <button class="switcher-btn" data-theme-btn="clay" type="button" aria-pressed="true">Clay 🫧</button>
-          <button class="switcher-btn" data-theme-btn="gold" type="button" aria-pressed="false">Gold 👑</button>
-          <button class="switcher-btn" data-theme-btn="neon" type="button" aria-pressed="false">Neon ⚡</button>
-          <button class="switcher-btn" data-theme-btn="8bit" type="button" aria-pressed="false">8-bit 🕹️</button>
         </div>
       </div>
     </div>

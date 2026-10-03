@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script>(function(){try{var t=localStorage.getItem('clinchy-theme');if(t&&t!=='clay'){document.documentElement.dataset.theme=t;}}catch(e){}})();</script>
 <title>Politique de confidentialité · Clinchy</title>
 <meta name="description" content="Quelles données Clinchy collecte, pourquoi, avec qui elles sont partagées, et comment exercer tes droits RGPD.">
 <link rel="canonical" href="https://getclinchy.com/confidentialite/">
@@ -15,9 +14,8 @@
 <link rel="icon" href="../assets/img/favicon-192x192.png" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
 <link rel="manifest" href="../site.webmanifest">
-<meta name="theme-color" content="#13111E">
-<link rel="preload" href="../assets/fonts/nunito-900.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="../assets/fonts/dmsans-400.woff2" as="font" type="font/woff2" crossorigin>
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#F2F2F7" media="(prefers-color-scheme: light)">
 <link rel="stylesheet" href="../assets/css/style.css">
 
 <meta property="og:type" content="website">
@@ -36,11 +34,6 @@
 </head>
 <body>
 <a class="skip-link" href="#main">Aller au contenu</a>
-<div class="ambient" aria-hidden="true">
-  <div class="ambient__blob ambient__blob--1"></div>
-  <div class="ambient__blob ambient__blob--2"></div>
-  <div class="ambient__blob ambient__blob--3"></div>
-</div>
 
 <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
   <symbol id="icon-burger" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></symbol>
@@ -111,7 +104,7 @@
     <p>Clinchy s’appuie sur <strong>Google Firebase</strong>. Voici précisément ce qui est stocké, et où :</p>
     <ul>
       <li><strong>Compte (Firebase Authentication) :</strong> ton adresse email et un identifiant technique unique (UID). Ton mot de passe n’est <strong>jamais</strong> stocké en clair ni accessible par nous : Firebase Authentication en conserve uniquement une empreinte chiffrée. Si tu te connectes via Apple ou Google, nous ne recevons que l’email et l’identifiant transmis par le fournisseur.</li>
-      <li><strong>Profil (Cloud Firestore) :</strong> ton prénom ou pseudo, ton avatar, ton thème, tes préférences de notification, ton niveau et ton XP.</li>
+      <li><strong>Profil (Cloud Firestore) :</strong> ton prénom ou pseudo, ton avatar, tes préférences de notification, ton niveau et ton XP.</li>
       <li><strong>Photo de profil (Cloud Storage for Firebase) :</strong> uniquement si tu en choisis une. Elle est facultative — un avatar généré est proposé par défaut.</li>
       <li><strong>Contenu que tu crées (Cloud Firestore) :</strong> missions, valeurs en points, récompenses de la boutique, historique d’activité et statistiques.</li>
       <li><strong>Appartenance aux espaces (Cloud Firestore) :</strong> les foyers, colocations ou équipes que tu rejoins, et ton rôle dans chacun.</li>
@@ -234,15 +227,6 @@
         <div class="switcher-row">
           <a class="switcher-btn" href="./" aria-current="true">FR</a>
           <a class="switcher-btn" href="../en/confidentialite/">EN</a>
-        </div>
-      </div>
-      <div class="switcher-group">
-        <span class="switcher-label">Thème</span>
-        <div class="switcher-row" role="group" aria-label="Choisir un thème">
-          <button class="switcher-btn" data-theme-btn="clay" type="button" aria-pressed="true">Clay 🫧</button>
-          <button class="switcher-btn" data-theme-btn="gold" type="button" aria-pressed="false">Gold 👑</button>
-          <button class="switcher-btn" data-theme-btn="neon" type="button" aria-pressed="false">Neon ⚡</button>
-          <button class="switcher-btn" data-theme-btn="8bit" type="button" aria-pressed="false">8-bit 🕹️</button>
         </div>
       </div>
     </div>

@@ -134,13 +134,15 @@ déjà son propre cadre de téléphone avec coins transparents ; le site ne rajo
 aucun bezel CSS par-dessus, juste une ombre portée via `.shot`) :
 
 ```
-market.png   shop.png    activity.png  pomodoro.png  planner.png
-stats.png    equity.png  kid.png       family.png
+market.png   shop.png    activity.png  pomodoro.png  live.png  island.png
+planner.png  stats.png   equity.png    kid.png       family.png
 ```
 
-Chaque fichier a une variante `@1x` (moitié résolution, ex. `market@1x.png`) pour le
-`srcset` 1x/2x utilisé dans le carrousel. Si tu remplaces une capture, régénère sa
-variante `@1x` en conservant le même nom.
+Elles viennent du dossier `CAPTURES_CLINCHY_2026-10/Framed_iPhone_transparent_758x1552`
+(famille démo Bennett, en anglais, 9:41), produit depuis le dépôt de l'app
+(`scripts/frameShowcaseShots.py`). `live.png` et `island.png` sont des rendus de la
+Live Activity réelle (`scripts/renderLiveActivity.swift`), allégés en 256 couleurs.
+Pour remplacer une capture, garde le même nom et le ratio 758:1552.
 
 ### Badges App Store / Google Play
 `assets/img/badge-appstore-fr.svg`, `badge-appstore-en.svg`,
@@ -226,14 +228,18 @@ sont renommées.
 
 ---
 
-## 🎨 Thèmes
+## 🌗 Apparence
 
-Le sélecteur de thème (pied de page + section Personnalisation) repeint le site en
-`Clay 🫧 / Gold 👑 / Neon ⚡ / 8-bit 🕹️` via `document.documentElement.dataset.theme`
-et des surcharges de variables CSS dans `assets/css/style.css`. Le choix est mémorisé
-en `localStorage` (clé `clinchy-theme`) et appliqué au chargement de chaque page via
-un petit script inline dans le `<head>`, avant le CSS, pour éviter un flash du mauvais
-thème.
+Le site reprend le design de l'app : style iOS, police système (SF Pro sur les
+appareils Apple), une seule teinte d'accent, aplats sans dégradés ni halos. Il suit
+le réglage clair / sombre de l'appareil (`prefers-color-scheme`), comme le mode
+« Auto » de l'app. Les couleurs sont les mêmes que `src/theme.ts` de l'app : tokens
+sombres dans `:root`, tokens clairs dans `@media (prefers-color-scheme: light)` en
+tête de `assets/css/style.css`. Le logo a une version sombre
+(`clinchy-wordmark-dark.png`), substituée en CSS sur fond clair.
+
+Les anciens thèmes du site (Clay, Gold, Neon, 8-bit) et leur sélecteur ont été
+retirés en même temps que de l'app.
 
 ---
 
