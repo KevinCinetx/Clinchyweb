@@ -138,12 +138,14 @@ market.png   shop.png    activity.png  pomodoro.png  live.png  island.png
 planner.png  stats.png   equity.png    kid.png       family.png
 ```
 
-Elles viennent du dossier `CAPTURES_CLINCHY_2026-10/Framed_iPhone_transparent_758x1552`
-(famille démo Bennett, en anglais, 9:41), produit depuis le dépôt de l'app
-(`scripts/frameShowcaseShots.py`). `live.png` et `island.png` sont de vraies captures
+Elles viennent des captures App Store de `CAPTURES_CLINCHY_2026-10` (famille démo
+Bennett, en anglais, 9:41), habillées depuis le dépôt de l'app par
+`scripts/frameShowcaseShots.py` du contour iPhone 17 Pro Max que dessine Device Hub
+(boutons compris), à 988 × 1984 px, en 256 couleurs. `live.png` et `island.png` sont de vraies captures
 de la Live Activity (écran verrouillé, Dynamic Island étendue), gardées en couleurs
 pleines : en 256 couleurs, le fond d'écran iOS fait des aplats.
-Pour remplacer une capture, garde le même nom et le ratio 758:1552.
+Pour remplacer une capture, garde le même nom et le ratio 494:992 (attributs
+`width`/`height` des `<img>`).
 
 ### Badges App Store / Google Play
 `assets/img/badge-appstore-fr.svg`, `badge-appstore-en.svg`,
